@@ -1,8 +1,8 @@
-'''Module containing the Film class.'''
+"""Module containing the Film class."""
 
+import re
 import requests
 from bs4 import BeautifulSoup
-import re
 
 
 class Film:
@@ -64,7 +64,7 @@ class Film:
         self.set_id(film_id)
         url = f"https://www.allocine.fr/film/fichefilm_gen_cfilm" \
               f"={self.__id}.html"
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         html_code = str(BeautifulSoup(response.content, "html.parser"))
         self.set_title(html_code)
         self.set_duration(html_code)

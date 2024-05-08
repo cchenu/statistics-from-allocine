@@ -1,11 +1,13 @@
 country,number
-France,256
+U.S.A.,258
+Grande-Bretagne,36
+Allemagne,22
+Japon,7
+Hong-Kong,4
+Chine,6
+France,262
 Belgique,22
-U.S.A.,247
-Grande-Bretagne,33
-Japon,6
 Italie,24
-Allemagne,21
 Espagne,5
 Pologne,1
 Canada,9
@@ -16,9 +18,7 @@ Chili,1
 Finlande,1
 Corée du Sud,6
 Mexique,1
-Hong-Kong,3
 Brésil,2
-Chine,5
 Russie,1
 Emirats Arabes Unis,1
 Afrique du Sud,1

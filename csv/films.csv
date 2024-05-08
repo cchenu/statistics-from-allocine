@@ -1,4 +1,27 @@
 id,title,duration,genres,year,countries
+125562,Mamma Mia!,110,"['COMEDY', 'MUSICAL', 'ROMANCE']",2008,"['U.S.A.', 'Grande-Bretagne', 'Allemagne']"
+297,Les Sept Samouraïs,207,"['ACTION', 'ADVENTURE']",1955,['Japon']
+46937,Les Bravados,98,"['DRAMA', 'WESTERN']",1957,['U.S.A.']
+204925,Hunger Games - La Révolte : Partie 2,137,"['ADVENTURE', 'SCIENCE_FICTION', 'WARMOVIE']",2015,['U.S.A.']
+200088,Hunger Games - La Révolte : Partie 1,123,"['ACTION', 'DRAMA', 'SCIENCE_FICTION']",2014,['U.S.A.']
+196666,Hunger Games - L'embrasement,146,"['ACTION', 'DRAMA', 'SCIENCE_FICTION']",2013,['U.S.A.']
+250664,Ip Man 4 : Le dernier combat,105,"['ACTION', 'BIOPIC', 'DRAMA', 'MARTIAL_ARTS']",2020,"['Hong-Kong', 'Chine']"
+145083,Hunger Games,142,"['ACTION', 'DRAMA', 'SCIENCE_FICTION']",2012,['U.S.A.']
+53879,Kill Bill: Volume 2,135,"['ACTION', 'MARTIAL_ARTS', 'THRILLER']",2004,['U.S.A.']
+28541,Kill Bill: Volume 1,112,"['ACTION', 'MARTIAL_ARTS', 'THRILLER']",2003,['U.S.A.']
+14788,Trainspotting,93,"['DETECTIVE', 'DRAMA']",1996,['Grande-Bretagne']
+479,Les Demoiselles de Rochefort,125,['MUSICAL'],1967,['France']
+273579,Les Misérables,105,"['DETECTIVE', 'DRAMA']",2019,['France']
+197379,Point Break,113,['ACTION'],2016,['U.S.A.']
+16731,Le Dîner de cons,80,['COMEDY'],1998,['France']
+316372,American Fiction,117,"['COMEDY', 'COMEDY_DRAMA', 'DRAMA']",2024,['U.S.A.']
+299937,Le Procès Goldman,116,"['DETECTIVE', 'DRAMA', 'HISTORICAL', 'JUDICIAL']",2023,['France']
+279636,Chien de la casse,93,['COMEDY_DRAMA'],2023,['France']
+666,Emmanuelle,90,['EROTIC'],1974,['France']
+256426,Johnny English contre-attaque,89,"['COMEDY', 'SPY']",2018,['Grande-Bretagne']
+219262,Batman v Superman : L’Aube de la Justice,153,"['ACTION', 'ADVENTURE', 'FANTASY']",2016,['U.S.A.']
+315119,Yannick,67,['COMEDY'],2023,['France']
+224799,Cars 3,102,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'FANTASY']",2017,['U.S.A.']
 295635,La Nuit du 12,114,"['DETECTIVE', 'THRILLER']",2022,"['France', 'Belgique']"
 135215,Le Garçon au pyjama rayé,90,"['DRAMA', 'WARMOVIE']",2009,"['U.S.A.', 'Grande-Bretagne']"
 260,Orange mécanique,136,"['DRAMA', 'SCIENCE_FICTION']",1972,"['Grande-Bretagne', 'U.S.A.']"
@@ -147,7 +170,7 @@ id,title,duration,genres,year,countries
 46112,Spider-Man 2,127,"['ACTION', 'FANTASY']",2004,['U.S.A.']
 29007,Spider-Man,121,"['ACTION', 'FANTASY']",2002,['U.S.A.']
 268136,Deux Moi,110,['DRAMA'],2019,['France']
-4510,La Bête humaine,100,['DRAMA'],2006,['France']
+4510,La Bête humaine,100,['DRAMA'],2013,['France']
 232669,Avengers: Endgame,181,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2019,['U.S.A.']
 141110,Captain Marvel,124,"['ACTION', 'FANTASY', 'SCIENCE_FICTION']",2019,['U.S.A.']
 218265,Avengers: Infinity War,156,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2018,['U.S.A.']
@@ -281,7 +304,7 @@ id,title,duration,genres,year,countries
 130631,High School Musical 2 (TV),101,"['COMEDY', 'FAMILY', 'MUSICAL']",2007,['U.S.A.']
 124065,High School Musical,93,['MUSICAL'],2006,['U.S.A.']
 132786,High School Musical 3 : nos années lycée,115,['MUSICAL'],2008,['U.S.A.']
-144713,Kung Fu Panda : Les Secrets des Cinq Cyclones,25,['ANIMATION'],2016,['U.S.A.']
+144713,Kung Fu Panda : Les Secrets des Cinq Cyclones,25,['ANIMATION'],2022,['U.S.A.']
 194397,Kung Fu Panda 3,95,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'MARTIAL_ARTS']",2016,"['U.S.A.', 'Chine']"
 143048,Kung Fu Panda 2,95,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'MARTIAL_ARTS']",2011,['U.S.A.']
 45889,Kung Fu Panda,90,"['ACTION', 'ANIMATION', 'FAMILY', 'MARTIAL_ARTS']",2008,['U.S.A.']
@@ -335,7 +358,6 @@ id,title,duration,genres,year,countries
 140603,Karaté Kid,140,"['ACTION', 'DRAMA', 'FAMILY', 'MARTIAL_ARTS']",2010,"['U.S.A.', 'Chine']"
 186905,After Earth,100,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2013,['U.S.A.']
 105557,Je suis une légende,100,['SCIENCE_FICTION'],2007,['U.S.A.']
-197379,Point Break,113,['ACTION'],2016,['U.S.A.']
 29289,Retour vers le futur III,118,"['ADVENTURE', 'COMEDY', 'SCIENCE_FICTION']",1990,['U.S.A.']
 129924,Slumdog Millionaire,120,"['COMEDY', 'COMEDY_DRAMA', 'ROMANCE']",2009,"['U.S.A.', 'Grande-Bretagne']"
 929,Et pour quelques dollars de plus,130,['WESTERN'],1966,"['Espagne', ""Allemagne de l'Ouest"", 'Italie']"
@@ -429,7 +451,7 @@ id,title,duration,genres,year,countries
 133404,Les Femmes du 6e étage,106,['COMEDY'],2011,['France']
 231739,Comme Un Avion,105,['COMEDY'],2015,['France']
 221613,Elle l'adore,104,['COMEDY'],2014,['France']
-59303,La Doublure,85,"['COMEDY', 'DRAMA']",2006,"['France', 'Belgique', 'Italie']"
+59303,La Doublure,85,"['COMEDY', 'DRAMA']",2006,"['France', 'Italie', 'Belgique']"
 267228,La Belle époque,116,"['COMEDY', 'DRAMA', 'ROMANCE']",2019,['France']
 33285,Pour cent briques t'as plus rien...,85,['COMEDY'],1982,['France']
 180314,Time Out,101,"['ACTION', 'SCIENCE_FICTION', 'THRILLER']",2011,['U.S.A.']
@@ -454,7 +476,6 @@ id,title,duration,genres,year,countries
 262394,Qu'est-ce qu'on a encore fait au Bon Dieu?,99,['COMEDY'],2017,['France']
 3198,Les Bronzés font du ski,90,['COMEDY'],1979,['France']
 30717,Papy fait de la résistance,106,['COMEDY'],1983,['France']
-16731,Le Dîner de cons,80,['COMEDY'],1998,['France']
 59308,Les Bronzés 3 amis pour la vie,97,['COMEDY'],2006,['France']
 227279,Nos femmes,95,['COMEDY'],2015,['France']
 253174,All Inclusive,92,['COMEDY'],2019,['France']
@@ -472,7 +493,7 @@ id,title,duration,genres,year,countries
 198750,Fast &amp; Furious 7,137,['ACTION'],2015,['U.S.A.']
 29173,Fast &amp; Furious,107,"['ACTION', 'DETECTIVE']",2001,['U.S.A.']
 131334,Fast and Furious 4,100,['ACTION'],2009,['U.S.A.']
-3845,La Vache et le prisonnier,119,['COMEDY_DRAMA'],1959,"['Italie', 'France']"
+3845,La Vache et le prisonnier,119,['COMEDY_DRAMA'],1959,"['France', 'Italie']"
 13467,La Cuisine au beurre,82,['COMEDY'],1963,['France']
 135916,King Guillaume,85,['COMEDY'],2009,['France']
 235236,La Ch’tite famille,107,['COMEDY'],2018,['France']
