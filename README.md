@@ -16,7 +16,7 @@ On Allocine, a feature allow to create collection of films. The website do not g
 This projet recoveries different data about films of one collection with python and creates csv files with these data. It is possible to have some graphs with power BI.
 
 ## Technologies Used
-- Python - version 3.11.3
+- Python - version 3.11.7
   - Python library : BeautifulSoup (bs4), csv, re, requests, tqdm
 - Microsoft Power BI Desktop - version 2.124
 
