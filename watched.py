@@ -191,20 +191,6 @@ def watched_list(collection_id, token):
 
 
 if __name__ == "__main__":
-    ID = "VXNlckNvbGxlY3Rpb246NDgxMjc"
-    TOKEN = ("eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDc2ODE5MjEsImV"
-             "4cCI6MTczOTMwNDMyMSwidXNlcm5hbWUiOiJjaGVudTQ0MkBnbWFpbC5jb20iLCJ"
-             "hcHBsaWNhdGlvbl9uYW1lIjoid3d3IiwidXVpZCI6IjAzZDFiNjljLTY3YzgtNDQ"
-             "wMy1iNTQ5LWU3MmUzNjU5YzA1MSIsInNjb3BlIjpudWxsfQ.nVSS4ARwEFXJ9Hid"
-             "0IcSF4Bwsb0F8LjYoSw3Mke47fM5jWyP1s3FcIdtiRc_RIxi_TXiz_XyG1cMaZPs"
-             "BIyodpHKeqSYlSac5uw0OsS_F4q3WY7t2T2auH44cLBTj96azoTpdMEbNelBwK2x"
-             "y6nWBxC-O5cs8qiqoUnGWlOuaioDKEmY1Q_L0DDggx-HRRBndne7UHc3huX1GW7u"
-             "q5QHeg1qxmpeSoOx64pX3ca53EJXUNCez_AZuzM6GWDz9vEaL6hTC_rTKATGyIA3"
-             "6T2kioROtT3pKWraoAqCsVmDkq5UYpA9NIRp2vkS9sY3Fmc9lu_qr7XBSNXZl-Bx"
-             "VslHXMPGRDUeB_9S5KdmAL2_rxn53LcTx5oxRP1TzAL09oCx0gZfJj8Tkr1zXKwy"
-             "Ir1fsIdgjwUnV0l3ZQ8DZ3KHntUgsZwHjuPsgGXHV1L7yBg55hyKrlFB5PPrPdb0"
-             "kpRLdDNL0SETbXrThzBq2fwIyKrSC3z5jTITsRDxBemQ0SKFuiWK8CiOBBdvtJbT"
-             "LWTGZ3A0RTHgqU6XJV0GwGt4gQ1rvU7MsplCCRpgc9O38XvrouQEdZoYVdJ_s5Q_"
-             "hYs06aPxcl6-_qe5BM8ig1MREZWjP2M1UOr1Bf0Oz-apu5hkeAYft2YvO_menFEq"
-             "tA66_o0SvedxxycafL0jXnueVuE")
+    ID = ""
+    TOKEN = ""
     watched = watched_list(ID, TOKEN)
