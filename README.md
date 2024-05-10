@@ -32,8 +32,8 @@ This projet recoveries different data about films of one collection with python 
   - Create a histogram films by genre.
   - Create a histogram films by duration.
 
-![Four different graphs](https://zupimages.net/viewer.php?id=24/19/4cc1.png)
-![Histogram films by duration](https://zupimages.net/viewer.php?id=24/19/fgw1.png)
+![Four different graphs](https://zupimages.net/up/24/19/4cc1.png)
+![Histogram films by duration](https://zupimages.net/up/24/19/fgw1.png)
 
 ## Usage
 To use this code, first, you have to open the main.py file.
