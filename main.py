@@ -27,7 +27,7 @@ def films(collection_id, token):
     country_dict = {}
     genre_dict = {}
     progress_bar = tqdm(total=len(list_id), desc="Progression")
-    with open('films.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('csv/films.csv', 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=headers)
 
         # Write headers
@@ -46,7 +46,8 @@ def films(collection_id, token):
 
     # Creation of the country csv file
     headers = ['country', 'number']
-    with open('countries.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with (open('csv/countries.csv', 'w', newline='', encoding='utf-8')
+          as csvfile):
         writer = csv.DictWriter(csvfile, fieldnames=headers)
 
         # Write headers
@@ -58,7 +59,7 @@ def films(collection_id, token):
 
     # Creation of the genre csv file
     headers = ['genre', 'number']
-    with open('genres.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('csv/genres.csv', 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=headers)
 
         # Write headers
