@@ -12,7 +12,7 @@
 
 
 ## General Information
-On Allocine, a feature allow to create collection of films. The website do not give statistics on a collection, the goal of this projet is to have these statistics. 
+On Allocine, a feature allow to create collection of films. The website do not give statistics on a collection, the goal of this project is to have these statistics. 
 This projet recoveries different data about films of one collection with python and creates csv files with these data. It is possible to have some graphs with power BI.
 
 ## Technologies Used
@@ -21,7 +21,7 @@ This projet recoveries different data about films of one collection with python 
 - Microsoft Power BI Desktop - version 2.124
 
 ## Features
-- Create csv files from a Allocine collection.
+- Create csv files from an Allocine collection.
   - Create films.csv with for all films his Allocine's id, his title, his duration, his genres, his year and his countries.
   - Create countries.csv with for each country present in the Allocine collection, gives the number of films from this country.
   - Create genres.csv with for each film genre present in the Allocine collection, gives the number of films of this genre.

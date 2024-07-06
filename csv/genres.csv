@@ -1,25 +1,38 @@
-genre,number
-COMEDY,258
-MUSICAL,9
-ROMANCE,29
-ACTION,133
-ADVENTURE,104
-DRAMA,111
-WESTERN,10
-SCIENCE_FICTION,56
-WARMOVIE,7
-BIOPIC,18
-MARTIAL_ARTS,12
-THRILLER,64
-DETECTIVE,56
-COMEDY_DRAMA,15
-HISTORICAL,10
-JUDICIAL,4
-EROTIC,5
-SPY,16
-FANTASY,50
-ANIMATION,58
-FAMILY,37
-HORROR,2
-MUSIC,2
-DOCUMENTARY,1
+id,genre,number
+13001,Aventure,104
+13002,Comédie dramatique,17
+13005,Comédie,262
+13006,Dessin Animé,0
+13008,Drame,117
+13009,Epouvante-horreur,2
+13010,Erotique,5
+13012,Fantastique,50
+13013,Comédie musicale,9
+13014,Guerre,7
+13015,Historique,10
+13016,Arts Martiaux,12
+13017,Divers,0
+13018,Policier,57
+13019,Western,10
+13021,Science Fiction,56
+13022,Espionnage,16
+13023,Thriller,64
+13024,Romance,29
+13025,Action,133
+13026,Animation,58
+13027,Biopic,18
+13028,Péplum,0
+13030,Médical,0
+13031,Judiciaire,5
+13032,Feuilleton,0
+13033,Expérimental,0
+13036,Famille,37
+13040,Classique,0
+13043,Musical,2
+13045,Web Séries,0
+13047,Bollywood,0
+13048,Opéra,0
+13049,Concert,0
+13050,Évènement Sportif,0
+13051,Spectacle,0
+13054,Drama,0

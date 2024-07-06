@@ -1,0 +1,102 @@
+id,title,duration,genres,year,countries,press rating,spectator rating
+323024,Anora,139,[13002],2024.0,['U.S.A.'],,
+297303,Anatomie d’une chute,151,"[13018, 13008, 13031, 13023]",2023.0,['France'],4.4,4.1
+256851,Sans filtre,149,"[13005, 13008]",2022.0,"['Suède', 'Allemagne', 'France', 'Danemark']",3.2,3.7
+277192,Titane,108,"[13008, 13009, 13023]",2021.0,"['France', 'Belgique']",3.5,2.5
+255238,Parasite,132,"[13008, 13023]",2019.0,['Corée du Sud'],4.8,4.5
+262694,Une Affaire de famille,121,[13008],2018.0,['Japon'],4.5,4.2
+248683,The Square,142,[13002],2017.0,"['Suède', 'Allemagne', 'Danemark', 'France']",3.2,3.3
+241697,"Moi, Daniel Blake",101,[13008],2016.0,"['Grande-Bretagne', 'France', 'Belgique']",3.9,4.2
+232070,Dheepan,115,[13008],2015.0,['France'],3.6,3.7
+220032,Winter Sleep,196,[13008],2014.0,"['Turquie', 'France', 'Allemagne']",3.8,3.8
+203302,La Vie d'Adèle - Chapitres 1 et 2,177,"[13008, 13024]",2013.0,['France'],4.6,3.5
+188067,Amour,127,[13008],2012.0,"['France', 'Allemagne', 'Autriche']",4.4,3.8
+132244,The Tree of Life,138,"[13008, 13012]",2011.0,['U.S.A.'],3.5,2.8
+180417,Oncle Boonmee (celui qui se souvient de ses vies antérieures),113,"[13005, 13008, 13012]",2010.0,"['France', 'Grande-Bretagne', 'Espagne', 'Thaïlande', 'Allemagne', 'Pays-Bas']",3.7,2.4
+131948,Le Ruban blanc,144,[13008],2009.0,"['Autriche', 'Allemagne', 'France', 'Italie']",4.1,3.6
+58151,Entre les murs,128,[13008],2008.0,['France'],4.5,3.5
+127944,"4 mois, 3 semaines, 2 jours",113,[13008],2007.0,"['Roumanie', 'Belgique']",4.4,3.7
+110201,Le Vent se lève,124,"[13008, 13015, 13014]",2006.0,"['Grande-Bretagne', 'Espagne', 'Italie', 'Irlande', 'Allemagne']",3.8,2.9
+59638,L'Enfant,95,[13008],2005.0,"['France', 'Belgique']",4.3,1.9
+256279,Fahrenheit 11/9,128,[13007],2018.0,['U.S.A.'],2.7,3.9
+52588,Elephant,81,[13008],2003.0,['U.S.A.'],4.4,3.7
+28359,Le Pianiste,148,"[13008, 13015]",2002.0,"['France', 'Grande-Bretagne', 'Allemagne', 'Pologne']",4.1,4.4
+28578,La Chambre du fils,99,[13008],2001.0,"['Italie', 'France']",4.4,3.8
+26095,Dancer in the Dark,139,"[13018, 13008, 13013]",2000.0,"['Pays-Bas', 'Suède', 'Danemark', 'Finlande', 'Islande', 'Allemagne', 'France', 'U.S.A.', 'Grande-Bretagne', 'Norvège']",3.7,3.7
+20089,Rosetta,90,[13008],1999.0,"['U.S.A.', 'France', 'Belgique']",4.3,3.0
+19087,L'Eternité et un jour,132,[13008],1998.0,"['France', 'Italie', 'Allemagne', 'Grèce']",,3.6
+11494,L'Anguille,117,[13008],1997.0,['Japon'],,3.7
+9121,Le Goût de la cerise,99,[13008],1997.0,"['Iran', 'France']",,3.7
+15225,Secrets et mensonges,142,[13008],1996.0,"['France', 'Grande-Bretagne']",,3.8
+13249,Underground,164,"[13002, 13014]",1995.0,"['Yougoslavie', 'France', 'Allemagne', 'Bulgarie', 'République tchèque', 'Hongrie', 'Grande-Bretagne', 'U.S.A.']",4.7,4.0
+10126,Pulp Fiction,149,"[13018, 13008]",1994.0,['U.S.A.'],4.4,4.5
+7807,La Leçon de piano,121,"[13008, 13024]",1993.0,"['Nouvelle-Zélande', 'Australie', 'France']",,4.1
+99677,Adieu ma concubine,173,"[13008, 13024]",1993.0,"['Hong-Kong', 'Chine']",,3.9
+90412,Les Meilleures intentions,180,"[13027, 13008, 13024]",2013.0,"['France', 'Grande-Bretagne', 'Italie', 'Norvège', 'Suède', 'Finlande', 'Islande', 'Allemagne', 'Danemark']",,3.9
+7017,Barton Fink,116,"[13002, 13023]",1991.0,['U.S.A.'],5.0,3.9
+5981,Sailor et Lula,125,"[13002, 13024, 13023]",1990.0,['U.S.A.'],4.0,3.7
+5012,"Sexe, mensonges et vidéo",96,[13002],1989.0,['U.S.A.'],,3.4
+37988,Pelle le conquérant,157,[13008],1988.0,"['Danemark', 'Suède']",,3.8
+2642,Sous le soleil de Satan,103,[13008],1987.0,['France'],,2.9
+2152,Mission,125,"[13001, 13008, 13015]",1986.0,"['U.S.A.', 'Grande-Bretagne']",,4.1
+85145,Papa est en voyage d'affaires,136,[13008],1985.0,['Yougoslavie'],,3.8
+263,"Paris, Texas",148,[13008],1984.0,"['France', 'Allemagne', 'Grande-Bretagne', 'U.S.A.', ""Allemagne de l'Ouest""]",,4.2
+128,La Ballade de Narayama,131,[13008],1983.0,['Japon'],,3.9
+53029,La Permission,110,[13008],1982.0,"['Suisse', 'Turquie']",,3.6
+2529,Missing (Porté disparu),122,[13008],1982.0,['U.S.A.'],,3.8
+3244,L'Homme de fer,153,"[13008, 13015]",1981.0,['Pologne'],,3.3
+955,"Kagemusha, l'ombre du guerrier",179,"[13008, 13015, 13014]",1980.0,"['Japon', 'U.S.A.']",5.0,4.2
+1629,Que le spectacle commence !,125,"[13008, 13013]",1980.0,['U.S.A.'],,4.1
+1153,Le Tambour,162,[13008],1979.0,"['Pologne', ""Allemagne de l'Ouest"", 'France', 'Yougoslavie']",,3.6
+27061,Apocalypse Now Final Cut,182,"[13008, 13014]",1979.0,['U.S.A.'],4.8,4.4
+2086,L'Arbre aux sabots,178,"[13008, 13015]",1978.0,['Italie'],,3.8
+1843,Padre Padrone,113,"[13027, 13008]",1977.0,['Italie'],,3.7
+308,Taxi Driver,115,"[13018, 13008, 13023]",1976.0,['U.S.A.'],4.8,4.3
+7160,Chronique des Années de Braise,177,[13008],1975.0,['Algérie'],,3.9
+9955,Conversation secrète,113,"[13008, 13022, 13023]",1974.0,['U.S.A.'],4.7,3.7
+995,L'Epouvantail,104,[13008],1973.0,['U.S.A.'],,3.9
+9917,La Méprise,110,[13008],2022.0,['Grande-Bretagne'],,3.3
+27558,L'Affaire Mattei,114,"[13027, 13008]",,['Italie'],,3.5
+6095,La Classe ouvrière va au paradis,125,[13008],1972.0,['Italie'],,3.7
+876,Le Messager,116,[13008],1971.0,['Grande-Bretagne'],,4.1
+10053,M.A.S.H.,116,"[13005, 13014]",1970.0,['U.S.A.'],3.0,3.7
+105754,If....,111,[13008],2011.0,['Grande-Bretagne'],5.0,3.8
+1422,Blow Up,110,[13008],1967.0,"['Grande-Bretagne', 'Italie']",4.7,3.7
+4013,Ces messieurs dames,118,[13005],2009.0,"['France', 'Italie']",4.7,3.9
+1334,Un homme et une femme,100,"[13002, 13024]",1966.0,['France'],,3.9
+31526,Le Knack... et comment l'avoir,84,[13005],,['Grande-Bretagne'],,2.7
+495,Les Parapluies de Cherbourg,91,[13013],1964.0,"[""Allemagne de l'Ouest"", 'France']",5.0,3.5
+1766,Le Guépard,185,"[13008, 13015, 13014]",1963.0,"['France', 'Italie']",5.0,4.0
+3759,La Parole donnée,97,[13008],2008.0,['Brésil'],,3.6
+1244,Viridiana,90,[13008],2006.0,"['Espagne', 'Mexique']",,4.0
+41785,Une Aussi longue absence,98,[13008],2016.0,"['France', 'Italie']",,3.6
+4459,La Dolce Vita,176,"[13005, 13002, 13008]",1960.0,"['France', 'Italie']",,4.0
+261,Orfeu negro,105,"[13005, 13008, 13043, 13024]",1959.0,"['France', 'Brésil', 'Italie']",3.5,3.9
+2043,Quand passent les cigognes,97,"[13008, 13024, 13014]",1958.0,"['URSS', 'Russie']",4.2,4.3
+22122,La Loi du Seigneur,140,"[13008, 13014, 13019]",1957.0,['U.S.A.'],,3.5
+5769,Le Monde du silence,86,[13007],1956.0,"['Italie', 'France']",,3.1
+49971,Marty,91,"[13008, 13024]",1955.0,['U.S.A.'],3.0,3.7
+4970,La Porte de l'enfer,89,"[13008, 13015, 13024]",1954.0,['Japon'],5.0,3.5
+2513,Le Salaire de la Peur,151,"[13001, 13023]",1953.0,"['France', 'Italie']",,4.2
+6096,Deux sous d'espoir,110,"[13008, 13024]",1952.0,['Italie'],,3.5
+594,Othello,95,"[13008, 13024]",1952.0,"['France', 'Italie', 'Maroc', 'U.S.A.']",,4.0
+1651,Miracle à Milan,100,"[13002, 13012]",1951.0,['Italie'],,3.9
+1324,Mademoiselle Julie,90,"[13008, 13024]",2014.0,['Suède'],,3.6
+1826,Le Troisième homme,104,"[13018, 13008, 13023]",1949.0,['Grande-Bretagne'],4.6,4.1
+1094,Feux croisés,86,"[13018, 13008]",2022.0,['U.S.A.'],,3.1
+1099,Antoine et Antoinette,78,[13002],1947.0,['France'],,3.8
+37042,Les Maudits,105,[13008],2010.0,['France'],,3.5
+22037,Dumbo,64,"[13026, 13013]",1947.0,['U.S.A.'],,3.8
+621,Ziegfeld Follies,110,[13013],,['U.S.A.'],,3.5
+3622,"Rome, ville ouverte",105,[13008],1946.0,['Italie'],,4.0
+16126,Les Hommes sans ailes,75,[13008],,['Tchécoslovaquie'],,
+130257,La dernière chance,113,"[13008, 13014]",,['Suisse'],,
+6699,La Symphonie Pastorale,95,[13008],1946.0,['France'],,3.4
+2025,Le Tournant decisif,108,[13008],,['Russie'],,
+6955,Maria Candelaria,101,[13008],,['Mexique'],,3.0
+4291,Brève Rencontre,86,"[13008, 13024]",1946.0,['Grande-Bretagne'],,4.2
+193367,La ville basse,122,[13008],,['Inde'],,
+174825,La terre sera rouge,85,"[13008, 13014]",,['Danemark'],,
+65267,Le Poison,100,[13008],2001.0,['U.S.A.'],,4.2
+53953,Tourments,101,[13008],2023.0,['Suède'],,3.8
+2909,Pacific Express,135,[13019],1940.0,['U.S.A.'],,3.4

@@ -13,20 +13,22 @@ class Film:
 
     Attributes
     ----------
-    id : integer
+    __id : integer
         Identifier of the film on Allocine.
-    title : string
+    __title : string
         Title of the film.
-    duration : integer
+    __duration : integer
         Duration of the film in minutes.
-    genres : list of string
-        Genres of the film.
-    year : integer
+    __genres : list of integers
+        Genres' id of the film.
+    __year : integer
         Release year of the film.
-    countries : list of string
+    __countries : list of string
         List of countries of the film.
-    total : dictionary
-        All the film's information.
+    __press_rating : float
+        Press rating of the film.
+    __spectator_rating : float
+        Spectator rating of the film.
 
     Public methods
     -------
@@ -43,9 +45,9 @@ class Film:
     get_duration() -> int
         Get the film's duration.
     set_genres(html_code: str)
-        Set the film's genres.
-    get_genres() -> list of str
-        Get the film's genres.
+        Set the film's genres id.
+    get_genres() -> list of int
+        Get the film's genres id.
     set_year(html_code: str)
         Set the film's release year.
     get_year() -> int
@@ -54,16 +56,32 @@ class Film:
         Set the list of countries of the film.
     get_countries() -> list of str
         Get the list of countries of the film.
-    set_total()
-        Set all the film's information.
-    get_total() -> dict
-        Get all the film's information.
+    set_press_rating(html_code: str)
+        Set the press rating of the film.
+    get_press_rating() -> float
+        Get the press rating of the film.
+    set_spectator_rating(html_code: str)
+        Set the spectator rating of the film.
+    get_spectator_rating() -> float
+        Get the spectator rating of the film.
     """
 
+    # pylint: disable=R0902
+
     def __init__(self, film_id):
-        self.set_id(film_id)
-        url = f"https://www.allocine.fr/film/fichefilm_gen_cfilm" \
-              f"={self.__id}.html"
+        self.__id = film_id
+        self.__title = None
+        self.__duration = None
+        self.__genres = None
+        self.__year = None
+        self.__countries = None
+        self.__press_rating = None
+        self.__spectator_rating = None
+
+        url = (
+            f"https://www.allocine.fr/film/fichefilm_gen_cfilm={self.__id}.htm"
+            f"l"
+        )
         response = requests.get(url, timeout=10)
         html_code = str(BeautifulSoup(response.content, "html.parser"))
         self.set_title(html_code)
@@ -71,7 +89,8 @@ class Film:
         self.set_genres(html_code)
         self.set_year(html_code)
         self.set_countries(html_code)
-        self.set_total()
+        self.set_press_rating(html_code)
+        self.set_spectator_rating(html_code)
 
     def set_id(self, film_id):
         """
@@ -79,7 +98,7 @@ class Film:
 
         Parameters
         ----------
-        id : integer
+        film_id : integer
             Value of the film's identifier on Allocine.
 
         Returns
@@ -112,8 +131,9 @@ class Film:
         -------
         None.
         """
-        pattern_title = r'<div class="titlebar-title titlebar-title-xl">' \
-                        r'(.*?)</div>'
+        pattern_title = (
+            r'<div class="titlebar-title titlebar-title-xl">(.*?)</div>'
+        )
         self.__title = re.findall(pattern_title, html_code)[0]
 
     def get_title(self):
@@ -140,14 +160,16 @@ class Film:
         -------
         None.
         """
-        pattern_duration = r'<span class="spacer">\|</span>\s*(.*?)\s*' \
-                           r'<span class="spacer">\|</span>'
+        pattern_duration = (
+            r'<span class="spacer">\|</span>\s*(.*?)\s*<span class="spacer">\|'
+            r"</span>"
+        )
         duration = re.findall(pattern_duration, html_code)
         if duration:
             duration = duration[0]
             self.__duration = int(duration[0]) * 60 + int(duration[3:5])
-        else:
-            self.__duration = None
+        if self.__id == 228223:
+            self.__duration = 99
 
     def get_duration(self):
         """
@@ -162,7 +184,7 @@ class Film:
 
     def set_genres(self, html_code):
         """
-        Set the film's genres.
+        Set the film's genres id.
 
         Parameters
         ----------
@@ -173,17 +195,18 @@ class Film:
         -------
         None.
         """
-        pattern_genres = r'"movie_genres":"(.*?)"'
-        self.__genres = re.findall(pattern_genres, html_code)[0].split('|')
+        pattern_genres = r'"genre":\["(.*?)"\]'
+        genres = re.findall(pattern_genres, html_code)[0].split('","')
+        self.__genres = [int(genre) for genre in genres]
 
     def get_genres(self):
         """
-        Get the film's genres.
+        Get the film's genres id.
 
         Returns
         -------
-        list of string
-            List of genres of the film.
+        list of int
+            List of genres' id of the film.
         """
         return self.__genres
 
@@ -204,10 +227,10 @@ class Film:
         year = re.findall(pattern_year, html_code)
         if year:
             self.__year = int(year[0])
-        else:
-            self.__year = None
         if self.__id == 4327:  # Error on Allocine website
             self.__year = 1963
+        elif self.__id == 176238:
+            self.__year = 2009
 
     def get_year(self):
         """
@@ -247,32 +270,71 @@ class Film:
         """
         return self.__countries
 
-    def set_total(self):
+    def set_press_rating(self, html_code):
         """
-        Set all the film's information.
+        Set the press rating of the film.
+
+        Parameters
+        ----------
+        html_code : string
+            HTML code of the film's page.
 
         Returns
         -------
-        dictionary
-            All the film's information.
+        None.
         """
-        self.__total = {'id': self.__id,
-                        'title': self.__title,
-                        'duration': self.__duration,
-                        'genres': self.__genres,
-                        'year': self.__year,
-                        'countries': self.__countries}
+        pattern_press_rating = (
+            r"Presse </span>.*?<span class=\"stareval-note\">(.*?)</span>"
+        )
+        rating = re.findall(pattern_press_rating, html_code, re.DOTALL)
+        if len(rating) == 1:  # If there is a rating
+            self.__press_rating = float(rating[0].replace(",", "."))
+        else:
+            self.__press_rating = float("nan")
 
-    def get_total(self):
+    def get_press_rating(self):
         """
-        Get all the film's information.
+        Get the press rating of the film.
 
         Returns
         -------
-        dictionary
-            All the film's information.
+        float
+            Press rating of the film.
         """
-        return self.__total
+        return self.__press_rating
+
+    def set_spectator_rating(self, html_code):
+        """
+        Set the spectator rating of the film.
+
+        Parameters
+        ----------
+        html_code : string
+            HTML code of the film's page.
+
+        Returns
+        -------
+        None.
+        """
+        pattern_spectator_rating = (
+            r"Spectateurs </span>.*?<span class=\"stareval-note\">(.*?)</span>"
+        )
+        rating = re.findall(pattern_spectator_rating, html_code, re.DOTALL)
+        if len(rating) == 1:  # If there is a rating
+            self.__spectator_rating = float(rating[0].replace(",", "."))
+        else:
+            self.__spectator_rating = float("nan")
+
+    def get_spectator_rating(self):
+        """
+        Get the spectator rating of the film.
+
+        Returns
+        -------
+        float
+            Spectator rating of the film.
+        """
+        return self.__spectator_rating
 
 
 if __name__ == "__main__":

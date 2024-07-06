@@ -1,0 +1,51 @@
+id,title,duration,genres,year,countries,press rating,spectator rating
+297303,Anatomie d’une chute,151,"[13018, 13008, 13031, 13023]",2023,['France'],4.4,4.1
+295635,La Nuit du 12,114,"[13018, 13023]",2022,"['France', 'Belgique']",4.4,4.0
+273621,Illusions Perdues,150,"[13008, 13015]",2021,['France'],4.0,4.3
+274345,Adieu Les Cons,87,[13005],2020,['France'],3.7,3.9
+273579,Les Misérables,105,"[13018, 13008]",2019,['France'],4.3,4.0
+248039,Jusqu’à la Garde,94,"[13008, 13023]",2018,['France'],4.2,4.1
+245592,120 battements Par Minute,143,[13008],2017,['France'],4.6,4.2
+231874,Elle,126,"[13008, 13023]",2016,"['France', 'Allemagne', 'Belgique']",4.3,3.4
+227827,Fatima,79,"[13008, 13036]",2015,"['France', 'Canada']",4.3,3.5
+225923,Timbuktu,96,[13008],2014,"['France', 'Mauritanie']",4.2,3.8
+180103,"Les Garçons et Guillaume, à table !",87,[13005],2013,['France'],3.9,3.6
+188067,Amour,127,[13008],2012,"['France', 'Allemagne', 'Autriche']",4.4,3.8
+183070,The Artist,100,"[13005, 13008, 13024]",2011,['France'],4.1,4.0
+56826,Des hommes et des dieux,120,[13008],2010,['France'],4.1,3.4
+110268,Un prophète,155,"[13018, 13008]",2009,"['France', 'Italie']",4.6,4.2
+126513,Séraphine,125,"[13027, 13008]",2008,"['France', 'Belgique']",3.6,3.5
+61185,La Graine et le mulet,151,[13008],2007,['France'],4.7,3.4
+61490,Lady Chatterley,158,"[13008, 13024]",2006,"['France', 'Belgique']",4.4,3.0
+57956,De battre mon coeur s'est arrêté,107,[13008],2005,['France'],4.5,3.7
+48230,L'esquive,117,[13002],2004,['France'],4.7,2.8
+52584,Les Invasions barbares,99,[13002],2003,"['France', 'Canada']",3.2,3.3
+28359,Le Pianiste,148,"[13008, 13015]",2002,"['France', 'Grande-Bretagne', 'Allemagne', 'Pologne']",4.1,4.4
+27063,Le Fabuleux destin d'Amélie Poulain,120,"[13005, 13012, 13024]",2001,['France'],4.4,3.9
+22758,Le goût des autres,112,"[13002, 13024]",2000,['France'],4.2,3.7
+14954,Vénus beauté (institut),105,"[13002, 13024]",1999,['France'],4.1,2.3
+97639,La vie rêvée des anges,113,[13008],1998,['France'],,3.2
+9118,On connaît la chanson,120,"[13002, 13043, 13024]",1997,"['Grande-Bretagne', 'France', 'Suisse', 'Italie']",,3.4
+14661,Ridicule,102,[13002],1996,['France'],3.6,3.5
+12551,La Haine,95,[13008],1995,['France'],4.6,4.1
+10134,Les Roseaux sauvages,110,"[13008, 13024]",1994,['France'],,3.6
+8962,Smoking/No Smoking,298,[13002],1993,"['France', 'Italie', 'Suisse']",,3.3
+7312,Les Nuits Fauves,126,"[13027, 13008]",1992,"['France', 'Italie']",,3.0
+1918,Tous les matins du monde,115,"[13027, 13008, 13043]",1991,['France'],,3.7
+5544,Cyrano de Bergerac,135,"[13002, 13015, 13024]",1990,['France'],,4.1
+4735,Trop belle pour toi,92,[13002],1989,['France'],,3.1
+4288,Camille Claudel,175,"[13027, 13008]",1988,['France'],,3.6
+2725,Au revoir les enfants,105,"[13008, 13014]",1987,"['France', ""Allemagne de l'Ouest"", 'Italie']",,4.0
+2120,Thérèse,94,"[13027, 13015]",1986,['France'],,3.7
+641,Trois hommes et un couffin,100,[13005],1985,['France'],,3.2
+32758,Les Ripoux,107,[13005],1984,['France'],,3.4
+126,Le Bal,112,[13005],1983,"['Italie', 'France']",4.0,3.9
+613,À nos amours,95,[13008],1983,['France'],,3.6
+28043,La Balance,102,[13018],1982,['France'],,3.3
+738,La guerre du feu,100,"[13001, 13008, 13015]",1981,"['Canada', 'France']",5.0,3.7
+169,Le Dernier métro,133,"[13008, 13024, 13014]",1980,['France'],3.3,4.0
+823,Tess,171,"[13008, 13024]",1979,"['Grande-Bretagne', 'France']",5.0,3.8
+43270,L'Argent des autres,105,[13002],1978,['France'],,3.4
+278,Providence,110,[13008],1977,"['Suisse', 'France']",4.5,3.6
+68249,Monsieur Klein,123,"[13008, 13031]",1976,"['Italie', 'France']",,3.9
+20810,Le vieux fusil,103,"[13008, 13023, 13014]",1975,"['France', 'Allemagne']",,4.2

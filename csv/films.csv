@@ -1,538 +1,548 @@
-id,title,duration,genres,year,countries
-125562,Mamma Mia!,110,"['COMEDY', 'MUSICAL', 'ROMANCE']",2008,"['U.S.A.', 'Grande-Bretagne', 'Allemagne']"
-297,Les Sept Samouraïs,207,"['ACTION', 'ADVENTURE']",1955,['Japon']
-46937,Les Bravados,98,"['DRAMA', 'WESTERN']",1957,['U.S.A.']
-204925,Hunger Games - La Révolte : Partie 2,137,"['ADVENTURE', 'SCIENCE_FICTION', 'WARMOVIE']",2015,['U.S.A.']
-200088,Hunger Games - La Révolte : Partie 1,123,"['ACTION', 'DRAMA', 'SCIENCE_FICTION']",2014,['U.S.A.']
-196666,Hunger Games - L'embrasement,146,"['ACTION', 'DRAMA', 'SCIENCE_FICTION']",2013,['U.S.A.']
-250664,Ip Man 4 : Le dernier combat,105,"['ACTION', 'BIOPIC', 'DRAMA', 'MARTIAL_ARTS']",2020,"['Hong-Kong', 'Chine']"
-145083,Hunger Games,142,"['ACTION', 'DRAMA', 'SCIENCE_FICTION']",2012,['U.S.A.']
-53879,Kill Bill: Volume 2,135,"['ACTION', 'MARTIAL_ARTS', 'THRILLER']",2004,['U.S.A.']
-28541,Kill Bill: Volume 1,112,"['ACTION', 'MARTIAL_ARTS', 'THRILLER']",2003,['U.S.A.']
-14788,Trainspotting,93,"['DETECTIVE', 'DRAMA']",1996,['Grande-Bretagne']
-479,Les Demoiselles de Rochefort,125,['MUSICAL'],1967,['France']
-273579,Les Misérables,105,"['DETECTIVE', 'DRAMA']",2019,['France']
-197379,Point Break,113,['ACTION'],2016,['U.S.A.']
-16731,Le Dîner de cons,80,['COMEDY'],1998,['France']
-316372,American Fiction,117,"['COMEDY', 'COMEDY_DRAMA', 'DRAMA']",2024,['U.S.A.']
-299937,Le Procès Goldman,116,"['DETECTIVE', 'DRAMA', 'HISTORICAL', 'JUDICIAL']",2023,['France']
-279636,Chien de la casse,93,['COMEDY_DRAMA'],2023,['France']
-666,Emmanuelle,90,['EROTIC'],1974,['France']
-256426,Johnny English contre-attaque,89,"['COMEDY', 'SPY']",2018,['Grande-Bretagne']
-219262,Batman v Superman : L’Aube de la Justice,153,"['ACTION', 'ADVENTURE', 'FANTASY']",2016,['U.S.A.']
-315119,Yannick,67,['COMEDY'],2023,['France']
-224799,Cars 3,102,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'FANTASY']",2017,['U.S.A.']
-295635,La Nuit du 12,114,"['DETECTIVE', 'THRILLER']",2022,"['France', 'Belgique']"
-135215,Le Garçon au pyjama rayé,90,"['DRAMA', 'WARMOVIE']",2009,"['U.S.A.', 'Grande-Bretagne']"
-260,Orange mécanique,136,"['DRAMA', 'SCIENCE_FICTION']",1972,"['Grande-Bretagne', 'U.S.A.']"
-299938,Je verrai toujours vos visages,118,['DRAMA'],2023,['France']
-14790,Mon voisin Totoro,87,['ANIMATION'],1999,['Japon']
-26190,Le Journal d'une femme de chambre,92,"['COMEDY_DRAMA', 'DETECTIVE', 'DRAMA']",1964,"['France', 'Italie']"
-288402,Les Trois Mousquetaires: D'Artagnan,121,"['ADVENTURE', 'HISTORICAL']",2023,"['France', 'Allemagne', 'Espagne']"
-20361,C'est pas parce qu'on n'a rien a dire qu'il faut fermer sa gueule,90,['COMEDY'],1975,['France']
-269975,Spider-Man : Across The Spider-Verse,141,"['ACTION', 'ADVENTURE', 'ANIMATION', 'FANTASY']",2023,['U.S.A.']
-275707,La Communion,115,['DRAMA'],2020,"['Pologne', 'France']"
-324,Les Valseuses,123,"['COMEDY', 'DRAMA', 'EROTIC']",1974,['France']
-290915,Novembre,107,"['DETECTIVE', 'THRILLER']",2022,['France']
-226078,L'Âge de Glace : les Lois de l'Univers,94,"['ANIMATION', 'FAMILY']",2016,['U.S.A.']
-198371,Imitation Game,115,"['BIOPIC', 'DRAMA']",2015,['U.S.A.']
-181893,Polisse,127,['DRAMA'],2011,['France']
-173087,Barbie,115,"['ADVENTURE', 'COMEDY', 'FAMILY']",2023,"['U.S.A.', 'Grande-Bretagne']"
-184989,Le Garçon et le Héron,123,"['ADVENTURE', 'ANIMATION', 'DRAMA']",2023,['Japon']
-54226,Da Vinci Code,152,['THRILLER'],2006,['U.S.A.']
-103306,Copains pour toujours,102,['COMEDY'],2010,['U.S.A.']
-2072,Vol au-dessus d'un nid de coucou,129,['DRAMA'],1976,['U.S.A.']
-111835,OSS 117 : Rio ne répond plus,100,"['COMEDY', 'SPY']",2009,['France']
-258374,Joker,122,['DRAMA'],2019,"['U.S.A.', 'Canada']"
-136666,Les Beaux Gosses,90,['COMEDY'],2009,['France']
-3326,Princess Bride,98,"['ADVENTURE', 'FANTASY']",1988,['U.S.A.']
-300856,3 jours max,87,"['ACTION', 'COMEDY']",2023,['France']
-2749,Full Metal Jacket,116,"['DRAMA', 'WARMOVIE']",1987,"['U.S.A.', 'Grande-Bretagne']"
-7524,Reservoir Dogs,99,"['DETECTIVE', 'THRILLER']",1992,['U.S.A.']
-83,L'Année dernière à Marienbad,94,"['DRAMA', 'ROMANCE']",1961,"['Italie', 'France']"
-297303,Anatomie d’une chute,151,"['DETECTIVE', 'DRAMA', 'JUDICIAL', 'THRILLER']",2023,['France']
-234099,"Super Mario Bros, le film",92,"['ANIMATION', 'COMEDY', 'FAMILY']",2023,"['U.S.A.', 'Japon']"
-304913,Sentinelle,99,"['COMEDY', 'DETECTIVE']",2023,['France']
-1325,Les Rivières pourpres,105,"['DETECTIVE', 'THRILLER']",2000,['France']
-52648,L'enquête Corse,92,"['COMEDY', 'DETECTIVE']",2004,['France']
-29338,La Cage aux folles,103,['COMEDY'],1978,"['France', 'Italie']"
-20810,Le vieux fusil,103,"['DRAMA', 'THRILLER', 'WARMOVIE']",1975,"['France', 'Allemagne']"
-60208,Inglourious Basterds,153,"['ACTION', 'WARMOVIE']",2009,"['U.S.A.', 'Allemagne']"
-4963,La Nuit du chasseur,92,"['DRAMA', 'HORROR', 'THRILLER']",1956,['U.S.A.']
-187191,Astérix - Le Domaine des Dieux,86,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2014,"['France', 'Belgique']"
-19776,Matrix,135,"['ACTION', 'SCIENCE_FICTION']",1999,"['U.S.A.', 'Australie']"
-256312,Fatima,113,"['DRAMA', 'HISTORICAL']",2021,['Portugal']
-29071,La Mémoire dans la peau,118,"['ACTION', 'SPY', 'THRILLER']",2002,"['U.S.A.', 'Allemagne', 'République tchèque']"
-12037,Le Pacha,90,['DETECTIVE'],1968,"['Italie', 'France']"
-193921,Les Saveurs du palais,95,['COMEDY'],2012,['France']
-193715,Dans la maison,105,['THRILLER'],2012,['France']
-296168,Oppenheimer,181,"['BIOPIC', 'HISTORICAL', 'THRILLER']",2023,['U.S.A.']
-141808,Gatsby le Magnifique,142,"['DRAMA', 'ROMANCE']",2013,"['Australie', 'U.S.A.']"
-241116,Don't Tell Her,96,['COMEDY'],2017,"['Belgique', 'France']"
-308,Taxi Driver,115,"['DETECTIVE', 'DRAMA', 'THRILLER']",1976,['U.S.A.']
-227602,Un homme idéal,97,['THRILLER'],2015,['France']
-182013,Colombiana,105,['ACTION'],2011,"['France', 'U.S.A.', 'Grande-Bretagne']"
-25744,Memento,116,"['DETECTIVE', 'THRILLER']",2000,['U.S.A.']
-303483,Chili 1976,95,['DRAMA'],2023,['Chili']
-54484,Miss FBI : divinement armée,115,"['ACTION', 'COMEDY', 'DETECTIVE']",2005,"['U.S.A.', 'Australie']"
-251713,La Mort dans l'Âme,100,"['DETECTIVE', 'DRAMA']",2018,['France']
-39141,Le Flic de Beverly Hills 2,102,"['COMEDY', 'DETECTIVE', 'THRILLER']",1987,['U.S.A.']
-256661,Green Book : Sur les routes du sud,130,"['BIOPIC', 'DRAMA']",2019,['U.S.A.']
-292132,Plancha,98,['COMEDY'],2022,['France']
-33280,Le coup du parapluie,90,"['COMEDY', 'DETECTIVE']",1980,['France']
-26861,Miss Détective,109,"['ACTION', 'COMEDY']",2001,"['Australie', 'U.S.A.']"
-221400,Big Game,91,"['ACTION', 'ADVENTURE']",2018,"['Finlande', 'Grande-Bretagne', 'Allemagne']"
-39139,Le Flic de Beverly Hills,105,"['ACTION', 'COMEDY', 'DETECTIVE']",1985,['U.S.A.']
-13892,Seven,130,"['DETECTIVE', 'DRAMA', 'THRILLER']",1996,['U.S.A.']
-263242,Black Panther: Wakanda Forever,162,"['ACTION', 'ADVENTURE', 'FANTASY']",2022,['U.S.A.']
-275207,Thor: Love And Thunder,119,"['ACTION', 'ADVENTURE', 'FANTASY', 'SCIENCE_FICTION']",2022,"['U.S.A.', 'Australie']"
-57731,La Moustache,86,['COMEDY_DRAMA'],2005,['France']
-259759,L'Appel de la forêt,100,"['ADVENTURE', 'DRAMA', 'FAMILY']",2020,['U.S.A.']
-178014,Avatar : la voie de l'eau,192,"['ACTION', 'ADVENTURE', 'FANTASY', 'SCIENCE_FICTION']",2022,['U.S.A.']
-261638,Just a Gigolo,94,['COMEDY'],2019,['France']
-284846,Bullet Train,127,"['ACTION', 'THRILLER']",2022,['U.S.A.']
-244560,Astérix - Le Secret de la Potion Magique,86,"['ADVENTURE', 'ANIMATION', 'FAMILY']",2018,['France']
-126112,L'Âge de glace 3 - Le Temps des dinosaures,94,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2009,['U.S.A.']
-287116,Decision To Leave,138,"['DETECTIVE', 'DRAMA', 'ROMANCE', 'THRILLER']",2022,['Corée du Sud']
-290507,Menteur,93,['COMEDY'],2022,['France']
-26163,L'Etoffe des héros,187,"['ADVENTURE', 'DRAMA', 'HISTORICAL', 'SCIENCE_FICTION']",1984,['U.S.A.']
-285935,Irréductible,85,['COMEDY'],2022,['France']
-130769,Sept vies,123,['DRAMA'],2009,['U.S.A.']
-274204,Boîte noire,130,"['DRAMA', 'THRILLER']",2021,['France']
-275354,Chacun chez soi,84,['COMEDY'],2021,['France']
-2361,La Chèvre,95,"['ADVENTURE', 'COMEDY', 'DETECTIVE']",1981,"['France', 'Mexique']"
-10491,Maverick,127,"['ADVENTURE', 'COMEDY', 'WESTERN']",1994,['U.S.A.']
-108526,Hors de prix,103,['COMEDY'],2006,['France']
-28335,Les compères,92,['COMEDY'],1983,['France']
-29179,Le Raid,94,['COMEDY'],2002,['France']
-285300,Maison de Retraite,97,['COMEDY'],2022,['France']
-2380,Le Corbeau,92,"['DRAMA', 'THRILLER']",1943,['France']
-281976,Goliath,122,['THRILLER'],2022,['France']
-9393,La Liste de Schindler,195,"['BIOPIC', 'DRAMA', 'HISTORICAL']",1994,['U.S.A.']
-110096,"No Country for Old Men - Non, ce pays n'est pas pour le vieil homme",122,"['DETECTIVE', 'DRAMA', 'THRILLER', 'WESTERN']",2008,['U.S.A.']
-278851,Tendre Et Saignant,91,"['COMEDY', 'ROMANCE']",2022,['France']
-285884,Super-héros malgré lui,82,"['ACTION', 'COMEDY']",2022,['France']
-132874,The Dark Knight Rises,164,"['ACTION', 'THRILLER']",2012,"['U.S.A.', 'Grande-Bretagne']"
-115362,"The Dark Knight, Le Chevalier Noir",152,"['ACTION', 'THRILLER']",2008,"['U.S.A.', 'Grande-Bretagne']"
-51013,Batman Begins,140,"['ACTION', 'THRILLER']",2005,"['U.S.A.', 'Grande-Bretagne']"
-4413,Un Poisson nommé Wanda,108,"['COMEDY', 'DETECTIVE']",1989,['U.S.A.']
-110101,Into the Wild,148,"['ADVENTURE', 'BIOPIC', 'DRAMA']",2008,['U.S.A.']
-264475,355,123,"['ACTION', 'SPY', 'THRILLER']",2022,['U.S.A.']
-265358,The King's Man : Première Mission,131,"['ACTION', 'SPY']",2021,['Grande-Bretagne']
-231299,Mademoiselle,151,"['DRAMA', 'ROMANCE']",2016,['Corée du Sud']
-251390,Doctor Strange in the Multiverse of Madness,126,"['ACTION', 'ADVENTURE', 'FANTASY']",2022,['U.S.A.']
-4708,Le Viager,101,['COMEDY'],1972,['France']
-274530,Bac Nord,104,"['DETECTIVE', 'THRILLER']",2021,['France']
-231874,Elle,126,"['DRAMA', 'THRILLER']",2016,"['France', 'Allemagne', 'Belgique']"
-43591,Faites sauter la banque,88,['COMEDY'],2017,['France']
-14178,Casino,178,"['DETECTIVE', 'DRAMA']",1996,"['U.S.A.', 'France']"
-5969,Les Affranchis,145,"['DETECTIVE', 'DRAMA']",1990,['U.S.A.']
-136316,Les Eternels,157,"['ACTION', 'FANTASY', 'SCIENCE_FICTION']",2021,['U.S.A.']
-248039,Jusqu’à la Garde,94,"['DRAMA', 'THRILLER']",2018,['France']
-274345,Adieu Les Cons,87,['COMEDY'],2020,['France']
-287252,Mes très chers enfants,95,['COMEDY'],2021,['France']
-236464,Ip Man 3,105,"['ACTION', 'BIOPIC', 'MARTIAL_ARTS']",2016,['Hong-Kong']
-186452,Lucy,89,"['ACTION', 'SCIENCE_FICTION']",2014,['France']
-285749,Barbaque,88,['COMEDY'],2021,['France']
-45264,La Cité de Dieu,135,"['DETECTIVE', 'DRAMA']",2003,['Brésil']
-4063,12 hommes en colère,95,"['DRAMA', 'JUDICIAL']",1957,['U.S.A.']
-190918,Django Unchained,164,['WESTERN'],2013,['U.S.A.']
-123530,"Snowpiercer, Le Transperceneige",126,"['DRAMA', 'SCIENCE_FICTION']",2013,"['Corée du Sud', 'France', 'U.S.A.', 'République tchèque']"
-277208,Pourris gâtés,95,['COMEDY'],2021,['France']
-277532,Tout Simplement Noir,90,['COMEDY'],2020,['France']
-12551,La Haine,95,['DRAMA'],1995,['France']
-132039,Shutter Island,137,['THRILLER'],2010,['U.S.A.']
-178267,Ip Man 2,108,"['ACTION', 'BIOPIC', 'DRAMA', 'MARTIAL_ARTS']",2011,"['Chine', 'Hong-Kong']"
-2133,Top Gun,110,"['ACTION', 'DRAMA', 'ROMANCE']",1986,['U.S.A.']
-183070,The Artist,100,"['COMEDY', 'DRAMA', 'ROMANCE']",2011,['France']
-114782,Interstellar,169,"['DRAMA', 'SCIENCE_FICTION']",2014,"['U.S.A.', 'Grande-Bretagne']"
-4572,Rain Man,133,['COMEDY_DRAMA'],1989,['U.S.A.']
-243501,Retour chez ma mère,91,['COMEDY'],2016,['France']
-8066,Un jour sans fin,101,"['COMEDY', 'FANTASY']",1993,['U.S.A.']
-41011,8 Mile,110,"['DRAMA', 'MUSIC']",2003,['U.S.A.']
-262383,OSS 117: Alerte rouge en Afrique noire,116,"['ADVENTURE', 'COMEDY', 'SPY']",2021,['France']
-245535,The Suicide Squad,132,"['ACTION', 'ADVENTURE', 'FANTASY']",2021,['U.S.A.']
-233998,Spider-Man : New Generation,117,"['ACTION', 'ANIMATION', 'FAMILY']",2018,['U.S.A.']
-135082,Drive,100,"['ACTION', 'THRILLER']",2011,['U.S.A.']
-55983,Les Infiltrés,150,"['DETECTIVE', 'DRAMA', 'THRILLER']",2006,['U.S.A.']
-256880,Spider-Man: No Way Home,148,"['ACTION', 'ADVENTURE', 'FANTASY']",2021,['U.S.A.']
-270144,Shang-Chi et la Légende des Dix Anneaux,132,"['ACTION', 'FANTASY']",2021,['U.S.A.']
-212358,Mourir peut attendre,163,"['ACTION', 'SPY', 'THRILLER']",2021,"['U.S.A.', 'Grande-Bretagne']"
-126279,Braquage à l'Anglaise,111,"['DETECTIVE', 'THRILLER']",2008,['U.S.A.']
-192186,The Amazing Spider-Man : le destin d'un Héros,142,"['ACTION', 'ADVENTURE', 'FANTASY']",2014,['U.S.A.']
-128188,The Amazing Spider-Man,137,"['ACTION', 'ADVENTURE', 'FANTASY']",2012,['U.S.A.']
-230783,Black Widow,134,"['ACTION', 'ADVENTURE', 'SPY']",2021,['U.S.A.']
-10498,Speed,116,"['ACTION', 'THRILLER']",1994,['U.S.A.']
-1191,Cléo De 5 À 7,90,['DRAMA'],1962,"['Italie', 'France']"
-56136,Spider-Man 3,139,"['ACTION', 'FANTASY']",2007,['U.S.A.']
-261243,La Lutte des Classes,103,['COMEDY'],2019,['France']
-257881,Pupille,110,['DRAMA'],2018,"['France', 'Belgique']"
-46112,Spider-Man 2,127,"['ACTION', 'FANTASY']",2004,['U.S.A.']
-29007,Spider-Man,121,"['ACTION', 'FANTASY']",2002,['U.S.A.']
-268136,Deux Moi,110,['DRAMA'],2019,['France']
-4510,La Bête humaine,100,['DRAMA'],2013,['France']
-232669,Avengers: Endgame,181,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2019,['U.S.A.']
-141110,Captain Marvel,124,"['ACTION', 'FANTASY', 'SCIENCE_FICTION']",2019,['U.S.A.']
-218265,Avengers: Infinity War,156,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2018,['U.S.A.']
-130336,Black Panther,135,"['ACTION', 'ADVENTURE', 'FANTASY', 'SCIENCE_FICTION']",2018,['U.S.A.']
-131868,Bouquet final,101,['COMEDY'],2008,['France']
-223252,Thor : Ragnarok,131,"['ACTION', 'FANTASY']",2017,['U.S.A.']
-255238,Parasite,132,"['DRAMA', 'THRILLER']",2019,['Corée du Sud']
-248768,L'un dans l'autre,85,['COMEDY'],2017,['France']
-226995,Les Gardiens de la Galaxie 2,136,"['ACTION', 'COMEDY', 'SCIENCE_FICTION']",2017,['U.S.A.']
-130533,Doctor Strange,115,"['ADVENTURE', 'FANTASY']",2016,['U.S.A.']
-130438,Ant-Man,117,"['ACTION', 'SCIENCE_FICTION']",2015,"['U.S.A.', 'Grande-Bretagne']"
-198488,Avengers : L'ère d'Ultron,141,"['ACTION', 'ADVENTURE', 'FANTASY']",2015,['U.S.A.']
-193113,"Captain America, le soldat de l'hiver",136,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2014,['U.S.A.']
-193108,Thor : Le Monde des ténèbres,112,"['ACTION', 'ADVENTURE', 'FANTASY']",2013,['U.S.A.']
-121462,Une fiancée pas comme les autres,102,"['COMEDY', 'ROMANCE']",2008,"['U.S.A.', 'Canada']"
-10126,Pulp Fiction,149,"['DETECTIVE', 'DRAMA']",1994,['U.S.A.']
-139589,Iron Man 3,131,"['ACTION', 'SCIENCE_FICTION']",2013,['U.S.A.']
-130440,Avengers,143,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2012,['U.S.A.']
-136557,Captain America : First Avenger,124,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2011,['U.S.A.']
-129477,Thor,115,"['ACTION', 'ADVENTURE', 'FANTASY']",2011,['U.S.A.']
-136190,Iron Man 2,124,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2010,['U.S.A.']
-114820,L'Incroyable Hulk,112,"['ACTION', 'FANTASY']",2008,['U.S.A.']
-53751,Iron Man,126,"['ACTION', 'SCIENCE_FICTION']",2008,['U.S.A.']
-262396,Le Mans 66,153,"['BIOPIC', 'DRAMA']",2019,['U.S.A.']
-266064,Le Lion,95,"['COMEDY', 'SPY']",2020,['France']
-261787,Nous Finirons Ensemble,135,['COMEDY_DRAMA'],2019,['France']
-11199,Le Corniaud,110,['COMEDY'],1965,"['Italie', 'France']"
-89979,Le Cuirassé Potemkine,75,"['DRAMA', 'HISTORICAL']",1926,['Russie']
-47352,Karaté Kid,126,"['ACTION', 'DRAMA', 'MARTIAL_ARTS']",1984,['U.S.A.']
-125433,Le Dernier maître de l'air,103,"['ACTION', 'ADVENTURE', 'FAMILY', 'FANTASY']",2010,['U.S.A.']
-51602,Double zéro,90,['COMEDY'],2004,"['France', 'Grande-Bretagne']"
-193911,Casse-tête chinois,117,"['COMEDY_DRAMA', 'ROMANCE']",2013,['France']
-6272,"Maman, j'ai raté l'avion",103,"['ADVENTURE', 'COMEDY']",1990,['U.S.A.']
-235620,Un Sac De Billes,114,['DRAMA'],2017,"['France', 'Canada', 'République tchèque']"
-35973,Arrête-moi si tu peux,141,"['DRAMA', 'THRILLER']",2003,['U.S.A.']
-221413,#Chef,114,"['COMEDY', 'DRAMA']",2014,['U.S.A.']
-29104,Le Boulet,107,"['ACTION', 'ADVENTURE', 'COMEDY']",2002,['France']
-232740,Don't Breathe - La maison des ténèbres,88,"['HORROR', 'THRILLER']",2016,['U.S.A.']
-135063,Gran Torino,116,['DRAMA'],2009,['U.S.A.']
-221620,Five,102,['COMEDY'],2016,['France']
-129694,Invictus,132,"['BIOPIC', 'DRAMA', 'HISTORICAL']",2010,['U.S.A.']
-275355,30 jours max,87,"['COMEDY', 'DETECTIVE']",2020,['France']
-363,Will Hunting,126,['DRAMA'],1998,['U.S.A.']
-8136,Haute Voltige,113,"['ACTION', 'DETECTIVE', 'ROMANCE', 'THRILLER']",1999,"['Grande-Bretagne', 'Allemagne', 'U.S.A.']"
-45423,Signé Arsène Lupin,100,"['COMEDY', 'DETECTIVE']",2011,"['France', 'Italie']"
-28561,Le Baiser mortel du dragon,98,"['ACTION', 'MARTIAL_ARTS', 'THRILLER']",2001,"['France', 'U.S.A.']"
-14046,Heat,170,"['ACTION', 'DETECTIVE', 'DRAMA']",1996,['U.S.A.']
-146632,Les petits mouchoirs,154,['COMEDY_DRAMA'],2010,['France']
-253927,Première année,92,['DRAMA'],2018,['France']
-18478,Mary à tout prix,119,['COMEDY'],1998,['U.S.A.']
-267948,Premier de la classe,82,['COMEDY'],2019,['France']
-251564,Le Mec de la tombe d'à côté,90,"['COMEDY', 'DRAMA', 'ROMANCE']",2023,['France']
-8865,Nous irons tous au paradis,110,['COMEDY'],1977,['France']
-182990,Mais qui a re-tué Pamela Rose ?,98,['COMEDY'],2012,['France']
-176238,Des nouilles aux haricots noirs,116,"['COMEDY_DRAMA', 'ROMANCE']",,['Corée du Sud']
-228223,L'esprit de famille,,"['COMEDY', 'FAMILY']",2019,['France']
-253900,Garde alternée,104,['COMEDY'],2017,['France']
-12789,Les Dents de la Mer,124,"['ACTION', 'THRILLER']",1975,['U.S.A.']
-36507,L'Homme qui en savait trop,120,['THRILLER'],1956,['U.S.A.']
-236147,Comment c’est loin,90,"['COMEDY', 'MUSICAL']",2015,['France']
-259340,Le Traître,153,"['BIOPIC', 'DRAMA']",2019,"['Italie', 'France', 'Allemagne', 'Brésil']"
-259650,Anna,119,"['ACTION', 'THRILLER']",2019,['France']
-5453,Nikita,117,"['ACTION', 'DETECTIVE', 'THRILLER']",1990,"['Italie', 'France']"
-24657,"Un éléphant, ça trompe énormément",100,['COMEDY'],1976,['France']
-47702,Mais qui a tué Pamela Rose ?,92,"['COMEDY', 'DETECTIVE']",2003,['France']
-12302,Le Cinquième élément,126,"['ACTION', 'SCIENCE_FICTION']",1997,"['France', 'U.S.A.', 'Grande-Bretagne']"
-29668,Le retour du grand blond,80,['COMEDY'],1974,['France']
-4740,Le Grand Blond avec une chaussure noire,90,['COMEDY'],1972,['France']
-231738,Débarquement immédiat,91,['COMEDY'],2016,['France']
-9400,La Cité de la peur,100,['COMEDY'],1994,['France']
-28933,Ghost Rider,110,"['ACTION', 'FANTASY']",2007,['U.S.A.']
-212729,Joséphine,88,"['COMEDY', 'ROMANCE']",2013,['France']
-231740,Joséphine s'arrondit,94,['COMEDY'],2016,['France']
-246587,Sous le même toit,93,['COMEDY'],2017,['France']
-183425,La Croisière,100,['COMEDY'],2011,['France']
-219309,Fonzy,102,['COMEDY'],2013,['France']
-261563,Inséparables,94,['COMEDY'],2019,['France']
-247045,L'Ascension,103,['COMEDY'],2017,['France']
-130203,Salt,101,"['ACTION', 'SPY', 'THRILLER']",2010,['U.S.A.']
-15282,Un air de famille,110,['COMEDY_DRAMA'],1996,['France']
-31518,La Boum 2,107,['COMEDY'],1982,['France']
-99,L'As des As,100,['COMEDY'],1982,"['Allemagne', 'France']"
-1073,West Side Story,153,"['COMEDY_DRAMA', 'MUSICAL']",1962,['U.S.A.']
-61445,Le Diable s'habille en Prada,110,['COMEDY'],2006,['U.S.A.']
-31520,Les Sous-doués en vacances,95,['COMEDY'],1982,['France']
-40868,Les Sous-doués,92,['COMEDY'],1980,['France']
-265572,Divorce Club,108,['COMEDY'],2020,['France']
-1975,Blade Runner,117,['SCIENCE_FICTION'],1982,['U.S.A.']
-58911,V pour Vendetta,130,"['ACTION', 'SCIENCE_FICTION']",2006,"['U.S.A.', 'Allemagne', 'Grande-Bretagne']"
-28430,Intolérable cruauté,100,"['COMEDY', 'ROMANCE']",2003,['U.S.A.']
-266409,La Vie scolaire,111,"['COMEDY', 'DRAMA']",2019,['France']
-4403,La Boum,109,"['COMEDY', 'DRAMA', 'ROMANCE']",1980,['France']
-237561,Kingsman : Le Cercle d'or,141,"['ACTION', 'COMEDY', 'SPY']",2017,"['Grande-Bretagne', 'U.S.A.']"
-47690,La Grande cuisine,112,"['COMEDY', 'THRILLER']",1978,"['France', 'U.S.A.']"
-198771,Kingsman : Services secrets,129,"['ACTION', 'SPY']",2015,"['Grande-Bretagne', 'U.S.A.']"
-183489,Hollywoo,107,['COMEDY'],2011,['France']
-256184,Le Retour du Héros,90,"['COMEDY', 'HISTORICAL']",2018,"['France', 'Belgique']"
-48382,Tais-toi !,85,['COMEDY'],2003,['France']
-9895,Rasta Rockett,108,"['ADVENTURE', 'COMEDY']",1994,['U.S.A.']
-9257,Madame Doubtfire,125,"['COMEDY', 'DRAMA']",1994,['U.S.A.']
-46551,Jeux d'enfants,93,"['COMEDY', 'DRAMA', 'ROMANCE']",2003,"['France', 'Belgique']"
-128181,Le Code A Changé,100,['COMEDY_DRAMA'],2009,['France']
-28560,"Mon beau-père, mes parents et moi",116,['COMEDY'],2005,['U.S.A.']
-226879,Joy,124,"['BIOPIC', 'DRAMA']",2015,['U.S.A.']
-123532,Le Chat Potté,90,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2011,['U.S.A.']
-248355,L'Embarras Du Choix,98,"['COMEDY', 'ROMANCE']",2017,['France']
-249113,Les Ex,84,['COMEDY'],2017,['France']
-236242,Gaston Lagaffe,83,['COMEDY'],2018,['France']
-20711,Mine de rien,85,['COMEDY'],2020,['France']
-56062,Les Brigades du Tigre,125,['DETECTIVE'],2006,['France']
-83984,Classe tous risques,109,"['DETECTIVE', 'DRAMA']",1960,"['France', 'Italie']"
-225707,La Liste du Père Noël,83,"['COMEDY', 'DRAMA', 'FANTASY']",2022,"['U.S.A.', 'Canada']"
-1554,Peter Pan,76,"['ANIMATION', 'FAMILY']",1953,['U.S.A.']
-26862,Monstres &amp; Cie,92,"['ANIMATION', 'COMEDY', 'FAMILY']",2002,['U.S.A.']
-2223,Bambi,68,"['ANIMATION', 'FAMILY']",1948,['U.S.A.']
-139,La Belle et le Clochard,75,"['ANIMATION', 'FAMILY', 'MUSICAL']",1955,['U.S.A.']
-179515,Bienvenue à bord,90,['COMEDY'],2011,['France']
-193459,"Les Miller, une famille en herbe",110,['COMEDY'],2013,['U.S.A.']
-111406,Comment tuer son Boss ?,100,['COMEDY'],2011,['U.S.A.']
-214860,La Famille Bélier,106,['COMEDY'],2014,"['France', 'Belgique']"
-174939,127 heures,94,"['ADVENTURE', 'BIOPIC', 'DRAMA', 'THRILLER']",2011,"['U.S.A.', 'Grande-Bretagne']"
-23497,Mewtwo contre-attaque,95,"['ACTION', 'ADVENTURE', 'ANIMATION']",2000,"['U.S.A.', 'Japon']"
-27477,"Pokémon 2, le pouvoir est en toi",100,['ANIMATION'],2000,"['U.S.A.', 'Japon']"
-260363,Premières vacances,102,['COMEDY'],2019,['France']
-40619,Shrek 2,90,"['ADVENTURE', 'ANIMATION', 'COMEDY', 'FAMILY']",2004,['U.S.A.']
-55718,Shrek le troisième,93,"['ANIMATION', 'COMEDY', 'FANTASY']",2007,['U.S.A.']
-174738,Sur la piste du Marsupilami,105,"['ADVENTURE', 'COMEDY', 'FAMILY']",2012,['France']
-181059,L'Âge de glace : La dérive des continents,94,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2012,['U.S.A.']
-237821,Valérian et la Cité des mille planètes,137,"['ACTION', 'ADVENTURE', 'FANTASY', 'SCIENCE_FICTION']",2017,"['France', 'Chine', 'Belgique', 'Emirats Arabes Unis', 'U.S.A.', 'Allemagne', 'Canada', 'Grande-Bretagne']"
-27415,Shrek,89,"['ANIMATION', 'COMEDY', 'FAMILY', 'FANTASY']",2001,['U.S.A.']
-130631,High School Musical 2 (TV),101,"['COMEDY', 'FAMILY', 'MUSICAL']",2007,['U.S.A.']
-124065,High School Musical,93,['MUSICAL'],2006,['U.S.A.']
-132786,High School Musical 3 : nos années lycée,115,['MUSICAL'],2008,['U.S.A.']
-144713,Kung Fu Panda : Les Secrets des Cinq Cyclones,25,['ANIMATION'],2022,['U.S.A.']
-194397,Kung Fu Panda 3,95,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'MARTIAL_ARTS']",2016,"['U.S.A.', 'Chine']"
-143048,Kung Fu Panda 2,95,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'MARTIAL_ARTS']",2011,['U.S.A.']
-45889,Kung Fu Panda,90,"['ACTION', 'ANIMATION', 'FAMILY', 'MARTIAL_ARTS']",2008,['U.S.A.']
-258107,Escape Game,99,['THRILLER'],2019,"['U.S.A.', 'Afrique du Sud']"
-178496,Gravity,90,"['ADVENTURE', 'THRILLER']",2013,"['U.S.A.', 'Grande-Bretagne']"
-220846,Passengers,117,"['ACTION', 'ROMANCE', 'SCIENCE_FICTION']",2016,['U.S.A.']
-106,Astérix et Cléopâtre,80,"['ANIMATION', 'COMEDY']",1968,"['France', 'Belgique']"
-4365,Les Douze Travaux d'Asterix,82,['ANIMATION'],1976,['France']
-5014,Astérix et le coup du menhir,81,['ANIMATION'],1989,"['Allemagne', 'France']"
-12011,Astérix et les Indiens,85,['ANIMATION'],1995,"['France', 'Allemagne']"
-54220,Astérix et les Vikings,78,['ANIMATION'],2006,['France']
-15277,Matilda,98,"['COMEDY', 'FANTASY']",1997,['U.S.A.']
-1079,Astérix et la surprise de César,121,['ANIMATION'],1985,"['Belgique', 'France']"
-2373,Astérix chez les Bretons,80,"['ADVENTURE', 'ANIMATION', 'COMEDY', 'FAMILY']",1986,['Belgique']
-37270,Le Grand restaurant,88,['COMEDY'],1966,['France']
-36763,Les Aventures de Rabbi Jacob,97,['COMEDY'],1973,"['France', 'Italie']"
-30750,La Soupe aux choux,98,"['COMEDY', 'SCIENCE_FICTION']",1981,['France']
-9268,La Folie des grandeurs,113,"['COMEDY', 'HISTORICAL']",1971,['France']
-207487,Paddington,95,"['ANIMATION', 'COMEDY', 'FAMILY']",2014,"['France', 'Grande-Bretagne']"
-259649,Le Jeu,90,"['COMEDY', 'DRAMA']",2018,['France']
-135523,Raiponce,101,"['ANIMATION', 'FAMILY']",2010,['U.S.A.']
-186604,"Garfield, champion du rire",79,['ANIMATION'],2023,"['U.S.A.', 'Corée du Sud']"
-210516,Le Hobbit : la Bataille des Cinq Armées,144,"['ACTION', 'ADVENTURE', 'FANTASY']",2014,"['U.S.A.', 'Nouvelle-Zélande']"
-186918,Le Hobbit : la Désolation de Smaug,161,"['ADVENTURE', 'FANTASY']",2013,"['U.S.A.', 'Nouvelle-Zélande']"
-22323,Toy Story 2,93,"['ADVENTURE', 'ANIMATION', 'COMEDY', 'FAMILY', 'FANTASY']",2000,['U.S.A.']
-14264,Toy Story,77,"['ANIMATION', 'COMEDY', 'FAMILY']",1996,['U.S.A.']
-27791,Chicken Run,84,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2000,"['Grande-Bretagne', 'France', 'U.S.A.']"
-55129,Wallace et Gromit : le Mystère du lapin-garou,85,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2005,"['U.S.A.', 'Grande-Bretagne']"
-57615,La Marche de l'Empereur,85,['DOCUMENTARY'],2005,['France']
-284,Robin des Bois,83,"['ADVENTURE', 'ANIMATION', 'COMEDY']",1974,['U.S.A.']
-32544,"Elle boit pas, elle fume pas, elle drague pas, mais... elle cause !",85,['COMEDY'],2016,['France']
-37167,La Tulipe noire,115,"['ACTION', 'ADVENTURE', 'COMEDY']",1964,"['France', 'Espagne', 'Italie']"
-239764,Papa Ou maman 2,90,['COMEDY'],2016,"['France', 'Belgique']"
-228537,Papa ou maman,85,"['COMEDY', 'ROMANCE']",2015,"['France', 'Belgique']"
-15308,Mission : Impossible,110,"['ACTION', 'SPY', 'THRILLER']",1996,['U.S.A.']
-185426,On ne choisit pas sa famille,103,"['ADVENTURE', 'COMEDY']",2011,['France']
-29366,Yamakasi,90,"['ACTION', 'COMEDY']",2001,['France']
-179173,L'Elève Ducobu,96,['COMEDY'],2011,['France']
-195874,Les Vacances de Ducobu,94,"['COMEDY', 'FAMILY']",2012,['France']
-270878,Ducobu 3,90,['COMEDY'],2020,['France']
-135816,Cyprien,98,['COMEDY'],2009,['France']
-188550,Le Labyrinthe,114,"['ACTION', 'SCIENCE_FICTION']",2014,['U.S.A.']
-140623,"Moi, moche et méchant",95,['ANIMATION'],2010,['U.S.A.']
-190299,"Moi, moche et méchant 2",98,"['ANIMATION', 'COMEDY', 'FAMILY']",2013,['U.S.A.']
-59198,"40 ans, toujours puceau",117,['COMEDY'],2005,['U.S.A.']
-10744,The Mask,100,"['COMEDY', 'FANTASY']",1994,['U.S.A.']
-146717,Ip Man,105,"['ACTION', 'BIOPIC', 'MARTIAL_ARTS']",2010,"['Chine', 'Hong-Kong']"
-339,Gremlins,105,"['COMEDY', 'FANTASY']",1984,['U.S.A.']
-13018,Casper,100,"['ADVENTURE', 'COMEDY']",1995,['U.S.A.']
-221524,Seul sur Mars,144,['SCIENCE_FICTION'],2015,['U.S.A.']
-140603,Karaté Kid,140,"['ACTION', 'DRAMA', 'FAMILY', 'MARTIAL_ARTS']",2010,"['U.S.A.', 'Chine']"
-186905,After Earth,100,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2013,['U.S.A.']
-105557,Je suis une légende,100,['SCIENCE_FICTION'],2007,['U.S.A.']
-29289,Retour vers le futur III,118,"['ADVENTURE', 'COMEDY', 'SCIENCE_FICTION']",1990,['U.S.A.']
-129924,Slumdog Millionaire,120,"['COMEDY', 'COMEDY_DRAMA', 'ROMANCE']",2009,"['U.S.A.', 'Grande-Bretagne']"
-929,Et pour quelques dollars de plus,130,['WESTERN'],1966,"['Espagne', ""Allemagne de l'Ouest"", 'Italie']"
-46211,Ratatouille,110,"['ANIMATION', 'COMEDY', 'FAMILY']",2007,['U.S.A.']
-5247,Retour vers le futur II,108,"['ADVENTURE', 'COMEDY', 'SCIENCE_FICTION']",1989,['U.S.A.']
-229831,Ready Player One,140,"['ACTION', 'SCIENCE_FICTION']",2018,['U.S.A.']
-18671,The Truman Show,103,"['COMEDY', 'DRAMA']",1998,['U.S.A.']
-110705,3 Amis,93,['COMEDY'],2007,['France']
-259166,Le Gendre de ma vie,100,['COMEDY'],2018,['France']
-146711,L'Italien,102,['COMEDY'],2010,['France']
-29738,Le Magicien d'Oz,101,"['ADVENTURE', 'FANTASY']",1946,['U.S.A.']
-52933,Charlie et la chocolaterie,115,"['ADVENTURE', 'COMEDY', 'FAMILY', 'FANTASY']",2005,"['U.S.A.', 'Grande-Bretagne']"
-143035,Neuilly sa mère !,90,['COMEDY'],2009,['France']
-27438,La Tour Montparnasse infernale,92,['COMEDY'],2001,['France']
-240944,Demain Tout Commence,118,"['COMEDY', 'DRAMA']",2016,"['France', 'Grande-Bretagne']"
-248962,Knock,114,['COMEDY'],2017,['France']
-180270,Stars 80,110,['COMEDY'],2012,['France']
-12644,La vérité si je mens,100,['COMEDY'],1997,['France']
-148103,Le Coeur des hommes 3,114,"['COMEDY', 'ROMANCE']",2013,['France']
-2246,Astérix le Gaulois,68,"['ANIMATION', 'COMEDY']",1967,"['Belgique', 'France']"
-126535,Bienvenue chez les Ch'tis,106,['COMEDY'],2008,['France']
-173528,Rien à déclarer,108,['COMEDY'],2011,"['France', 'Belgique']"
-177895,Astérix et Obélix : au service de Sa Majesté,109,"['ADVENTURE', 'COMEDY']",2012,['France']
-212120,Supercondriaque,108,['COMEDY'],2014,['France']
-243329,Radin!,89,['COMEDY'],2016,['France']
-205956,Eyjafjallajökull,92,['COMEDY'],2013,"['France', 'Belgique']"
-188649,La Guerre des Boutons,109,"['ADVENTURE', 'FAMILY']",2011,['France']
-11295,Billy Elliot,110,['COMEDY_DRAMA'],2000,['Grande-Bretagne']
-49341,Arthur et les Minimoys,94,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'FANTASY']",2006,['France']
-141890,Les Tuche,95,['COMEDY'],2011,['France']
-247291,Le Sens de la fête,116,['COMEDY'],2017,['France']
-50145,RRRrrrr !!!,98,['COMEDY'],2004,['France']
-226391,Ant-Man et la Guêpe,118,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2018,['U.S.A.']
-111112,Les Simpson - le film,87,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2007,['U.S.A.']
-129526,Warcraft : Le commencement,124,"['ACTION', 'ADVENTURE', 'FANTASY']",2016,['U.S.A.']
-146349,Deadpool,108,"['ACTION', 'COMEDY']",2016,"['U.S.A.', 'Canada']"
-28869,Daredevil,102,"['ACTION', 'FANTASY']",2003,['U.S.A.']
-232095,"Connasse, Princesse des coeurs",82,['COMEDY'],2015,['France']
-196604,Les Gardiens de la Galaxie,121,"['ACTION', 'SCIENCE_FICTION']",2014,['U.S.A.']
-131394,Very Bad Trip,90,['COMEDY'],2009,"['U.S.A.', 'Allemagne']"
-222291,Spider-Man: Far From Home,130,"['ACTION', 'ADVENTURE']",2019,['U.S.A.']
-215143,Captain America: Civil War,148,"['ACTION', 'FANTASY']",2016,['U.S.A.']
-209778,Spider-Man: Homecoming,133,"['ACTION', 'ADVENTURE']",2017,['U.S.A.']
-51366,Les 11 commandements,85,['COMEDY'],2004,['France']
-16591,Madagascar,86,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2005,['U.S.A.']
-193511,Comme un Chef,85,['COMEDY'],2012,['France']
-146915,"Madagascar 3, Bons Baisers D’Europe",93,"['ADVENTURE', 'ANIMATION', 'COMEDY']",2012,['U.S.A.']
-264918,Chamboultout,100,"['COMEDY', 'DRAMA']",2019,['France']
-134542,Fatal,95,"['COMEDY', 'MUSIC']",2010,['France']
-17106,Taxi,86,"['ACTION', 'COMEDY', 'DETECTIVE']",1998,['France']
-23460,Taxi 2,90,"['ACTION', 'COMEDY', 'DETECTIVE']",2000,['France']
-41230,Taxi 3,90,"['ACTION', 'COMEDY']",2003,['France']
-112452,Taxi 4,90,"['ACTION', 'COMEDY', 'DETECTIVE']",2007,['France']
-241480,La Folle Histoire de Max et Léon,98,"['COMEDY', 'WARMOVIE']",2016,"['France', 'Belgique']"
-250627,Taxi 5,102,"['ACTION', 'COMEDY', 'DETECTIVE']",2018,['France']
-56143,Brice de Nice,98,['COMEDY'],2005,['France']
-61099,"OSS 117, Le Caire nid d'espions",99,"['ACTION', 'COMEDY', 'SPY']",2006,['France']
-125611,Lucky Luke,104,"['COMEDY', 'WESTERN']",2009,"['France', 'Argentine']"
-58912,On l'appelle Trinita,113,"['COMEDY', 'WESTERN']",1971,['Italie']
-58913,On continue à l'appeler Trinita,117,"['COMEDY', 'WESTERN']",2016,['Italie']
-55774,Cars,96,"['ACTION', 'ANIMATION', 'COMEDY', 'FANTASY']",2006,['U.S.A.']
-135530,Cars 2,112,['ANIMATION'],2011,['U.S.A.']
-235582,Le Grand Bain,122,"['COMEDY', 'DRAMA']",2018,['France']
-200433,San Andreas,114,"['ACTION', 'ADVENTURE', 'THRILLER']",2015,['U.S.A.']
-171204,Agents presque secrets,107,"['ACTION', 'COMEDY']",2016,['U.S.A.']
-179349,Incendies,123,['DRAMA'],2011,['Canada']
-188448,Le Prénom,109,['COMEDY'],2012,['France']
-222030,Tu veux ou tu veux pas,87,"['COMEDY', 'ROMANCE']",2014,['France']
-261634,Le Meilleur reste à venir,118,"['COMEDY', 'DRAMA']",2019,['France']
-38255,P.R.O.F.S.,95,['COMEDY'],1985,['France']
-251981,La Colle,91,['COMEDY'],2017,"['France', 'Belgique']"
-209672,La Vraie vie des profs,100,['COMEDY'],2013,['France']
-247411,Alibi.com,90,['COMEDY'],2017,['France']
-249232,Epouse-moi mon pote,92,['COMEDY'],2017,['France']
-257514,Nicky Larson et le parfum de Cupidon,91,"['ACTION', 'COMEDY', 'DETECTIVE']",2019,['France']
-222512,Babysitting,84,['COMEDY'],2014,['France']
-280464,Soda : le rêve américain,90,['COMEDY'],2015,['France']
-224323,Les Profs 2,92,['COMEDY'],2015,['France']
-236089,Amis publics,98,['COMEDY'],2016,['France']
-251244,Loue-moi !,89,['COMEDY'],2017,['France']
-29057,Le Monde de Nemo,101,"['ADVENTURE', 'ANIMATION', 'FAMILY']",2003,['U.S.A.']
-61577,Camping,95,['COMEDY'],2006,['France']
-61259,Astérix aux Jeux Olympiques,113,"['ACTION', 'ADVENTURE', 'COMEDY']",2008,"['France', 'Belgique', 'Espagne', 'Italie', 'Allemagne']"
-112171,Camping 2,99,['COMEDY'],2010,['France']
-190768,Les Seigneurs,97,['COMEDY'],2012,['France']
-224790,Bis,107,['COMEDY'],2015,['France']
-273882,10 jours sans maman,98,['COMEDY'],2020,['France']
-218634,Fiston,88,['COMEDY'],2014,['France']
-198937,Les Indestructibles 2,118,"['ADVENTURE', 'ANIMATION', 'FAMILY']",2018,['U.S.A.']
-53096,Les Indestructibles,123,"['ACTION', 'ADVENTURE', 'ANIMATION', 'COMEDY', 'FAMILY']",2004,['U.S.A.']
-133404,Les Femmes du 6e étage,106,['COMEDY'],2011,['France']
-231739,Comme Un Avion,105,['COMEDY'],2015,['France']
-221613,Elle l'adore,104,['COMEDY'],2014,['France']
-59303,La Doublure,85,"['COMEDY', 'DRAMA']",2006,"['France', 'Italie', 'Belgique']"
-267228,La Belle époque,116,"['COMEDY', 'DRAMA', 'ROMANCE']",2019,['France']
-33285,Pour cent briques t'as plus rien...,85,['COMEDY'],1982,['France']
-180314,Time Out,101,"['ACTION', 'SCIENCE_FICTION', 'THRILLER']",2011,['U.S.A.']
-206892,007 Spectre,150,"['ACTION', 'SPY']",2015,"['Grande-Bretagne', 'U.S.A.']"
-145646,Skyfall,143,"['ACTION', 'SPY', 'THRILLER']",2012,"['Grande-Bretagne', 'U.S.A.']"
-209893,Cinquante Nuances plus sombres,118,"['DRAMA', 'EROTIC', 'ROMANCE']",2017,['U.S.A.']
-209894,Cinquante Nuances plus claires,106,"['DRAMA', 'EROTIC', 'ROMANCE']",2018,['U.S.A.']
-205450,Cinquante Nuances de Grey,125,"['DRAMA', 'ROMANCE', 'THRILLER']",2015,['U.S.A.']
-228533,Dofus - Livre 1 : Julith,107,['ANIMATION'],2016,['France']
-127524,Le Loup de Wall Street,179,"['BIOPIC', 'DRAMA']",2013,['U.S.A.']
-3130,La vie est un long fleuve tranquille,90,['COMEDY'],1988,['France']
-53934,Vipère Au Poing,100,['DRAMA'],2004,['France']
-5241,Les Visiteurs,105,['COMEDY'],1993,['France']
-1919,Les Visiteurs 2 : Les couloirs du temps,118,"['COMEDY', 'SCIENCE_FICTION']",1998,['France']
-14539,Astérix et Obélix contre César,109,"['ADVENTURE', 'COMEDY']",1999,"['Allemagne', 'France', 'Italie']"
-28537,Astérix et Obélix : Mission Cléopâtre,112,['COMEDY'],2002,['France']
-210211,Les Profs,88,['COMEDY'],2013,['France']
-222259,Qu'est-ce qu'on a fait au Bon Dieu?,97,['COMEDY'],2014,['France']
-232321,Babysitting 2,93,['COMEDY'],2015,['France']
-246797,À bras ouverts,93,['COMEDY'],2017,"['France', 'Belgique']"
-250465,Momo,86,['COMEDY'],2017,['France']
-262394,Qu'est-ce qu'on a encore fait au Bon Dieu?,99,['COMEDY'],2017,['France']
-3198,Les Bronzés font du ski,90,['COMEDY'],1979,['France']
-30717,Papy fait de la résistance,106,['COMEDY'],1983,['France']
-59308,Les Bronzés 3 amis pour la vie,97,['COMEDY'],2006,['France']
-227279,Nos femmes,95,['COMEDY'],2015,['France']
-253174,All Inclusive,92,['COMEDY'],2019,['France']
-9798,Les Bronzés,98,['COMEDY'],1978,['France']
-7342,Basic Instinct,130,"['DETECTIVE', 'EROTIC', 'THRILLER']",1992,"['U.S.A.', 'France']"
-188021,The Dictator,83,['COMEDY'],2012,['U.S.A.']
-32563,La Septième compagnie au clair de lune,90,"['ADVENTURE', 'COMEDY']",1977,['France']
-32552,On a retrouvé la 7ème compagnie,90,"['ADVENTURE', 'COMEDY']",1975,['France']
-36384,Mais où est donc passée la septième compagnie ?,91,"['ACTION', 'COMEDY', 'WARMOVIE']",1973,"['France', 'Italie']"
-189651,Fast &amp; Furious 6,130,['ACTION'],2013,['U.S.A.']
-45319,2 Fast 2 Furious,105,"['ACTION', 'ADVENTURE']",2003,"['U.S.A.', 'Allemagne']"
-221541,Fast &amp; Furious 8,136,"['ACTION', 'THRILLER']",2017,"['U.S.A.', 'Grande-Bretagne', 'France', 'Canada', 'Samoa']"
-61256,Fast &amp; Furious : Tokyo Drift,104,"['ACTION', 'DETECTIVE']",2006,"['U.S.A.', 'Allemagne']"
-178061,Fast and Furious 5,130,"['ACTION', 'THRILLER']",2011,['U.S.A.']
-198750,Fast &amp; Furious 7,137,['ACTION'],2015,['U.S.A.']
-29173,Fast &amp; Furious,107,"['ACTION', 'DETECTIVE']",2001,['U.S.A.']
-131334,Fast and Furious 4,100,['ACTION'],2009,['U.S.A.']
-3845,La Vache et le prisonnier,119,['COMEDY_DRAMA'],1959,"['France', 'Italie']"
-13467,La Cuisine au beurre,82,['COMEDY'],1963,['France']
-135916,King Guillaume,85,['COMEDY'],2009,['France']
-235236,La Ch’tite famille,107,['COMEDY'],2018,['France']
-28331,Le Jouet,95,['COMEDY'],1976,['France']
-215097,Star Wars - Le Réveil de la Force,135,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2015,['U.S.A.']
-215099,Star Wars - Les Derniers Jedi,152,"['ACTION', 'SCIENCE_FICTION']",2017,['U.S.A.']
-215094,Star Wars: L'Ascension de Skywalker,142,"['ADVENTURE', 'SCIENCE_FICTION']",2019,['U.S.A.']
-29014,Star Wars : Episode II - L'Attaque des clones,142,"['ADVENTURE', 'FANTASY', 'SCIENCE_FICTION']",2002,['U.S.A.']
-40623,Star Wars : Episode III - La Revanche des Sith,140,"['ACTION', 'ADVENTURE', 'SCIENCE_FICTION']",2005,['U.S.A.']
-20754,Star Wars : Episode I - La Menace fantôme,133,"['ADVENTURE', 'FANTASY', 'SCIENCE_FICTION']",1999,['U.S.A.']
-1105,Touchez pas au grisbi,94,"['ACTION', 'DETECTIVE', 'DRAMA']",1954,"['France', 'Italie']"
-45025,"125, rue Montmartre",85,"['DETECTIVE', 'DRAMA', 'JUDICIAL']",1959,['France']
-1361,Garde à vue,90,['DETECTIVE'],1981,['France']
-33928,Le Ruffian,108,"['ADVENTURE', 'DETECTIVE']",1983,"['France', 'Canada']"
-4327,Les Tontons flingueurs,105,"['COMEDY', 'DETECTIVE']",1963,"['France', 'Allemagne', 'Italie']"
-22092,Le Sixième Sens,107,"['DRAMA', 'THRILLER']",2000,['U.S.A.']
-61282,Avatar,162,"['ADVENTURE', 'SCIENCE_FICTION']",2009,['U.S.A.']
-123734,Wall-E,97,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'SCIENCE_FICTION']",2008,['U.S.A.']
-5818,Titanic,194,"['DRAMA', 'ROMANCE']",1998,['U.S.A.']
-121,Les Aventuriers de l'Arche perdue,116,"['ACTION', 'ADVENTURE']",1981,['U.S.A.']
-219070,Les Figures de l'ombre,127,"['BIOPIC', 'DRAMA']",2017,['U.S.A.']
-126123,Toy Story 3,100,"['ADVENTURE', 'ANIMATION', 'COMEDY', 'FANTASY']",2010,['U.S.A.']
-5032,Indiana Jones et la Dernière Croisade,127,"['ACTION', 'ADVENTURE']",1989,['U.S.A.']
-37485,Le Voyage de Chihiro,125,"['ADVENTURE', 'ANIMATION', 'FANTASY']",2002,['Japon']
-25803,Star Wars : Episode VI - Le Retour du Jedi,133,"['ADVENTURE', 'SCIENCE_FICTION']",1983,['U.S.A.']
-25801,Star Wars : Episode IV - Un nouvel espoir (La Guerre des étoiles),121,"['ADVENTURE', 'SCIENCE_FICTION']",1977,['U.S.A.']
-448,Retour vers le futur,116,"['ADVENTURE', 'COMEDY', 'SCIENCE_FICTION']",1985,['U.S.A.']
-182745,Intouchables,112,"['BIOPIC', 'COMEDY', 'DRAMA']",2011,['France']
-185719,Bohemian Rhapsody,135,"['BIOPIC', 'DRAMA']",2018,['U.S.A.']
-12837,Usual Suspects,106,"['DETECTIVE', 'THRILLER']",1995,"['U.S.A.', 'Allemagne']"
-143692,Inception,148,"['SCIENCE_FICTION', 'THRILLER']",2010,"['U.S.A.', 'Grande-Bretagne']"
-25802,Star Wars : Episode V - L'Empire contre-attaque,124,"['ADVENTURE', 'SCIENCE_FICTION']",1980,['U.S.A.']
-2021,Il était une fois dans l'Ouest,175,['WESTERN'],1969,"['U.S.A.', 'Italie']"
-19395,"Le Bon, la brute et le truand",180,['WESTERN'],1968,"['Espagne', 'Italie']"
-10862,Le Roi Lion,89,"['ADVENTURE', 'ANIMATION', 'FAMILY', 'MUSICAL']",1994,['U.S.A.']
-11736,Les Evadés,142,['DRAMA'],1995,['U.S.A.']
-1628,Le Parrain,175,"['DETECTIVE', 'DRAMA']",1972,['U.S.A.']
-22779,La Ligne verte,189,"['DETECTIVE', 'DRAMA', 'FANTASY']",2000,['U.S.A.']
-10568,Forrest Gump,140,"['COMEDY', 'DRAMA', 'ROMANCE']",1994,['U.S.A.']
-9684,Léon,103,"['ACTION', 'DETECTIVE', 'DRAMA', 'THRILLER']",1994,['France']
-21189,Fight Club,139,"['DRAMA', 'THRILLER']",1999,"['Allemagne', 'U.S.A.']"
-251315,Tenet,150,"['ACTION', 'SCIENCE_FICTION']",2020,['U.S.A.']
+id,title,duration,genres,year,countries,press rating,spectator rating
+493,La Règle du jeu,112,[13002],1939,['France'],5.0,3.9
+26602,Requiem for a Dream,102,[13008],2001,['U.S.A.'],4.0,4.2
+318031,Un p’tit truc en plus,99,[13005],2024,['France'],3.0,4.3
+298732,Rien à Perdre,112,[13008],2023,['France'],3.5,3.8
+10457,Les Galettes de Pont-Aven,105,[13005],1975,['France'],,3.4
+32941,Lady Bird,95,"[13005, 13008]",2018,['U.S.A.'],3.8,3.6
+6787,Thelma et Louise,129,[13002],1991,['U.S.A.'],,4.1
+68249,Monsieur Klein,123,"[13008, 13031]",1976,"['Italie', 'France']",,3.9
+9121,Le Goût de la cerise,99,[13008],1997,"['Iran', 'France']",,3.7
+267546,À couteaux tirés,131,"[13005, 13018, 13008]",2019,['U.S.A.'],3.8,4.1
+125562,Mamma Mia!,110,"[13005, 13013, 13024]",2008,"['U.S.A.', 'Grande-Bretagne', 'Allemagne']",2.8,3.3
+297,Les Sept Samouraïs,207,"[13025, 13001]",1955,['Japon'],4.6,2.8
+46937,Les Bravados,98,"[13008, 13019]",1957,['U.S.A.'],,3.6
+204925,Hunger Games - La Révolte : Partie 2,137,"[13001, 13021, 13014]",2015,['U.S.A.'],3.0,3.4
+200088,Hunger Games - La Révolte : Partie 1,123,"[13025, 13008, 13021]",2014,['U.S.A.'],3.0,3.4
+196666,Hunger Games - L'embrasement,146,"[13025, 13008, 13021]",2013,['U.S.A.'],3.6,3.9
+250664,Ip Man 4 : Le dernier combat,105,"[13025, 13027, 13008, 13016]",2020,"['Hong-Kong', 'Chine']",3.3,3.6
+145083,Hunger Games,142,"[13025, 13008, 13021]",2012,['U.S.A.'],3.4,3.8
+53879,Kill Bill: Volume 2,135,"[13025, 13016, 13023]",2004,['U.S.A.'],4.4,4.1
+28541,Kill Bill: Volume 1,112,"[13025, 13016, 13023]",2003,['U.S.A.'],4.0,4.2
+14788,Trainspotting,93,"[13018, 13008]",1996,['Grande-Bretagne'],3.4,4.1
+479,Les Demoiselles de Rochefort,125,[13013],1967,['France'],,3.7
+273579,Les Misérables,105,"[13018, 13008]",2019,['France'],4.3,4.0
+197379,Point Break,113,[13025],2016,['U.S.A.'],2.0,2.3
+16731,Le Dîner de cons,80,[13005],1998,['France'],,4.2
+316372,American Fiction,117,"[13005, 13002, 13008]",2024,['U.S.A.'],3.8,3.7
+299937,Le Procès Goldman,116,"[13018, 13008, 13015, 13031]",2023,['France'],4.4,3.9
+279636,Chien de la casse,93,[13002],2023,['France'],3.7,4.0
+666,Emmanuelle,90,[13010],1974,['France'],,2.1
+256426,Johnny English contre-attaque,89,"[13005, 13022]",2018,['Grande-Bretagne'],2.9,3.1
+219262,Batman v Superman : L’Aube de la Justice,153,"[13025, 13001, 13012]",2016,['U.S.A.'],2.6,3.3
+315119,Yannick,67,[13005],2023,['France'],3.8,3.8
+224799,Cars 3,102,"[13001, 13026, 13036, 13012]",2017,['U.S.A.'],2.9,3.8
+295635,La Nuit du 12,114,"[13018, 13023]",2022,"['France', 'Belgique']",4.4,4.0
+135215,Le Garçon au pyjama rayé,90,"[13008, 13014]",2009,"['U.S.A.', 'Grande-Bretagne']",,4.2
+260,Orange mécanique,136,"[13008, 13021]",1972,"['Grande-Bretagne', 'U.S.A.']",4.8,4.2
+299938,Je verrai toujours vos visages,118,[13008],2023,['France'],4.1,4.4
+14790,Mon voisin Totoro,87,[13026],1999,['Japon'],4.4,4.3
+26190,Le Journal d'une femme de chambre,92,"[13002, 13018, 13008]",1964,"['France', 'Italie']",5.0,3.9
+288402,Les Trois Mousquetaires: D'Artagnan,121,"[13001, 13015]",2023,"['France', 'Allemagne', 'Espagne']",3.7,3.9
+20361,C'est pas parce qu'on n'a rien a dire qu'il faut fermer sa gueule,90,[13005],1975,['France'],,3.6
+269975,Spider-Man : Across The Spider-Verse,141,"[13025, 13001, 13026, 13012]",2023,['U.S.A.'],4.1,4.4
+275707,La Communion,115,[13008],2020,"['Pologne', 'France']",3.8,3.6
+324,Les Valseuses,123,"[13005, 13008, 13010]",1974,['France'],,3.7
+290915,Novembre,107,"[13018, 13023]",2022,['France'],3.5,4.1
+226078,L'Âge de Glace : les Lois de l'Univers,94,"[13026, 13036]",2016,['U.S.A.'],3.0,2.7
+198371,Imitation Game,115,"[13027, 13008]",2015,['U.S.A.'],3.4,4.3
+181893,Polisse,127,[13008],2011,['France'],3.7,4.1
+173087,Barbie,115,"[13001, 13005, 13036]",2023,"['U.S.A.', 'Grande-Bretagne']",3.5,2.8
+184989,Le Garçon et le Héron,123,"[13001, 13026, 13008]",2023,['Japon'],4.2,3.8
+54226,Da Vinci Code,152,[13023],2006,['U.S.A.'],1.4,2.8
+103306,Copains pour toujours,102,[13005],2010,['U.S.A.'],1.4,2.7
+2072,Vol au-dessus d'un nid de coucou,129,[13008],1976,['U.S.A.'],5.0,4.5
+111835,OSS 117 : Rio ne répond plus,100,"[13005, 13022]",2009,['France'],4.1,3.7
+258374,Joker,122,[13008],2019,"['U.S.A.', 'Canada']",4.1,4.4
+136666,Les Beaux Gosses,90,[13005],2009,['France'],4.3,3.0
+3326,Princess Bride,98,"[13001, 13012]",1988,['U.S.A.'],4.3,3.7
+300856,3 jours max,87,"[13025, 13005]",2023,['France'],2.7,2.1
+2749,Full Metal Jacket,116,"[13008, 13014]",1987,"['U.S.A.', 'Grande-Bretagne']",4.8,4.4
+7524,Reservoir Dogs,99,"[13018, 13023]",1992,['U.S.A.'],4.5,4.3
+83,L'Année dernière à Marienbad,94,"[13008, 13024]",1961,"['Italie', 'France']",,3.4
+297303,Anatomie d’une chute,151,"[13018, 13008, 13031, 13023]",2023,['France'],4.4,4.1
+234099,"Super Mario Bros, le film",92,"[13026, 13005, 13036]",2023,"['U.S.A.', 'Japon']",3.1,4.0
+304913,Sentinelle,99,"[13005, 13018]",2023,['France'],3.6,2.2
+1325,Les Rivières pourpres,105,"[13018, 13023]",2000,['France'],3.1,3.3
+52648,L'enquête Corse,92,"[13005, 13018]",2004,['France'],3.0,2.1
+29338,La Cage aux folles,103,[13005],1978,"['France', 'Italie']",,3.4
+20810,Le vieux fusil,103,"[13008, 13023, 13014]",1975,"['France', 'Allemagne']",,4.2
+60208,Inglourious Basterds,153,"[13025, 13014]",2009,"['U.S.A.', 'Allemagne']",3.7,4.3
+4963,La Nuit du chasseur,92,"[13008, 13009, 13023]",1956,['U.S.A.'],5.0,4.3
+187191,Astérix - Le Domaine des Dieux,86,"[13001, 13026, 13005]",2014,"['France', 'Belgique']",3.7,3.9
+19776,Matrix,135,"[13025, 13021]",1999,"['U.S.A.', 'Australie']",3.4,4.4
+256312,Fatima,113,"[13008, 13015]",2021,['Portugal'],1.6,3.2
+29071,La Mémoire dans la peau,118,"[13025, 13022, 13023]",2002,"['U.S.A.', 'Allemagne', 'République tchèque']",3.5,4.0
+12037,Le Pacha,90,[13018],1968,"['Italie', 'France']",,3.8
+193921,Les Saveurs du palais,95,[13005],2012,['France'],3.2,3.2
+193715,Dans la maison,105,[13023],2012,['France'],3.5,3.7
+296168,Oppenheimer,181,"[13027, 13015, 13023]",2023,['U.S.A.'],3.8,4.3
+141808,Gatsby le Magnifique,142,"[13008, 13024]",2013,"['Australie', 'U.S.A.']",2.8,3.9
+241116,Don't Tell Her,96,[13005],2017,"['Belgique', 'France']",2.9,2.3
+308,Taxi Driver,115,"[13018, 13008, 13023]",1976,['U.S.A.'],4.8,4.3
+227602,Un homme idéal,97,[13023],2015,['France'],3.2,3.8
+182013,Colombiana,105,[13025],2011,"['France', 'U.S.A.', 'Grande-Bretagne']",2.3,3.1
+25744,Memento,116,"[13018, 13023]",2000,['U.S.A.'],3.7,4.2
+303483,Chili 1976,95,[13008],2023,['Chili'],3.6,3.6
+54484,Miss FBI : divinement armée,115,"[13025, 13005, 13018]",2005,"['U.S.A.', 'Australie']",2.6,1.9
+251713,La Mort dans l'Âme,100,"[13018, 13008]",2018,['France'],,3.0
+39141,Le Flic de Beverly Hills 2,102,"[13005, 13018, 13023]",1987,['U.S.A.'],,3.1
+256661,Green Book : Sur les routes du sud,130,"[13027, 13008]",2019,['U.S.A.'],4.0,4.5
+292132,Plancha,98,[13005],2022,['France'],2.1,2.3
+33280,Le coup du parapluie,90,"[13005, 13018]",1980,['France'],,3.1
+26861,Miss Détective,109,"[13025, 13005]",2001,"['Australie', 'U.S.A.']",2.9,2.3
+221400,Big Game,91,"[13025, 13001]",2018,"['Finlande', 'Grande-Bretagne', 'Allemagne']",,1.9
+39139,Le Flic de Beverly Hills,105,"[13025, 13005, 13018]",1985,['U.S.A.'],,3.6
+13892,Seven,130,"[13018, 13008, 13023]",1996,['U.S.A.'],3.6,4.5
+263242,Black Panther: Wakanda Forever,162,"[13025, 13001, 13012]",2022,['U.S.A.'],2.9,3.1
+275207,Thor: Love And Thunder,119,"[13025, 13001, 13012, 13021]",2022,"['U.S.A.', 'Australie']",2.6,2.3
+57731,La Moustache,86,[13002],2005,['France'],3.7,2.0
+259759,L'Appel de la forêt,100,"[13001, 13008, 13036]",2020,['U.S.A.'],3.2,3.7
+178014,Avatar : la voie de l'eau,192,"[13025, 13001, 13012, 13021]",2022,['U.S.A.'],4.1,4.2
+261638,Just a Gigolo,94,[13005],2019,['France'],3.0,2.2
+284846,Bullet Train,127,"[13025, 13023]",2022,['U.S.A.'],3.2,3.9
+244560,Astérix - Le Secret de la Potion Magique,86,"[13001, 13026, 13036]",2018,['France'],3.7,3.9
+126112,L'Âge de glace 3 - Le Temps des dinosaures,94,"[13001, 13026, 13005]",2009,['U.S.A.'],3.6,3.8
+287116,Decision To Leave,138,"[13018, 13008, 13024, 13023]",2022,['Corée du Sud'],4.0,3.8
+290507,Menteur,93,[13005],2022,['France'],2.5,2.0
+26163,L'Etoffe des héros,187,"[13001, 13008, 13015, 13021]",1984,['U.S.A.'],5.0,4.1
+285935,Irréductible,85,[13005],2022,['France'],2.9,3.1
+130769,Sept vies,123,[13008],2009,['U.S.A.'],2.6,3.9
+274204,Boîte noire,130,"[13008, 13023]",2021,['France'],3.8,4.2
+275354,Chacun chez soi,84,[13005],2021,['France'],2.1,1.8
+2361,La Chèvre,95,"[13001, 13005, 13018]",1981,"['France', 'Mexique']",,3.8
+10491,Maverick,127,"[13001, 13005, 13019]",1994,['U.S.A.'],,3.5
+108526,Hors de prix,103,[13005],2006,['France'],3.4,2.8
+28335,Les compères,92,[13005],1983,['France'],,3.5
+29179,Le Raid,94,[13005],2002,['France'],2.2,1.3
+285300,Maison de Retraite,97,[13005],2022,['France'],2.3,3.2
+2380,Le Corbeau,92,"[13008, 13023]",1943,['France'],,4.1
+281976,Goliath,122,[13023],2022,['France'],3.6,3.9
+9393,La Liste de Schindler,195,"[13027, 13008, 13015]",1994,['U.S.A.'],4.2,4.6
+110096,"No Country for Old Men - Non, ce pays n'est pas pour le vieil homme",122,"[13018, 13008, 13023, 13019]",2008,['U.S.A.'],4.6,4.2
+278851,Tendre Et Saignant,91,"[13005, 13024]",2022,['France'],2.9,2.8
+285884,Super-héros malgré lui,82,"[13025, 13005]",2022,['France'],2.6,3.0
+132874,The Dark Knight Rises,164,"[13025, 13023]",2012,"['U.S.A.', 'Grande-Bretagne']",3.6,4.3
+115362,"The Dark Knight, Le Chevalier Noir",152,"[13025, 13023]",2008,"['U.S.A.', 'Grande-Bretagne']",4.0,4.5
+51013,Batman Begins,140,"[13025, 13023]",2005,"['U.S.A.', 'Grande-Bretagne']",3.7,4.1
+4413,Un Poisson nommé Wanda,108,"[13005, 13018]",1989,['U.S.A.'],,3.8
+110101,Into the Wild,148,"[13001, 13027, 13008]",2008,['U.S.A.'],3.9,4.3
+264475,355,123,"[13025, 13022, 13023]",2022,['U.S.A.'],2.8,2.6
+265358,The King's Man : Première Mission,131,"[13025, 13022]",2021,['Grande-Bretagne'],3.2,3.4
+231299,Mademoiselle,151,"[13008, 13024]",2016,['Corée du Sud'],3.8,4.2
+251390,Doctor Strange in the Multiverse of Madness,126,"[13025, 13001, 13012]",2022,['U.S.A.'],3.2,3.6
+4708,Le Viager,101,[13005],1972,['France'],,3.6
+274530,Bac Nord,104,"[13018, 13023]",2021,['France'],3.5,4.2
+231874,Elle,126,"[13008, 13023]",2016,"['France', 'Allemagne', 'Belgique']",4.3,3.4
+43591,Faites sauter la banque,88,[13005],2017,['France'],,3.5
+14178,Casino,178,"[13018, 13008]",1996,"['U.S.A.', 'France']",4.4,4.3
+5969,Les Affranchis,145,"[13018, 13008]",1990,['U.S.A.'],5.0,4.5
+136316,Les Eternels,157,"[13025, 13012, 13021]",2021,['U.S.A.'],2.9,3.3
+248039,Jusqu’à la Garde,94,"[13008, 13023]",2018,['France'],4.2,4.1
+274345,Adieu Les Cons,87,[13005],2020,['France'],3.7,3.9
+287252,Mes très chers enfants,95,[13005],2021,['France'],2.8,2.6
+236464,Ip Man 3,105,"[13025, 13027, 13016]",2016,['Hong-Kong'],,3.9
+186452,Lucy,89,"[13025, 13021]",2014,['France'],2.7,2.9
+285749,Barbaque,88,[13005],2021,['France'],3.3,3.7
+45264,La Cité de Dieu,135,"[13018, 13008]",2003,['Brésil'],3.9,4.2
+4063,12 hommes en colère,95,"[13008, 13031]",1957,['U.S.A.'],5.0,4.6
+190918,Django Unchained,164,[13019],2013,['U.S.A.'],4.6,4.5
+123530,"Snowpiercer, Le Transperceneige",126,"[13008, 13021]",2013,"['Corée du Sud', 'France', 'U.S.A.', 'République tchèque']",4.1,3.5
+277208,Pourris gâtés,95,[13005],2021,['France'],2.8,2.6
+277532,Tout Simplement Noir,90,[13005],2020,['France'],3.8,2.8
+12551,La Haine,95,[13008],1995,['France'],4.6,4.1
+132039,Shutter Island,137,[13023],2010,['U.S.A.'],3.8,4.4
+178267,Ip Man 2,108,"[13025, 13027, 13008, 13016]",2011,"['Chine', 'Hong-Kong']",,4.1
+2133,Top Gun,110,"[13025, 13008, 13024]",1986,['U.S.A.'],2.8,3.1
+183070,The Artist,100,"[13005, 13008, 13024]",2011,['France'],4.1,4.0
+114782,Interstellar,169,"[13008, 13021]",2014,"['U.S.A.', 'Grande-Bretagne']",3.8,4.5
+4572,Rain Man,133,[13002],1989,['U.S.A.'],3.6,4.3
+243501,Retour chez ma mère,91,[13005],2016,['France'],2.9,3.0
+8066,Un jour sans fin,101,"[13005, 13012]",1993,['U.S.A.'],3.8,4.1
+41011,8 Mile,110,"[13008, 13043]",2003,['U.S.A.'],3.8,3.7
+262383,OSS 117: Alerte rouge en Afrique noire,116,"[13001, 13005, 13022]",2021,['France'],2.8,2.7
+245535,The Suicide Squad,132,"[13025, 13001, 13012]",2021,['U.S.A.'],3.7,3.3
+233998,Spider-Man : New Generation,117,"[13025, 13026, 13036]",2018,['U.S.A.'],4.2,4.4
+135082,Drive,100,"[13025, 13023]",2011,['U.S.A.'],4.4,4.1
+55983,Les Infiltrés,150,"[13018, 13008, 13023]",2006,['U.S.A.'],4.0,4.2
+256880,Spider-Man: No Way Home,148,"[13025, 13001, 13012]",2021,['U.S.A.'],3.3,3.9
+270144,Shang-Chi et la Légende des Dix Anneaux,132,"[13025, 13012]",2021,['U.S.A.'],3.3,3.8
+212358,Mourir peut attendre,163,"[13025, 13022, 13023]",2021,"['U.S.A.', 'Grande-Bretagne']",3.1,3.7
+126279,Braquage à l'Anglaise,111,"[13018, 13023]",2008,['U.S.A.'],3.8,3.5
+192186,The Amazing Spider-Man : le destin d'un Héros,142,"[13025, 13001, 13012]",2014,['U.S.A.'],3.0,3.5
+128188,The Amazing Spider-Man,137,"[13025, 13001, 13012]",2012,['U.S.A.'],3.0,3.6
+230783,Black Widow,134,"[13025, 13001, 13022]",2021,['U.S.A.'],2.9,3.1
+10498,Speed,116,"[13025, 13023]",1994,['U.S.A.'],,3.6
+1191,Cléo De 5 À 7,90,[13008],1962,"['Italie', 'France']",5.0,4.1
+56136,Spider-Man 3,139,"[13025, 13012]",2007,['U.S.A.'],3.7,3.5
+261243,La Lutte des Classes,103,[13005],2019,['France'],3.6,2.9
+257881,Pupille,110,[13008],2018,"['France', 'Belgique']",4.3,4.2
+46112,Spider-Man 2,127,"[13025, 13012]",2004,['U.S.A.'],4.6,3.8
+29007,Spider-Man,121,"[13025, 13012]",2002,['U.S.A.'],4.2,4.0
+268136,Deux Moi,110,[13008],2019,['France'],3.7,3.5
+4510,La Bête humaine,100,[13008],2013,['France'],,3.8
+232669,Avengers: Endgame,181,"[13025, 13001, 13021]",2019,['U.S.A.'],3.2,4.2
+141110,Captain Marvel,124,"[13025, 13012, 13021]",2019,['U.S.A.'],3.2,3.5
+218265,Avengers: Infinity War,156,"[13025, 13001, 13021]",2018,['U.S.A.'],3.4,4.3
+130336,Black Panther,135,"[13025, 13001, 13012, 13021]",2018,['U.S.A.'],3.1,3.8
+131868,Bouquet final,101,[13005],2008,['France'],2.8,2.7
+223252,Thor : Ragnarok,131,"[13025, 13012]",2017,['U.S.A.'],3.4,3.8
+255238,Parasite,132,"[13008, 13023]",2019,['Corée du Sud'],4.8,4.5
+248768,L'un dans l'autre,85,[13005],2017,['France'],1.9,2.3
+226995,Les Gardiens de la Galaxie 2,136,"[13025, 13005, 13021]",2017,['U.S.A.'],3.4,4.0
+130533,Doctor Strange,115,"[13001, 13012]",2016,['U.S.A.'],3.1,3.9
+130438,Ant-Man,117,"[13025, 13021]",2015,"['U.S.A.', 'Grande-Bretagne']",3.3,3.7
+198488,Avengers : L'ère d'Ultron,141,"[13025, 13001, 13012]",2015,['U.S.A.'],2.9,3.8
+193113,"Captain America, le soldat de l'hiver",136,"[13025, 13001, 13021]",2014,['U.S.A.'],3.2,3.9
+193108,Thor : Le Monde des ténèbres,112,"[13025, 13001, 13012]",2013,['U.S.A.'],2.8,3.4
+121462,Une fiancée pas comme les autres,102,"[13005, 13024]",2008,"['U.S.A.', 'Canada']",3.1,3.5
+10126,Pulp Fiction,149,"[13018, 13008]",1994,['U.S.A.'],4.4,4.5
+139589,Iron Man 3,131,"[13025, 13021]",2013,['U.S.A.'],3.2,3.8
+130440,Avengers,143,"[13025, 13001, 13021]",2012,['U.S.A.'],4.0,4.1
+136557,Captain America : First Avenger,124,"[13025, 13001, 13021]",2011,['U.S.A.'],3.3,3.5
+129477,Thor,115,"[13025, 13001, 13012]",2011,['U.S.A.'],3.0,3.4
+136190,Iron Man 2,124,"[13025, 13001, 13021]",2010,['U.S.A.'],3.1,3.4
+114820,L'Incroyable Hulk,112,"[13025, 13012]",2008,['U.S.A.'],3.4,3.1
+53751,Iron Man,126,"[13025, 13021]",2008,['U.S.A.'],3.4,4.0
+262396,Le Mans 66,153,"[13027, 13008]",2019,['U.S.A.'],3.8,4.3
+266064,Le Lion,95,"[13005, 13022]",2020,['France'],2.4,1.7
+261787,Nous Finirons Ensemble,135,[13002],2019,['France'],2.7,3.6
+11199,Le Corniaud,110,[13005],1965,"['Italie', 'France']",,3.7
+89979,Le Cuirassé Potemkine,75,"[13008, 13015]",1926,['Russie'],,3.9
+47352,Karaté Kid,126,"[13025, 13008, 13016]",1984,['U.S.A.'],,3.4
+125433,Le Dernier maître de l'air,103,"[13025, 13001, 13036, 13012]",2010,['U.S.A.'],1.9,2.1
+51602,Double zéro,90,[13005],2004,"['France', 'Grande-Bretagne']",2.8,1.3
+193911,Casse-tête chinois,117,"[13002, 13024]",2013,['France'],3.4,3.8
+6272,"Maman, j'ai raté l'avion",103,"[13001, 13005]",1990,['U.S.A.'],,3.6
+235620,Un Sac De Billes,114,[13008],2017,"['France', 'Canada', 'République tchèque']",3.1,4.1
+35973,Arrête-moi si tu peux,141,"[13008, 13023]",2003,['U.S.A.'],4.2,4.2
+221413,#Chef,114,"[13005, 13008]",2014,['U.S.A.'],2.8,3.6
+29104,Le Boulet,107,"[13025, 13001, 13005]",2002,['France'],3.2,2.2
+232740,Don't Breathe - La maison des ténèbres,88,"[13009, 13023]",2016,['U.S.A.'],3.6,3.8
+135063,Gran Torino,116,[13008],2009,['U.S.A.'],4.7,4.5
+221620,Five,102,[13005],2016,['France'],3.0,3.8
+129694,Invictus,132,"[13027, 13008, 13015]",2010,['U.S.A.'],4.1,4.1
+275355,30 jours max,87,"[13005, 13018]",2020,['France'],2.4,2.2
+363,Will Hunting,126,[13008],1998,['U.S.A.'],3.2,4.0
+8136,Haute Voltige,113,"[13025, 13018, 13024, 13023]",1999,"['Grande-Bretagne', 'Allemagne', 'U.S.A.']",3.4,2.8
+45423,Signé Arsène Lupin,100,"[13005, 13018]",2011,"['France', 'Italie']",,3.5
+28561,Le Baiser mortel du dragon,98,"[13025, 13016, 13023]",2001,"['France', 'U.S.A.']",2.9,3.0
+14046,Heat,170,"[13025, 13018, 13008]",1996,['U.S.A.'],3.2,4.3
+146632,Les petits mouchoirs,154,[13002],2010,['France'],2.9,3.6
+253927,Première année,92,[13008],2018,['France'],3.7,3.8
+18478,Mary à tout prix,119,[13005],1998,['U.S.A.'],4.0,3.5
+267948,Premier de la classe,82,[13005],2019,['France'],3.3,2.5
+251564,Le Mec de la tombe d'à côté,90,"[13005, 13008, 13024]",2023,['France'],,3.1
+8865,Nous irons tous au paradis,110,[13005],1977,['France'],,3.7
+182990,Mais qui a re-tué Pamela Rose ?,98,[13005],2012,['France'],3.2,2.5
+176238,Des nouilles aux haricots noirs,116,"[13002, 13024]",2009,['Corée du Sud'],,4.2
+228223,L'esprit de famille,99,"[13005, 13036]",2019,['France'],,3.1
+253900,Garde alternée,104,[13005],2017,['France'],2.4,2.4
+12789,Les Dents de la Mer,124,"[13025, 13023]",1975,['U.S.A.'],3.2,4.0
+36507,L'Homme qui en savait trop,120,[13023],1956,['U.S.A.'],4.3,4.0
+236147,Comment c’est loin,90,"[13005, 13013]",2015,['France'],3.4,3.9
+259340,Le Traître,153,"[13027, 13008]",2019,"['Italie', 'France', 'Allemagne', 'Brésil']",4.3,4.1
+259650,Anna,119,"[13025, 13023]",2019,['France'],2.1,3.3
+5453,Nikita,117,"[13025, 13018, 13023]",1990,"['Italie', 'France']",2.8,3.7
+24657,"Un éléphant, ça trompe énormément",100,[13005],1976,['France'],,3.6
+47702,Mais qui a tué Pamela Rose ?,92,"[13005, 13018]",2003,['France'],2.8,2.6
+12302,Le Cinquième élément,126,"[13025, 13021]",1997,"['France', 'U.S.A.', 'Grande-Bretagne']",3.0,4.2
+29668,Le retour du grand blond,80,[13005],1974,['France'],,3.2
+4740,Le Grand Blond avec une chaussure noire,90,[13005],1972,['France'],,3.6
+231738,Débarquement immédiat,91,[13005],2016,['France'],2.4,2.3
+9400,La Cité de la peur,100,[13005],1994,['France'],3.4,4.0
+28933,Ghost Rider,110,"[13025, 13012]",2007,['U.S.A.'],1.7,1.9
+212729,Joséphine,88,"[13005, 13024]",2013,['France'],3.2,3.0
+231740,Joséphine s'arrondit,94,[13005],2016,['France'],3.2,3.2
+246587,Sous le même toit,93,[13005],2017,['France'],2.8,2.1
+183425,La Croisière,100,[13005],2011,['France'],2.0,1.6
+219309,Fonzy,102,[13005],2013,['France'],2.4,2.2
+261563,Inséparables,94,[13005],2019,['France'],2.5,3.2
+247045,L'Ascension,103,[13005],2017,['France'],3.6,3.9
+130203,Salt,101,"[13025, 13022, 13023]",2010,['U.S.A.'],2.7,2.9
+15282,Un air de famille,110,[13002],1996,['France'],3.0,4.0
+31518,La Boum 2,107,[13005],1982,['France'],,2.3
+99,L'As des As,100,[13005],1982,"['Allemagne', 'France']",,3.3
+1073,West Side Story,153,"[13002, 13013]",1962,['U.S.A.'],4.5,4.0
+61445,Le Diable s'habille en Prada,110,[13005],2006,['U.S.A.'],3.2,3.5
+31520,Les Sous-doués en vacances,95,[13005],1982,['France'],,2.2
+40868,Les Sous-doués,92,[13005],1980,['France'],2.5,3.0
+265572,Divorce Club,108,[13005],2020,['France'],3.1,2.4
+1975,Blade Runner,117,[13021],1982,['U.S.A.'],3.8,4.2
+58911,V pour Vendetta,130,"[13025, 13021]",2006,"['U.S.A.', 'Allemagne', 'Grande-Bretagne']",3.1,4.1
+28430,Intolérable cruauté,100,"[13005, 13024]",2003,['U.S.A.'],4.0,2.7
+266409,La Vie scolaire,111,"[13005, 13008]",2019,['France'],3.4,3.6
+4403,La Boum,109,"[13005, 13008, 13024]",1980,['France'],,3.0
+237561,Kingsman : Le Cercle d'or,141,"[13025, 13005, 13022]",2017,"['Grande-Bretagne', 'U.S.A.']",3.1,3.8
+47690,La Grande cuisine,112,"[13005, 13023]",1978,"['France', 'U.S.A.']",,2.4
+198771,Kingsman : Services secrets,129,"[13025, 13022]",2015,"['Grande-Bretagne', 'U.S.A.']",3.9,4.2
+183489,Hollywoo,107,[13005],2011,['France'],2.4,2.1
+256184,Le Retour du Héros,90,"[13005, 13015]",2018,"['France', 'Belgique']",3.4,3.5
+48382,Tais-toi !,85,[13005],2003,['France'],2.8,2.8
+9895,Rasta Rockett,108,"[13001, 13005]",1994,['U.S.A.'],3.0,3.8
+9257,Madame Doubtfire,125,"[13005, 13008]",1994,['U.S.A.'],,3.8
+46551,Jeux d'enfants,93,"[13005, 13008, 13024]",2003,"['France', 'Belgique']",2.9,3.6
+128181,Le Code A Changé,100,[13002],2009,['France'],3.3,2.3
+28560,"Mon beau-père, mes parents et moi",116,[13005],2005,['U.S.A.'],3.1,3.1
+226879,Joy,124,"[13027, 13008]",2015,['U.S.A.'],3.0,3.5
+123532,Le Chat Potté,90,"[13001, 13026, 13005]",2011,['U.S.A.'],3.1,3.4
+248355,L'Embarras Du Choix,98,"[13005, 13024]",2017,['France'],2.8,2.7
+249113,Les Ex,84,[13005],2017,['France'],2.2,2.3
+236242,Gaston Lagaffe,83,[13005],2018,['France'],2.1,1.7
+20711,Mine de rien,85,[13005],2020,['France'],3.3,2.3
+56062,Les Brigades du Tigre,125,[13018],2006,['France'],3.3,2.4
+83984,Classe tous risques,109,"[13018, 13008]",1960,"['France', 'Italie']",,3.8
+225707,La Liste du Père Noël,83,"[13005, 13008, 13012]",2022,"['U.S.A.', 'Canada']",,3.8
+1554,Peter Pan,76,"[13026, 13036]",1953,['U.S.A.'],,4.0
+26862,Monstres &amp; Cie,92,"[13026, 13005, 13036]",2002,['U.S.A.'],4.5,4.2
+2223,Bambi,68,"[13026, 13036]",1948,['U.S.A.'],,3.9
+139,La Belle et le Clochard,75,"[13026, 13036, 13013]",1955,['U.S.A.'],5.0,4.0
+179515,Bienvenue à bord,90,[13005],2011,['France'],1.7,2.5
+193459,"Les Miller, une famille en herbe",110,[13005],2013,['U.S.A.'],2.9,3.6
+111406,Comment tuer son Boss ?,100,[13005],2011,['U.S.A.'],2.6,3.1
+214860,La Famille Bélier,106,[13005],2014,"['France', 'Belgique']",3.7,3.8
+174939,127 heures,94,"[13001, 13027, 13008, 13023]",2011,"['U.S.A.', 'Grande-Bretagne']",3.2,3.8
+23497,Mewtwo contre-attaque,95,"[13025, 13001, 13026]",2000,"['U.S.A.', 'Japon']",2.4,2.6
+27477,"Pokémon 2, le pouvoir est en toi",100,[13026],2000,"['U.S.A.', 'Japon']",2.8,2.7
+260363,Premières vacances,102,[13005],2019,['France'],2.5,2.8
+40619,Shrek 2,90,"[13001, 13026, 13005, 13036]",2004,['U.S.A.'],4.1,3.9
+55718,Shrek le troisième,93,"[13026, 13005, 13012]",2007,['U.S.A.'],3.2,3.1
+174738,Sur la piste du Marsupilami,105,"[13001, 13005, 13036]",2012,['France'],3.8,2.3
+181059,L'Âge de glace : La dérive des continents,94,"[13001, 13026, 13005]",2012,['U.S.A.'],3.3,3.7
+237821,Valérian et la Cité des mille planètes,137,"[13025, 13001, 13012, 13021]",2017,"['France', 'Chine', 'Belgique', 'Emirats Arabes Unis', 'U.S.A.', 'Allemagne', 'Canada', 'Grande-Bretagne']",3.0,3.3
+27415,Shrek,89,"[13026, 13005, 13036, 13012]",2001,['U.S.A.'],4.3,4.2
+130631,High School Musical 2 (TV),101,"[13005, 13036, 13013]",2007,['U.S.A.'],,2.3
+124065,High School Musical,93,[13013],2006,['U.S.A.'],,2.4
+132786,High School Musical 3 : nos années lycée,115,[13013],2008,['U.S.A.'],2.8,2.5
+144713,Kung Fu Panda : Les Secrets des Cinq Cyclones,25,[13026],2022,['U.S.A.'],,3.1
+194397,Kung Fu Panda 3,95,"[13001, 13026, 13036, 13016]",2016,"['U.S.A.', 'Chine']",3.4,3.9
+143048,Kung Fu Panda 2,95,"[13001, 13026, 13036, 13016]",2011,['U.S.A.'],3.4,3.8
+45889,Kung Fu Panda,90,"[13025, 13026, 13036, 13016]",2008,['U.S.A.'],3.5,3.9
+258107,Escape Game,99,[13023],2019,"['U.S.A.', 'Afrique du Sud']",2.5,3.2
+178496,Gravity,90,"[13001, 13023]",2013,"['U.S.A.', 'Grande-Bretagne']",4.6,4.0
+220846,Passengers,117,"[13025, 13024, 13021]",2016,['U.S.A.'],3.2,3.8
+106,Astérix et Cléopâtre,80,"[13026, 13005]",1968,"['France', 'Belgique']",,3.8
+4365,Les Douze Travaux d'Asterix,82,[13026],1976,['France'],,4.0
+5014,Astérix et le coup du menhir,81,[13026],1989,"['Allemagne', 'France']",,3.1
+12011,Astérix et les Indiens,85,[13026],1995,"['France', 'Allemagne']",,2.7
+54220,Astérix et les Vikings,78,[13026],2006,['France'],2.9,2.5
+15277,Matilda,98,"[13005, 13012]",1997,['U.S.A.'],,3.4
+1079,Astérix et la surprise de César,121,[13026],1985,"['Belgique', 'France']",,3.1
+2373,Astérix chez les Bretons,80,"[13001, 13026, 13005, 13036]",1986,['Belgique'],,3.6
+37270,Le Grand restaurant,88,[13005],1966,['France'],,3.7
+36763,Les Aventures de Rabbi Jacob,97,[13005],1973,"['France', 'Italie']",,4.0
+30750,La Soupe aux choux,98,"[13005, 13021]",1981,['France'],,3.3
+9268,La Folie des grandeurs,113,"[13005, 13015]",1971,['France'],,4.1
+207487,Paddington,95,"[13026, 13005, 13036]",2014,"['France', 'Grande-Bretagne']",4.0,3.8
+259649,Le Jeu,90,"[13005, 13008]",2018,['France'],3.4,3.8
+135523,Raiponce,101,"[13026, 13036]",2010,['U.S.A.'],3.8,4.2
+186604,"Garfield, champion du rire",79,[13026],2023,"['U.S.A.', 'Corée du Sud']",,2.8
+210516,Le Hobbit : la Bataille des Cinq Armées,144,"[13025, 13001, 13012]",2014,"['U.S.A.', 'Nouvelle-Zélande']",3.6,4.0
+186918,Le Hobbit : la Désolation de Smaug,161,"[13001, 13012]",2013,"['U.S.A.', 'Nouvelle-Zélande']",3.7,4.2
+22323,Toy Story 2,93,"[13001, 13026, 13005, 13036, 13012]",2000,['U.S.A.'],4.3,4.1
+14264,Toy Story,77,"[13026, 13005, 13036]",1996,['U.S.A.'],4.0,4.3
+27791,Chicken Run,84,"[13001, 13026, 13005]",2000,"['Grande-Bretagne', 'France', 'U.S.A.']",4.3,3.6
+55129,Wallace et Gromit : le Mystère du lapin-garou,85,"[13001, 13026, 13005]",2005,"['U.S.A.', 'Grande-Bretagne']",4.9,3.8
+57615,La Marche de l'Empereur,85,[13007],2005,['France'],4.0,3.8
+284,Robin des Bois,83,"[13001, 13026, 13005]",1974,['U.S.A.'],,4.0
+32544,"Elle boit pas, elle fume pas, elle drague pas, mais... elle cause !",85,[13005],2016,['France'],,3.2
+37167,La Tulipe noire,115,"[13025, 13001, 13005]",1964,"['France', 'Espagne', 'Italie']",,3.2
+239764,Papa Ou maman 2,90,[13005],2016,"['France', 'Belgique']",3.3,3.6
+228537,Papa ou maman,85,"[13005, 13024]",2015,"['France', 'Belgique']",3.6,3.3
+15308,Mission : Impossible,110,"[13025, 13022, 13023]",1996,['U.S.A.'],4.0,3.6
+185426,On ne choisit pas sa famille,103,"[13001, 13005]",2011,['France'],1.2,2.0
+29366,Yamakasi,90,"[13025, 13005]",2001,['France'],3.0,1.9
+179173,L'Elève Ducobu,96,[13005],2011,['France'],2.1,2.0
+195874,Les Vacances de Ducobu,94,"[13005, 13036]",2012,['France'],2.8,1.9
+270878,Ducobu 3,90,[13005],2020,['France'],2.3,1.4
+135816,Cyprien,98,[13005],2009,['France'],2.1,1.4
+188550,Le Labyrinthe,114,"[13025, 13021]",2014,['U.S.A.'],3.4,3.6
+140623,"Moi, moche et méchant",95,[13026],2010,['U.S.A.'],3.4,4.0
+190299,"Moi, moche et méchant 2",98,"[13026, 13005, 13036]",2013,['U.S.A.'],3.7,4.0
+59198,"40 ans, toujours puceau",117,[13005],2005,['U.S.A.'],3.2,2.4
+10744,The Mask,100,"[13005, 13012]",1994,['U.S.A.'],3.2,3.9
+146717,Ip Man,105,"[13025, 13027, 13016]",2010,"['Chine', 'Hong-Kong']",,4.4
+339,Gremlins,105,"[13005, 13012]",1984,['U.S.A.'],,4.0
+13018,Casper,100,"[13001, 13005]",1995,['U.S.A.'],,3.1
+221524,Seul sur Mars,144,[13021],2015,['U.S.A.'],3.5,4.0
+140603,Karaté Kid,140,"[13025, 13008, 13036, 13016]",2010,"['U.S.A.', 'Chine']",3.1,3.4
+186905,After Earth,100,"[13025, 13001, 13021]",2013,['U.S.A.'],2.4,2.2
+105557,Je suis une légende,100,[13021],2007,['U.S.A.'],3.1,3.8
+29289,Retour vers le futur III,118,"[13001, 13005, 13021]",1990,['U.S.A.'],,4.1
+129924,Slumdog Millionaire,120,"[13005, 13002, 13024]",2009,"['U.S.A.', 'Grande-Bretagne']",3.5,4.3
+929,Et pour quelques dollars de plus,130,[13019],1966,"['Espagne', ""Allemagne de l'Ouest"", 'Italie']",3.7,4.3
+46211,Ratatouille,110,"[13026, 13005, 13036]",2007,['U.S.A.'],4.5,4.3
+5247,Retour vers le futur II,108,"[13001, 13005, 13021]",1989,['U.S.A.'],1.6,4.3
+229831,Ready Player One,140,"[13025, 13021]",2018,['U.S.A.'],4.0,4.2
+18671,The Truman Show,103,"[13005, 13008]",1998,['U.S.A.'],3.6,4.3
+110705,3 Amis,93,[13005],2007,['France'],2.6,2.1
+259166,Le Gendre de ma vie,100,[13005],2018,['France'],2.4,2.2
+146711,L'Italien,102,[13005],2010,['France'],3.1,2.2
+29738,Le Magicien d'Oz,101,"[13001, 13012]",1946,['U.S.A.'],3.6,3.8
+52933,Charlie et la chocolaterie,115,"[13001, 13005, 13036, 13012]",2005,"['U.S.A.', 'Grande-Bretagne']",4.0,3.9
+143035,Neuilly sa mère !,90,[13005],2009,['France'],2.7,2.6
+27438,La Tour Montparnasse infernale,92,[13005],2001,['France'],2.9,2.4
+240944,Demain Tout Commence,118,"[13005, 13008]",2016,"['France', 'Grande-Bretagne']",3.2,4.1
+248962,Knock,114,[13005],2017,['France'],2.4,2.5
+180270,Stars 80,110,[13005],2012,['France'],2.2,2.7
+12644,La vérité si je mens,100,[13005],1997,['France'],3.0,3.1
+148103,Le Coeur des hommes 3,114,"[13005, 13024]",2013,['France'],1.8,2.8
+2246,Astérix le Gaulois,68,"[13026, 13005]",1967,"['Belgique', 'France']",,3.0
+126535,Bienvenue chez les Ch'tis,106,[13005],2008,['France'],3.6,3.1
+173528,Rien à déclarer,108,[13005],2011,"['France', 'Belgique']",2.2,2.4
+177895,Astérix et Obélix : au service de Sa Majesté,109,"[13001, 13005]",2012,['France'],3.2,1.7
+212120,Supercondriaque,108,[13005],2014,['France'],2.4,2.4
+243329,Radin!,89,[13005],2016,['France'],2.8,2.3
+205956,Eyjafjallajökull,92,[13005],2013,"['France', 'Belgique']",2.5,2.5
+188649,La Guerre des Boutons,109,"[13001, 13036]",2011,['France'],2.6,3.1
+11295,Billy Elliot,110,[13002],2000,['Grande-Bretagne'],3.7,4.0
+49341,Arthur et les Minimoys,94,"[13001, 13026, 13036, 13012]",2006,['France'],3.3,3.1
+141890,Les Tuche,95,[13005],2011,['France'],2.3,2.4
+247291,Le Sens de la fête,116,[13005],2017,['France'],3.7,4.0
+50145,RRRrrrr !!!,98,[13005],2004,['France'],2.6,2.3
+226391,Ant-Man et la Guêpe,118,"[13025, 13001, 13021]",2018,['U.S.A.'],3.4,3.5
+111112,Les Simpson - le film,87,"[13001, 13026, 13005]",2007,['U.S.A.'],3.7,3.8
+129526,Warcraft : Le commencement,124,"[13025, 13001, 13012]",2016,['U.S.A.'],2.6,3.5
+146349,Deadpool,108,"[13025, 13005]",2016,"['U.S.A.', 'Canada']",3.1,4.0
+28869,Daredevil,102,"[13025, 13012]",2003,['U.S.A.'],2.7,2.0
+232095,"Connasse, Princesse des coeurs",82,[13005],2015,['France'],3.3,2.7
+196604,Les Gardiens de la Galaxie,121,"[13025, 13021]",2014,['U.S.A.'],3.8,4.2
+131394,Very Bad Trip,90,[13005],2009,"['U.S.A.', 'Allemagne']",3.7,4.0
+222291,Spider-Man: Far From Home,130,"[13025, 13001]",2019,['U.S.A.'],3.2,3.7
+215143,Captain America: Civil War,148,"[13025, 13012]",2016,['U.S.A.'],3.2,3.9
+209778,Spider-Man: Homecoming,133,"[13025, 13001]",2017,['U.S.A.'],3.5,3.5
+51366,Les 11 commandements,85,[13005],2004,['France'],2.8,1.8
+16591,Madagascar,86,"[13001, 13026, 13005]",2005,['U.S.A.'],3.6,3.6
+193511,Comme un Chef,85,[13005],2012,['France'],2.0,2.7
+146915,"Madagascar 3, Bons Baisers D’Europe",93,"[13001, 13026, 13005]",2012,['U.S.A.'],3.0,3.6
+264918,Chamboultout,100,"[13005, 13008]",2019,['France'],3.0,2.9
+134542,Fatal,95,"[13005, 13043]",2010,['France'],2.8,2.7
+17106,Taxi,86,"[13025, 13005, 13018]",1998,['France'],,2.4
+23460,Taxi 2,90,"[13025, 13005, 13018]",2000,['France'],2.8,2.0
+41230,Taxi 3,90,"[13025, 13005]",2003,['France'],2.8,1.5
+112452,Taxi 4,90,"[13025, 13005, 13018]",2007,['France'],2.2,1.4
+241480,La Folle Histoire de Max et Léon,98,"[13005, 13014]",2016,"['France', 'Belgique']",3.2,3.5
+250627,Taxi 5,102,"[13025, 13005, 13018]",2018,['France'],2.1,1.7
+56143,Brice de Nice,98,[13005],2005,['France'],2.8,1.9
+61099,"OSS 117, Le Caire nid d'espions",99,"[13025, 13005, 13022]",2006,['France'],3.9,3.7
+125611,Lucky Luke,104,"[13005, 13019]",2009,"['France', 'Argentine']",2.5,1.4
+58912,On l'appelle Trinita,113,"[13005, 13019]",1971,['Italie'],,3.3
+58913,On continue à l'appeler Trinita,117,"[13005, 13019]",2016,['Italie'],,3.2
+55774,Cars,96,"[13025, 13026, 13005, 13012]",2006,['U.S.A.'],4.0,3.8
+135530,Cars 2,112,[13026],2011,['U.S.A.'],2.6,3.3
+235582,Le Grand Bain,122,"[13005, 13008]",2018,['France'],4.1,3.8
+200433,San Andreas,114,"[13025, 13001, 13023]",2015,['U.S.A.'],2.8,2.9
+171204,Agents presque secrets,107,"[13025, 13005]",2016,['U.S.A.'],2.3,3.1
+179349,Incendies,123,[13008],2011,['Canada'],3.8,4.3
+188448,Le Prénom,109,[13005],2012,['France'],3.2,4.0
+222030,Tu veux ou tu veux pas,87,"[13005, 13024]",2014,['France'],2.0,2.0
+261634,Le Meilleur reste à venir,118,"[13005, 13008]",2019,['France'],2.9,3.4
+38255,P.R.O.F.S.,95,[13005],1985,['France'],,2.6
+251981,La Colle,91,[13005],2017,"['France', 'Belgique']",1.9,2.7
+209672,La Vraie vie des profs,100,[13005],2013,['France'],2.4,1.6
+247411,Alibi.com,90,[13005],2017,['France'],2.9,3.4
+249232,Epouse-moi mon pote,92,[13005],2017,['France'],2.2,2.9
+257514,Nicky Larson et le parfum de Cupidon,91,"[13025, 13005, 13018]",2019,['France'],2.9,3.7
+222512,Babysitting,84,[13005],2014,['France'],3.2,3.7
+280464,Soda : le rêve américain,90,[13005],2015,['France'],,2.5
+224323,Les Profs 2,92,[13005],2015,['France'],2.3,1.9
+236089,Amis publics,98,[13005],2016,['France'],2.7,3.0
+251244,Loue-moi !,89,[13005],2017,['France'],2.7,2.5
+29057,Le Monde de Nemo,101,"[13001, 13026, 13036]",2003,['U.S.A.'],4.5,4.2
+61577,Camping,95,[13005],2006,['France'],2.3,2.1
+61259,Astérix aux Jeux Olympiques,113,"[13025, 13001, 13005]",2008,"['France', 'Belgique', 'Espagne', 'Italie', 'Allemagne']",1.9,1.4
+112171,Camping 2,99,[13005],2010,['France'],2.6,1.6
+190768,Les Seigneurs,97,[13005],2012,['France'],2.6,2.0
+224790,Bis,107,[13005],2015,['France'],3.2,2.7
+273882,10 jours sans maman,98,[13005],2020,['France'],2.2,2.1
+218634,Fiston,88,[13005],2014,['France'],2.0,2.7
+198937,Les Indestructibles 2,118,"[13001, 13026, 13036]",2018,['U.S.A.'],4.2,4.2
+53096,Les Indestructibles,123,"[13025, 13001, 13026, 13005, 13036]",2004,['U.S.A.'],4.6,4.0
+133404,Les Femmes du 6e étage,106,[13005],2011,['France'],3.5,3.8
+231739,Comme Un Avion,105,[13005],2015,['France'],4.0,3.5
+221613,Elle l'adore,104,[13005],2014,['France'],3.7,3.4
+59303,La Doublure,85,"[13005, 13008]",2006,"['France', 'Italie', 'Belgique']",2.4,2.7
+267228,La Belle époque,116,"[13005, 13008, 13024]",2019,['France'],3.5,3.9
+33285,Pour cent briques t'as plus rien...,85,[13005],1982,['France'],,3.2
+180314,Time Out,101,"[13025, 13021, 13023]",2011,['U.S.A.'],2.7,3.5
+206892,007 Spectre,150,"[13025, 13022]",2015,"['Grande-Bretagne', 'U.S.A.']",3.0,3.6
+145646,Skyfall,143,"[13025, 13022, 13023]",2012,"['Grande-Bretagne', 'U.S.A.']",4.0,4.2
+209893,Cinquante Nuances plus sombres,118,"[13008, 13010, 13024]",2017,['U.S.A.'],1.5,2.3
+209894,Cinquante Nuances plus claires,106,"[13008, 13010, 13024]",2018,['U.S.A.'],2.1,2.5
+205450,Cinquante Nuances de Grey,125,"[13008, 13024, 13023]",2015,['U.S.A.'],2.1,2.0
+228533,Dofus - Livre 1 : Julith,107,[13026],2016,['France'],2.8,4.1
+127524,Le Loup de Wall Street,179,"[13027, 13008]",2013,['U.S.A.'],4.0,4.3
+3130,La vie est un long fleuve tranquille,90,[13005],1988,['France'],4.4,3.8
+53934,Vipère Au Poing,100,[13008],2004,['France'],2.9,2.9
+5241,Les Visiteurs,105,[13005],1993,['France'],3.2,3.8
+1919,Les Visiteurs 2 : Les couloirs du temps,118,"[13005, 13021]",1998,['France'],,2.4
+14539,Astérix et Obélix contre César,109,"[13001, 13005]",1999,"['Allemagne', 'France', 'Italie']",3.1,2.2
+28537,Astérix et Obélix : Mission Cléopâtre,112,[13005],2002,['France'],3.8,4.1
+210211,Les Profs,88,[13005],2013,['France'],2.2,2.2
+222259,Qu'est-ce qu'on a fait au Bon Dieu?,97,[13005],2014,['France'],3.8,3.4
+232321,Babysitting 2,93,[13005],2015,['France'],2.2,3.4
+246797,À bras ouverts,93,[13005],2017,"['France', 'Belgique']",1.8,1.8
+250465,Momo,86,[13005],2017,['France'],2.3,1.9
+262394,Qu'est-ce qu'on a encore fait au Bon Dieu?,99,[13005],2017,['France'],2.4,2.7
+3198,Les Bronzés font du ski,90,[13005],1979,['France'],,4.0
+30717,Papy fait de la résistance,106,[13005],1983,['France'],,3.6
+59308,Les Bronzés 3 amis pour la vie,97,[13005],2006,['France'],2.7,1.4
+227279,Nos femmes,95,[13005],2015,['France'],2.0,2.4
+253174,All Inclusive,92,[13005],2019,['France'],1.5,1.1
+9798,Les Bronzés,98,[13005],1978,['France'],3.2,3.6
+7342,Basic Instinct,130,"[13018, 13010, 13023]",1992,"['U.S.A.', 'France']",2.0,3.8
+188021,The Dictator,83,[13005],2012,['U.S.A.'],2.8,3.0
+32563,La Septième compagnie au clair de lune,90,"[13001, 13005]",1977,['France'],,3.1
+32552,On a retrouvé la 7ème compagnie,90,"[13001, 13005]",1975,['France'],,3.4
+36384,Mais où est donc passée la septième compagnie ?,91,"[13025, 13005, 13014]",1973,"['France', 'Italie']",,3.6
+189651,Fast &amp; Furious 6,130,[13025],2013,['U.S.A.'],3.0,3.5
+45319,2 Fast 2 Furious,105,"[13025, 13001]",2003,"['U.S.A.', 'Allemagne']",2.3,2.3
+221541,Fast &amp; Furious 8,136,"[13025, 13023]",2017,"['U.S.A.', 'Grande-Bretagne', 'France', 'Canada', 'Samoa']",3.1,3.6
+61256,Fast &amp; Furious : Tokyo Drift,104,"[13025, 13018]",2006,"['U.S.A.', 'Allemagne']",1.6,2.2
+178061,Fast and Furious 5,130,"[13025, 13023]",2011,['U.S.A.'],3.3,3.5
+198750,Fast &amp; Furious 7,137,[13025],2015,['U.S.A.'],3.6,3.6
+29173,Fast &amp; Furious,107,"[13025, 13018]",2001,['U.S.A.'],3.0,2.9
+131334,Fast and Furious 4,100,[13025],2009,['U.S.A.'],2.3,2.9
+3845,La Vache et le prisonnier,119,[13002],1959,"['France', 'Italie']",,3.8
+13467,La Cuisine au beurre,82,[13005],1963,['France'],,3.5
+135916,King Guillaume,85,[13005],2009,['France'],2.2,1.5
+235236,La Ch’tite famille,107,[13005],2018,['France'],2.9,2.6
+28331,Le Jouet,95,[13005],1976,['France'],,3.3
+215097,Star Wars - Le Réveil de la Force,135,"[13025, 13001, 13021]",2015,['U.S.A.'],4.0,3.6
+215099,Star Wars - Les Derniers Jedi,152,"[13025, 13021]",2017,['U.S.A.'],3.6,3.0
+215094,Star Wars: L'Ascension de Skywalker,142,"[13001, 13021]",2019,['U.S.A.'],3.1,3.0
+29014,Star Wars : Episode II - L'Attaque des clones,142,"[13001, 13012, 13021]",2002,['U.S.A.'],3.5,3.9
+40623,Star Wars : Episode III - La Revanche des Sith,140,"[13025, 13001, 13021]",2005,['U.S.A.'],3.9,4.2
+20754,Star Wars : Episode I - La Menace fantôme,133,"[13001, 13012, 13021]",1999,['U.S.A.'],3.1,3.8
+1105,Touchez pas au grisbi,94,"[13025, 13018, 13008]",1954,"['France', 'Italie']",,3.7
+45025,"125, rue Montmartre",85,"[13018, 13008, 13031]",1959,['France'],,3.9
+1361,Garde à vue,90,[13018],1981,['France'],,4.2
+33928,Le Ruffian,108,"[13001, 13018]",1983,"['France', 'Canada']",,3.1
+4327,Les Tontons flingueurs,105,"[13005, 13018]",1963,"['France', 'Allemagne', 'Italie']",3.8,4.3
+22092,Le Sixième Sens,107,"[13008, 13023]",2000,['U.S.A.'],4.0,4.3
+61282,Avatar,162,"[13001, 13021]",2009,['U.S.A.'],4.3,4.3
+123734,Wall-E,97,"[13001, 13026, 13036, 13021]",2008,['U.S.A.'],4.6,4.4
+5818,Titanic,194,"[13008, 13024]",1998,['U.S.A.'],4.9,4.3
+121,Les Aventuriers de l'Arche perdue,116,"[13025, 13001]",1981,['U.S.A.'],4.6,4.4
+219070,Les Figures de l'ombre,127,"[13027, 13008]",2017,['U.S.A.'],3.3,4.3
+126123,Toy Story 3,100,"[13001, 13026, 13005, 13012]",2010,['U.S.A.'],4.7,4.4
+5032,Indiana Jones et la Dernière Croisade,127,"[13025, 13001]",1989,['U.S.A.'],4.4,4.4
+37485,Le Voyage de Chihiro,125,"[13001, 13026, 13012]",2002,['Japon'],4.8,4.4
+25803,Star Wars : Episode VI - Le Retour du Jedi,133,"[13001, 13021]",1983,['U.S.A.'],3.0,4.4
+25801,Star Wars : Episode IV - Un nouvel espoir (La Guerre des étoiles),121,"[13001, 13021]",1977,['U.S.A.'],4.8,4.4
+448,Retour vers le futur,116,"[13001, 13005, 13021]",1985,['U.S.A.'],3.6,4.5
+182745,Intouchables,112,"[13027, 13005, 13008]",2011,['France'],3.7,4.4
+185719,Bohemian Rhapsody,135,"[13027, 13008]",2018,['U.S.A.'],3.0,4.3
+12837,Usual Suspects,106,"[13018, 13023]",1995,"['U.S.A.', 'Allemagne']",4.6,4.4
+143692,Inception,148,"[13021, 13023]",2010,"['U.S.A.', 'Grande-Bretagne']",4.1,4.5
+25802,Star Wars : Episode V - L'Empire contre-attaque,124,"[13001, 13021]",1980,['U.S.A.'],5.0,4.5
+2021,Il était une fois dans l'Ouest,175,[13019],1969,"['U.S.A.', 'Italie']",4.0,4.5
+19395,"Le Bon, la brute et le truand",180,[13019],1968,"['Espagne', 'Italie']",4.1,4.5
+10862,Le Roi Lion,89,"[13001, 13026, 13036, 13013]",1994,['U.S.A.'],3.4,4.5
+11736,Les Evadés,142,[13008],1995,['U.S.A.'],3.2,4.5
+1628,Le Parrain,175,"[13018, 13008]",1972,['U.S.A.'],4.6,4.5
+22779,La Ligne verte,189,"[13018, 13008, 13012]",2000,['U.S.A.'],2.8,4.6
+10568,Forrest Gump,140,"[13005, 13008, 13024]",1994,['U.S.A.'],2.6,4.6
+9684,Léon,103,"[13025, 13018, 13008, 13023]",1994,['France'],2.0,4.3
+21189,Fight Club,139,"[13008, 13023]",1999,"['Allemagne', 'U.S.A.']",2.7,4.5
+251315,Tenet,150,"[13025, 13021]",2020,['U.S.A.'],3.6,3.6
