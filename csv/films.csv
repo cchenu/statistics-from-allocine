@@ -1,7 +1,8 @@
 id,title,duration,genres,year,countries,press rating,spectator rating
+249877,Your Name,110,"[13026, 13012]",2016,['Japon'],4.0,4.5
 493,La Règle du jeu,112,[13002],1939,['France'],5.0,3.9
 26602,Requiem for a Dream,102,[13008],2001,['U.S.A.'],4.0,4.2
-318031,Un p’tit truc en plus,99,[13005],2024,['France'],3.0,4.3
+318031,Un p’tit truc en plus,99,[13005],2024,['France'],3.1,4.3
 298732,Rien à Perdre,112,[13008],2023,['France'],3.5,3.8
 10457,Les Galettes de Pont-Aven,105,[13005],1975,['France'],,3.4
 32941,Lady Bird,95,"[13005, 13008]",2018,['U.S.A.'],3.8,3.6
@@ -11,7 +12,7 @@ id,title,duration,genres,year,countries,press rating,spectator rating
 267546,À couteaux tirés,131,"[13005, 13018, 13008]",2019,['U.S.A.'],3.8,4.1
 125562,Mamma Mia!,110,"[13005, 13013, 13024]",2008,"['U.S.A.', 'Grande-Bretagne', 'Allemagne']",2.8,3.3
 297,Les Sept Samouraïs,207,"[13025, 13001]",1955,['Japon'],4.6,2.8
-46937,Les Bravados,98,"[13008, 13019]",1957,['U.S.A.'],,3.6
+46937,Les Bravados,98,"[13008, 13019]",1957,['U.S.A.'],,3.5
 204925,Hunger Games - La Révolte : Partie 2,137,"[13001, 13021, 13014]",2015,['U.S.A.'],3.0,3.4
 200088,Hunger Games - La Révolte : Partie 1,123,"[13025, 13008, 13021]",2014,['U.S.A.'],3.0,3.4
 196666,Hunger Games - L'embrasement,146,"[13025, 13008, 13021]",2013,['U.S.A.'],3.6,3.9
@@ -232,7 +233,7 @@ id,title,duration,genres,year,countries,press rating,spectator rating
 253927,Première année,92,[13008],2018,['France'],3.7,3.8
 18478,Mary à tout prix,119,[13005],1998,['U.S.A.'],4.0,3.5
 267948,Premier de la classe,82,[13005],2019,['France'],3.3,2.5
-251564,Le Mec de la tombe d'à côté,90,"[13005, 13008, 13024]",2023,['France'],,3.1
+251564,Le Mec de la tombe d'à côté,90,"[13005, 13008, 13024]",2023,['France'],,3.0
 8865,Nous irons tous au paradis,110,[13005],1977,['France'],,3.7
 182990,Mais qui a re-tué Pamela Rose ?,98,[13005],2012,['France'],3.2,2.5
 176238,Des nouilles aux haricots noirs,116,"[13002, 13024]",2009,['Corée du Sud'],,4.2
@@ -347,7 +348,7 @@ id,title,duration,genres,year,countries,press rating,spectator rating
 284,Robin des Bois,83,"[13001, 13026, 13005]",1974,['U.S.A.'],,4.0
 32544,"Elle boit pas, elle fume pas, elle drague pas, mais... elle cause !",85,[13005],2016,['France'],,3.2
 37167,La Tulipe noire,115,"[13025, 13001, 13005]",1964,"['France', 'Espagne', 'Italie']",,3.2
-239764,Papa Ou maman 2,90,[13005],2016,"['France', 'Belgique']",3.3,3.6
+239764,Papa Ou maman 2,90,[13005],2016,"['France', 'Belgique']",3.3,3.5
 228537,Papa ou maman,85,"[13005, 13024]",2015,"['France', 'Belgique']",3.6,3.3
 15308,Mission : Impossible,110,"[13025, 13022, 13023]",1996,['U.S.A.'],4.0,3.6
 185426,On ne choisit pas sa famille,103,"[13001, 13005]",2011,['France'],1.2,2.0

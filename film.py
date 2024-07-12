@@ -231,6 +231,12 @@ class Film:
             self.__year = 1963
         elif self.__id == 176238:
             self.__year = 2009
+        elif self.__id == 92174:
+            self.__year = 1929
+        elif self.__id == 7189:
+            self.__year == 1937
+        elif self.__id == 103167:
+            self.__year = 1936
 
     def get_year(self):
         """

@@ -93,5 +93,5 @@ id,title,duration,genres,year,countries,press rating,spectator rating
 4394,Grand Hotel,102,[13002],2023.0,['U.S.A.'],,3.5
 49968,La Ruée vers l'Ouest,131,"[13008, 13019]",,['U.S.A.'],,3.4
 47828,"A l'Ouest, rien de nouveau",133,"[13008, 13014]",1999.0,['U.S.A.'],4.5,4.0
-92174,The Broadway Melody,104,"[13013, 13024]",,['U.S.A.'],,2.6
+92174,The Broadway Melody,104,"[13013, 13024]",1929.0,['U.S.A.'],,2.6
 7113,Les Ailes,144,"[13025, 13008, 13024, 13014]",1928.0,['U.S.A.'],,3.9
