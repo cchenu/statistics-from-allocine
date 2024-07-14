@@ -3,6 +3,7 @@
 import re
 import requests
 from bs4 import BeautifulSoup
+from corrections import corrections
 
 
 class Film:
@@ -168,8 +169,10 @@ class Film:
         if duration:
             duration = duration[0]
             self.__duration = int(duration[0]) * 60 + int(duration[3:5])
-        if self.__id == 228223:
-            self.__duration = 99
+
+        # If data in Allocine is empty or false
+        if self.__id in corrections["year"]:
+            self.__year = corrections["year"][self.__id]
 
     def get_duration(self):
         """
@@ -227,16 +230,10 @@ class Film:
         year = re.findall(pattern_year, html_code)
         if year:
             self.__year = int(year[0])
-        if self.__id == 4327:  # Error on Allocine website
-            self.__year = 1963
-        elif self.__id == 176238:
-            self.__year = 2009
-        elif self.__id == 92174:
-            self.__year = 1929
-        elif self.__id == 7189:
-            self.__year == 1937
-        elif self.__id == 103167:
-            self.__year = 1936
+
+        # If data in Allocine is empty or false
+        if self.__id in corrections["year"]:
+            self.__year = corrections["year"][self.__id]
 
     def get_year(self):
         """
