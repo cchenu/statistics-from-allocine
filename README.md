@@ -1,5 +1,5 @@
 # Statistics-from-allocine
-> Python program to have statistics about a films list from Allocine
+> Python program to have statistics about a films list from Allocine.
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -51,6 +51,7 @@ This projet recoveries different data about films of one collection with python 
 To use this code, first, you have to open the main.py file.
 After, you must find your collection ID and your Allocine token, to find these, go to your Allocine page with all your collections, inspect the element (right click and inspect). Go on network tab. Click on your collection, an event "public" appears, click on it. On headers tab, in authorization, after "Bearer", you have your token. On payload tab, after "collectionId" you have your id.
 Complete the lines 99 and 100 of main.py and launch your script.
+Some data about durations or release years can be wrong in Allocine website, you can correct it in corrections.py.
 If you just want the csv files, you have it in "csv" folder.
 If you want to use Power BI, open rapport.pbix, go on home tab, on "Edit queries", in data source settings and write the paths of your csv files.
 
