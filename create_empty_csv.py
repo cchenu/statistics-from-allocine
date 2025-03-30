@@ -1,11 +1,13 @@
 """Create an empty list of countries and genres with films in Allocine."""
 
-import re
 import multiprocessing
-from bs4 import BeautifulSoup
-from tqdm import tqdm
-import requests
+import re
+
 import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+from deep_translator import GoogleTranslator
+from tqdm import tqdm
 
 
 def get_name(type_, id_):
@@ -14,19 +16,21 @@ def get_name(type_, id_):
 
     Parameters
     ----------
-    type_ : string
-        "pays" or "genre".
-    id_ : integer
-        ID of the country or the genre in allocine.
+    type_ : str
+        Type of entity to retrieve, either "pays" (country) or "genre".
+    id_ : int
+        Allocine ID of the country or genre.
 
     Returns
     -------
-    string
-        Name of the country or the genre with this id.
+    str
+        Name of the country or the genre with the given ID.
+        None if no result is found.
 
     """
-    response = requests.get(f"https://www.allocine.fr/films/{type_}-{id_}",
-                            timeout=10)
+    response = requests.get(
+        f"https://www.allocine.fr/films/{type_}-{id_}", timeout=10
+    )
     html_page = str(BeautifulSoup(response.content, "html.parser"))
     pattern = r'class="filter-entity-on-txt" data-name="(.*?)">'
     results = re.findall(pattern, html_page)
@@ -37,17 +41,18 @@ def get_name(type_, id_):
 
 def get_country(id_country):
     """
-    Get the country with its Allocine's id.
+    Get the country with its Allocine's ID.
 
     Parameters
     ----------
-    id_country : integer
-        ID of the country in allocine.
+    id_country : int
+        Allocine ID of the country.
 
     Returns
     -------
-    country : string
-        Name of the country with this id.
+    country : str
+        Name of the country corresponding to the given ID.
+        None if no result is found.
 
     """
     country = get_name("pays", id_country)
@@ -56,17 +61,18 @@ def get_country(id_country):
 
 def get_genre(id_genre):
     """
-    Get the genre with its Allocine's id.
+    Get the genre with its Allocine's ID.
 
     Parameters
     ----------
-    id_genre : integer
-        ID of the genre in allocine.
+    id_genre : int
+        Allocine ID of the genre.
 
     Returns
     -------
-    genre : string
-        Name of the genre with this id.
+    genre : str
+        Name of the genre corresponding to the given ID.
+        None if no result is found.
 
     """
     genre = get_name("genre", id_genre)
@@ -75,7 +81,12 @@ def get_genre(id_genre):
 
 def run():
     """
-    Create a csv file with all countries in Allocine.
+    Generate CSV files for countries and genres available on Allocine.
+
+    This function creates two CSV files:
+    - countries.csv with country names in french and english and their
+    respective IDs.
+    - genres.csv with french genre names and their respective IDs.
 
     Returns
     -------
@@ -83,21 +94,28 @@ def run():
 
     """
     df_countries = pd.DataFrame()
-    df_countries['id'] = range(0, 20000)
+    df_countries["id"] = range(5000, 8000)
     df_genres = pd.DataFrame()
-    df_genres['id'] = range(0, 20000)
+    df_genres["id"] = range(13000, 14000)
     with multiprocessing.Pool() as pool:
-        df_countries['country'] = tqdm(pool.imap(get_country,
-                                                 df_countries['id']),
-                                       total=len(df_countries))
-        df_genres['genre'] = tqdm(pool.imap(get_genre,
-                                            df_genres['id']),
-                                  total=len(df_genres))
+        df_countries["country"] = tqdm(
+            pool.imap(get_country, df_countries["id"]), total=len(df_countries)
+        )
+        df_genres["genre"] = tqdm(
+            pool.imap(get_genre, df_genres["id"]), total=len(df_genres)
+        )
     df_countries = df_countries.dropna()
-    df_countries.to_csv('csv/countries.csv', index=False)
+    # Add english names
+    translator = GoogleTranslator(source="fr", target="en")
+    df_countries["country_en"] = df_countries["country"].apply(
+        lambda country: (
+            translator.translate(country) if country != "Suède" else "Sweden"
+        )
+    )
+    df_countries.to_csv("csv/countries.csv", index=False)
     df_genres = df_genres.dropna()
-    df_genres.to_csv('csv/genres.csv', index=False)
+    df_genres.to_csv("csv/genres.csv", index=False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run()

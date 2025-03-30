@@ -5,19 +5,19 @@ import requests
 
 def watched_list(collection_id, token):
     """
-    Create the list of films' id.
+    Create the list of movie IDs from a specific Allocine collection.
 
     Parameters
     ----------
-    collection_id : string
+    collection_id : str
         ID of the Allocine collection.
-    token : TYPE
+    token : str
         Token to be connected to Allocine.
 
     Returns
     -------
-    list_id : list of integer
-        List of the films' id on Allocine.
+    list_id : list[int]
+        List of movie IDs from the specified Allocine collection.
 
     """
     # URL of the Allocine's api
@@ -169,28 +169,25 @@ def watched_list(collection_id, token):
           __typename
         }
         """,
-        "variables": {"collectionId": collection_id, "first": 120}}
+        "variables": {"collectionId": collection_id, "first": 120},
+    }
 
     response = requests.post(url, headers=headers, json=params, timeout=10)
     # Information are in entities
-    entities = (response.json()['data']['me']['user']['social']['collections']
-                ['edges'][0]['node']['entities'])
-    number_films = entities['totalCount']
+    entities = response.json()["data"]["me"]["user"]["social"]["collections"][
+        "edges"
+    ][0]["node"]["entities"]
+    number_films = entities["totalCount"]
     list_id = []
     # We can just have 120 films for one request, we have to know if there is
     # another page
     while len(list_id) != number_films:
-        for films in entities['edges']:  # Find the films id on this page
-            list_id.append(films['node']['entity']['internalId'])
-        after = entities['pageInfo']['endCursor']  # Find the end of this page
-        params['variables']['after'] = after  # Set the beginning of next page
+        for films in entities["edges"]:  # Find the films id on this page
+            list_id.append(films["node"]["entity"]["internalId"])
+        after = entities["pageInfo"]["endCursor"]  # Find the end of this page
+        params["variables"]["after"] = after  # Set the beginning of next page
         response = requests.post(url, headers=headers, json=params, timeout=10)
-        entities = (response.json()['data']['me']['user']['social']
-                    ['collections']['edges'][0]['node']['entities'])
+        entities = response.json()["data"]["me"]["user"]["social"][
+            "collections"
+        ]["edges"][0]["node"]["entities"]
     return list_id
-
-
-if __name__ == "__main__":
-    ID = ""
-    TOKEN = ""
-    watched = watched_list(ID, TOKEN)

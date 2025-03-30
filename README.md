@@ -1,8 +1,8 @@
 # Statistics-from-allocine
-> Python program to have statistics about a films list from Allocine.
+> Python program to generate statistics from an Allocine film collection.
 
 ## Table of Contents
-* [General Info](#general-information)
+* [General Information](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Usage](#usage)
@@ -10,54 +10,88 @@
 * [Contact](#contact)
 * [License](#license)
 
-
 ## General Information
-On Allocine, a feature allow to create collection of films. The website does not give statistics on a collection, the goal of this project is to have these statistics. 
-This projet recoveries different data about films of one collection with python and creates csv files with these data. It is possible to have some graphs with power BI.
+Allocine allows users to create film collections, but the website does not provide statistics on these collections.  
+The goal of this project is to generate statistics based on a given collection.  
+
+This project retrieves various data about films from a collection using Python and generates CSV files.  
+A **Streamlit** web app is also available to visualize the data.
 
 ## Technologies Used
-- Python - version 3.11.9
-  - Python library : BeautifulSoup (bs4), multiprocessing, pandas, re, requests, tqdm
-- Microsoft Power BI Desktop - version 2.124
+- **Python** - version 3.12.2  
+  - Python libraries: see `requirements.txt`.
 
 ## Features
-- Create csv files from an Allocine collection.
-  - Create films.csv with for all films his Allocine's id, his title, his duration, his genres, his year and his countries.
-    - Create cesars.csv, pzlmes.csv and oscars.csv as films.csv for award-winning films, from existing Allocine's collections.
-  - Create countries.csv with for each country present in the Allocine collection, gives the number of films from this country.
-  - Create genres.csv with for each film genre present in the Allocine collection, gives the number of films of this genre.
-- Create graphs on Power BI.
-  - Create a histogram films by year.
-  - Create a histogram films by country.
-  - Create a map with films by country.
-  - Create a histogram films by genre.
-  - Create a histogram films by duration.
+### CSV File Generation
+- Extract data from an Allocine collection and save it as CSV files.
+  - `films.csv`: Contains information about each film, including its Allocine ID, title, duration, genres, release year, countries, press rating, spectator rating, actors, and directors.
+  - `cesars.csv`, `palmes.csv`, and `oscars.csv`: Similar to `films.csv` but only include award-winning films from existing Allocine collections.
+  - `countries.csv`: Lists the number of films per country.
+  - `genres.csv`: Lists the number of films per genre.
+  - `actors.csv`: Lists the number of films per actor IDs.
+  - `directors.csv`: Lists the number of films per director IDs.
+
+### Streamlit Web App
+- Create a Streamlit web app.
+  - Provide general statistics on the number of watched films, total watch time, countries with at least one watched film, most-watched actors, and most-watched directors.
+  - Create a histogram of films by year.
+  - Create a histogram of films by genre.
+  - Create a histogram of films by country.
+  - Create a map of films by country
+  - Create a histogram of films by duration.
   - Create a doughnut chart with watched César-winning films.
   - Create a doughnut chart with watched Oscar-winning films.
   - Create a doughnut chart with watched Palmes d'Or-winning films.
   - Create a doughnut chart with countries with at least one watched film.
-  - Create a histogram films by spectator rating.
-  - Create a histogram films by press rating.
-  - Create a histogram films without press rating by spectator rating.
-  - Create a scatter plot with spectator rating in function of press rating.
+  - Create a histogram of films by spectator rating.
+  - Create a histogram of films by press rating.
+  - Create a histogram of films without press rating by spectator rating.
+  - Create a scatter plot of spectator rating as a function of press rating.
+  - Show the nine most-watched directors, including their names, photos, and number of watched films.
+  - Show the nine most-watched actors, including their names, photos, and number of watched films.
 
-![Four different graphs](https://zupimages.net/up/24/19/4cc1.png)
-![Histogram films by duration](https://zupimages.net/up/24/19/fgw1.png)
-![Progression of watched films](https://zupimages.net/up/24/27/xh1j.png)
-![Statistics about ratings](https://zupimages.net/up/24/27/ci26.png)
-
+![First part of the streamlit app](https://zupimages.net/up/25/13/0ryo.png)
+![Second part of the streamlit app](https://zupimages.net/up/25/13/x06n.png)
+![Third part of the streamlit app](https://zupimages.net/up/25/13/lw17.png)
 
 ## Usage
-To use this code, first, you have to open the main.py file.
-After, you must find your collection ID and your Allocine token, to find these, go to your Allocine page with all your collections, inspect the element (right click and inspect). Go on network tab. Click on your collection, an event "public" appears, click on it. On headers tab, in authorization, after "Bearer", you have your token. On payload tab, after "collectionId" you have your id.
-Complete the lines 99 and 100 of main.py and launch your script.
-Some data about durations or release years can be wrong in Allocine website, you can correct it in corrections.py.
-If you just want the csv files, you have it in "csv" folder.
-If you want to use Power BI, open rapport.pbix, go on home tab, on "Edit queries", in data source settings and write the paths of your csv files.
+### Setup
+**Ensure you have Python 3.x installed.**
+
+**Retrieve your Allocine collection ID and token:**
+   - Go to your Allocine collections page.
+   - Open your browser’s Developer Tools (`Right-click > Inspect` or press `F12`).
+   - Navigate to the **Network** tab.
+   - Click on your collection; an event named **"public"** should appear.
+   - Under the **Headers** tab, find `Authorization`:  
+     - The token is the value after **"Bearer"**.
+   - Under the **Payload** tab, find `collectionId`:  
+     - This is your collection ID.
+
+**Create your `.env` file in your command prompt:**  
+   ```bash
+   cp .env.example .env
+   ```
+
+**Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running the Application
+To launch the Streamlit app, navigate to your project folder in the command prompt (with `cd` command) and run:
+   ```bash
+   streamlit run app.py
+   ```
+
+### Other
+Some data about durations or release years may be incorrect on the Allocine website. You can correct it in `corrections.py`.
+
+If you only need the CSV files, you can find them in the `csv/` folder.
 
 
 ## Project Status
-Project is: _complete_ - version 2.0.0.
+Project is: _complete_ - version 3.0.0.
 
 
 ## Contact

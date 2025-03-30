@@ -1,34 +1,34 @@
 id,genre,number
-13001,Aventure,105
-13002,Comédie dramatique,17
-13005,Comédie,262
+13001,Aventure,0
+13002,Comédie dramatique,0
+13005,Comédie,0
 13006,Dessin Animé,0
-13008,Drame,118
-13009,Epouvante-horreur,2
-13010,Erotique,5
-13012,Fantastique,51
-13013,Comédie musicale,9
-13014,Guerre,7
-13015,Historique,11
-13016,Arts Martiaux,12
+13008,Drame,0
+13009,Epouvante-horreur,0
+13010,Erotique,0
+13012,Fantastique,0
+13013,Comédie musicale,0
+13014,Guerre,0
+13015,Historique,0
+13016,Arts Martiaux,0
 13017,Divers,0
-13018,Policier,57
-13019,Western,10
-13021,Science Fiction,56
-13022,Espionnage,16
-13023,Thriller,64
-13024,Romance,29
-13025,Action,133
-13026,Animation,59
-13027,Biopic,18
+13018,Policier,0
+13019,Western,0
+13021,Science Fiction,0
+13022,Espionnage,0
+13023,Thriller,0
+13024,Romance,0
+13025,Action,0
+13026,Animation,0
+13027,Biopic,0
 13028,Péplum,0
 13030,Médical,0
-13031,Judiciaire,5
+13031,Judiciaire,0
 13032,Feuilleton,0
 13033,Expérimental,0
-13036,Famille,37
+13036,Famille,0
 13040,Classique,0
-13043,Musical,2
+13043,Musical,0
 13045,Web Séries,0
 13047,Bollywood,0
 13048,Opéra,0

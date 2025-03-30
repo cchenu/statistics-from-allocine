@@ -1,4 +1,8 @@
-tqdm~=4.65.0
-requests~=2.31.0
-beautifulsoup4~=4.12.2
+beautifulsoup4~=4.12.3
 pandas~=2.2.2
+plotly==6.0.0
+python-dotenv==1.1.0
+Requests~=2.31.0
+streamlit==1.41.1
+tqdm==4.65.2
+dotenv~=0.9.9

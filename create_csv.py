@@ -1,20 +1,21 @@
-"""Create csv files for films data of a Allocine films collection."""
+"""Create CSV files containing data for a collection of films from Allociné."""
 
+import ast
 import multiprocessing
-from tqdm import tqdm
+import os
+from collections import Counter
+
 import pandas as pd
+from dotenv import load_dotenv
+from tqdm import tqdm
+
 from film import Film
 from watched import watched_list
 
 
-def update_awards(token):
+def update_awards():
     """
     Update csv about Cesars, Oscars and Palmes d'Or films.
-
-    Parameters
-    ----------
-    token : string
-        Token to be connected to Allocine.
 
     Returns
     -------
@@ -24,22 +25,21 @@ def update_awards(token):
     oscars_id = "VXNlckNvbGxlY3Rpb246NDQ5NzM="
     cesars_id = "VXNlckNvbGxlY3Rpb246NDQ5NzQ="
     palmes_id = "VXNlckNvbGxlY3Rpb246NDQ5NzY="
-    films(oscars_id, token, name_file="oscars", other_csv=False)
-    films(cesars_id, token, name_file="cesars", other_csv=False)
-    films(palmes_id, token, name_file="palmes", other_csv=False)
+    create_csv(oscars_id, name_file="oscars", other_csv=False)
+    create_csv(cesars_id, name_file="cesars", other_csv=False)
+    create_csv(palmes_id, name_file="palmes", other_csv=False)
 
 
-def films(collection_id, token, name_file="films", other_csv=True):
+def create_csv(collection_id=None, name_file="films", other_csv=True):
     """
     Create csv files for films, countries and genres.
 
     Parameters
     ----------
-    collection_id : string
+    collection_id : str, optional
         ID of the Allocine collection.
-    token : string
-        Token to be connected to Allocine.
-    name_file : string
+        The default is None, and become ID value of .env.
+    name_file : str, optional
         Name of the file with film information. The default is "films".
     other_csv : boolean, optional
         True if you want countries.csv and genres.csv. The default is True.
@@ -49,8 +49,34 @@ def films(collection_id, token, name_file="films", other_csv=True):
     None.
 
     """
-    list_id = watched_list(collection_id, token)
+    load_dotenv()
+    collection_id = collection_id or os.getenv("ID")
+    token = os.getenv("TOKEN")
+    try:
+        list_id = watched_list(collection_id, token)
+    except IndexError as exc:
+        raise ValueError("Verify your ID in your .env file!") from exc
+    except KeyError as exc:
+        raise ValueError("Verify your TOKEN in your .env file!") from exc
     df_films = pd.DataFrame(list_id, columns=["id"])
+
+    csv_exist = os.path.exists(f"csv/{name_file}.csv")
+    if csv_exist:
+        df_file = pd.read_csv(
+            f"csv/{name_file}.csv",
+            converters={  # Read values of these columns as lists or int
+                "genres": ast.literal_eval,
+                "countries": ast.literal_eval,
+                "actors": ast.literal_eval,
+                "directors": ast.literal_eval,
+                "duration": int,
+                "year": int,
+            },
+        )
+        df_films = df_films[~df_films["id"].isin(df_file["id"])]
+
+    if len(df_films) == 0:
+        return "No file updates."
 
     with multiprocessing.Pool() as pool:
         df_films["Film"] = tqdm(
@@ -68,7 +94,12 @@ def films(collection_id, token, name_file="films", other_csv=True):
     df_films["spectator rating"] = df_films["Film"].apply(
         lambda f: f.get_spectator_rating()
     )
+    df_films["actors"] = df_films["Film"].apply(lambda f: f.get_actors())
+    df_films["directors"] = df_films["Film"].apply(lambda f: f.get_directors())
+
     df_films = df_films.drop(["Film"], axis=1)  # Remove Film column
+    if csv_exist:
+        df_films = pd.concat([df_films, df_file], ignore_index=True)
     df_films.to_csv(f"csv/{name_file}.csv", index=False)
 
     if other_csv:
@@ -92,11 +123,16 @@ def films(collection_id, token, name_file="films", other_csv=True):
         )
         df_countries.to_csv("csv/countries.csv", index=False)
 
-    print("\nCompleted!")
+        # CSV actors and directors
+        for persons in ("actors", "directors"):
+            all_persons = df_films[persons].sum()
+            df_persons = pd.DataFrame(
+                list(Counter(all_persons).items()), columns=["id", "number"]
+            )
+            df_persons.to_csv(f"csv/{persons}.csv", index=False)
+
+    return f"The file {name_file} has been updated!"
 
 
 if __name__ == "__main__":
-    ID = ""
-    TOKEN = ""
-    # update_awards(TOKEN)
-    films(ID, TOKEN)
+    create_csv()
