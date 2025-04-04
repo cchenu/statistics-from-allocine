@@ -1,9 +1,11 @@
-"""Module which give the list of films' id."""
+"""Module which gives the list of films' IDs."""
+
+from typing import Any
 
 import requests
 
 
-def watched_list(collection_id, token):
+def watched_list(collection_id: str, token: str) -> list[int]:
     """
     Create the list of movie IDs from a specific Allocine collection.
 
@@ -20,14 +22,14 @@ def watched_list(collection_id, token):
         List of movie IDs from the specified Allocine collection.
 
     """
-    # URL of the Allocine's api
+    # URL of Allocine's API
     url = "https://graph.allocine.fr/v1/public"
 
     # Header of the requests
     headers = {"Authorization": "Bearer " + token}
 
     # Parameters of the post requests
-    params = {
+    params: dict[Any, Any] = {
         "operationName": "GetCollectionEntities",
         "query": """
         fragment MovieFragment on Movie {
@@ -178,12 +180,11 @@ def watched_list(collection_id, token):
         "edges"
     ][0]["node"]["entities"]
     number_films = entities["totalCount"]
-    list_id = []
-    # We can just have 120 films for one request, we have to know if there is
-    # another page
+    list_id: list[int] = []
+    # Each request retrieves up to 120 films; check if additional pages exist.
     while len(list_id) != number_films:
-        for films in entities["edges"]:  # Find the films id on this page
-            list_id.append(films["node"]["entity"]["internalId"])
+        for film in entities["edges"]:  # Find the films id on this page
+            list_id.append(film["node"]["entity"]["internalId"])
         after = entities["pageInfo"]["endCursor"]  # Find the end of this page
         params["variables"]["after"] = after  # Set the beginning of next page
         response = requests.post(url, headers=headers, json=params, timeout=10)

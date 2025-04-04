@@ -19,7 +19,7 @@ A **Streamlit** web app is also available to visualize the data.
 
 ## Technologies Used
 - **Python** - version 3.12.2  
-  - Python libraries: see `requirements.txt`.
+  - Python libraries: streamlit, pandas, plotly, requests, tqdm, beautifulsoup4, dotenv, and more (see `requirements.txt` for the full list).
 
 ## Features
 ### CSV File Generation
@@ -37,7 +37,7 @@ A **Streamlit** web app is also available to visualize the data.
   - Create a histogram of films by year.
   - Create a histogram of films by genre.
   - Create a histogram of films by country.
-  - Create a map of films by country
+  - Create a map of films by country.
   - Create a histogram of films by duration.
   - Create a doughnut chart with watched César-winning films.
   - Create a doughnut chart with watched Oscar-winning films.

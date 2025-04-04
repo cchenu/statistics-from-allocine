@@ -13,7 +13,7 @@ from film import Film
 from watched import watched_list
 
 
-def update_awards():
+def update_awards() -> None:
     """
     Update csv about Cesars, Oscars and Palmes d'Or films.
 
@@ -30,7 +30,11 @@ def update_awards():
     create_csv(palmes_id, name_file="palmes", other_csv=False)
 
 
-def create_csv(collection_id=None, name_file="films", other_csv=True):
+def create_csv(
+    collection_id: str | None = None,
+    name_file: str = "films",
+    other_csv: bool = True,
+) -> str:
     """
     Create csv files for films, countries and genres.
 
@@ -41,17 +45,20 @@ def create_csv(collection_id=None, name_file="films", other_csv=True):
         The default is None, and become ID value of .env.
     name_file : str, optional
         Name of the file with film information. The default is "films".
-    other_csv : boolean, optional
+    other_csv : bool, optional
         True if you want countries.csv and genres.csv. The default is True.
 
     Returns
     -------
-    None.
+    str
+        String which says if some updates had been done or not.
 
     """
-    load_dotenv()
+    load_dotenv(override=True)
     collection_id = collection_id or os.getenv("ID")
     token = os.getenv("TOKEN")
+    if collection_id is None or token is None:
+        raise ValueError("Verify your ID and your token in your .env file!")
     try:
         list_id = watched_list(collection_id, token)
     except IndexError as exc:

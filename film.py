@@ -91,24 +91,24 @@ class Film:
 
     # pylint: disable=R0902
 
-    def __init__(self, film_id):
-        """Constructor of the Film class.
+    def __init__(self, film_id: int):
+        """Construct an object of the Film class.
 
         Parameters
         ----------
-        film_id : str
+        film_id : int
             Identifier of the film on Allocine.
         """
         self.__id = film_id
-        self.__title = None
-        self.__duration = None
-        self.__genres = None
-        self.__year = None
-        self.__countries = None
-        self.__press_rating = None
-        self.__spectator_rating = None
-        self.__actors = None
-        self.__directors = None
+        self.__title: str
+        self.__duration: int
+        self.__genres: list[int]
+        self.__year: int
+        self.__countries: list[str]
+        self.__press_rating: float
+        self.__spectator_rating: float
+        self.__actors: list[int]
+        self.__directors: list[int]
 
         url = f"https://www.allocine.fr/film/fichefilm-{self.__id}/casting/"
         response = requests.get(url, timeout=30)
@@ -123,7 +123,7 @@ class Film:
         self.set_actors()
         self.set_directors()
 
-    def get_id(self):
+    def get_id(self) -> int:
         """
         Get the film's identifier on Allocine.
 
@@ -134,7 +134,7 @@ class Film:
         """
         return self.__id
 
-    def get_html(self):
+    def get_html(self) -> str:
         """
         Get HTML code of the film's page.
 
@@ -145,7 +145,7 @@ class Film:
         """
         return self.__html
 
-    def set_title(self):
+    def set_title(self) -> None:
         """
         Set the film's title.
 
@@ -161,7 +161,7 @@ class Film:
         )
         self.__title = re.findall(pattern_title, self.__html)[0]
 
-    def get_title(self):
+    def get_title(self) -> str:
         """
         Get the film's title.
 
@@ -172,7 +172,7 @@ class Film:
         """
         return self.__title
 
-    def set_duration(self):
+    def set_duration(self) -> None:
         """
         Set the film's duration.
 
@@ -191,7 +191,7 @@ class Film:
         if self.__id in corrections["duration"]:
             self.__duration = corrections["duration"][self.__id]
 
-    def get_duration(self):
+    def get_duration(self) -> int:
         """
         Get the film's duration.
 
@@ -202,7 +202,7 @@ class Film:
         """
         return self.__duration
 
-    def set_genres(self):
+    def set_genres(self) -> None:
         """
         Set the film's genres id.
 
@@ -214,7 +214,7 @@ class Film:
         genres = re.findall(pattern_genres, self.__html)[0].split('","')
         self.__genres = [int(genre) for genre in genres]
 
-    def get_genres(self):
+    def get_genres(self) -> list[int]:
         """
         Get the film's genres id.
 
@@ -225,7 +225,7 @@ class Film:
         """
         return self.__genres
 
-    def set_year(self):
+    def set_year(self) -> None:
         """
         Set the film's release year.
 
@@ -242,7 +242,7 @@ class Film:
         if self.__id in corrections["year"]:
             self.__year = corrections["year"][self.__id]
 
-    def get_year(self):
+    def get_year(self) -> int:
         """
         Get the film's release year.
 
@@ -253,7 +253,7 @@ class Film:
         """
         return self.__year
 
-    def set_countries(self):
+    def set_countries(self) -> None:
         """
         Set the list of countries of the film.
 
@@ -264,7 +264,7 @@ class Film:
         pattern_countries = r'"localizedName":"(.*?)"'
         self.__countries = re.findall(pattern_countries, self.__html)
 
-    def get_countries(self):
+    def get_countries(self) -> list[str]:
         """
         Get the list of countries of the film.
 
@@ -275,7 +275,7 @@ class Film:
         """
         return self.__countries
 
-    def set_press_rating(self):
+    def set_press_rating(self) -> None:
         """
         Set the press rating of the film.
 
@@ -290,7 +290,7 @@ class Film:
         else:
             self.__press_rating = float("nan")
 
-    def get_press_rating(self):
+    def get_press_rating(self) -> float:
         """
         Get the press rating of the film.
 
@@ -301,7 +301,7 @@ class Film:
         """
         return self.__press_rating
 
-    def set_spectator_rating(self):
+    def set_spectator_rating(self) -> None:
         """
         Set the spectator rating of the film.
 
@@ -316,7 +316,7 @@ class Film:
         else:
             self.__spectator_rating = float("nan")
 
-    def get_spectator_rating(self):
+    def get_spectator_rating(self) -> float:
         """
         Get the spectator rating of the film.
 
@@ -327,7 +327,7 @@ class Film:
         """
         return self.__spectator_rating
 
-    def set_actors(self):
+    def set_actors(self) -> None:
         """
         Set the film's actors id.
 
@@ -383,7 +383,7 @@ class Film:
                 ]
                 page += 1
 
-    def get_actors(self):
+    def get_actors(self) -> list[int]:
         """
         Get the film's actors id.
 
@@ -394,7 +394,7 @@ class Film:
         """
         return self.__actors
 
-    def set_directors(self):
+    def set_directors(self) -> None:
         """
         Set the film's directors id.
 
@@ -425,7 +425,7 @@ class Film:
         if self.__id in corrections["directors"]:
             self.__directors = corrections["directors"][self.__id]
 
-    def get_directors(self):
+    def get_directors(self) -> list[int]:
         """
         Get the film's directors id.
 

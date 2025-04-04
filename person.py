@@ -58,8 +58,8 @@ class Person:
         Get list of films with the person as actor.
     """
 
-    def __init__(self, person_id):
-        """Constructor of the Person class.
+    def __init__(self, person_id: int):
+        """Construct an object of the Person class.
 
         Parameters
         ----------
@@ -67,10 +67,10 @@ class Person:
             Identifier of the person on Allocine.
         """
         self.__id = person_id
-        self.__name = None
-        self.__image = None
-        self.__directed_films = None
-        self.__played_films = None
+        self.__name: str
+        self.__image: str
+        self.__directed_films: list[int]
+        self.__played_films: list[int]
 
         url = (
             f"https://www.allocine.fr/personne/fichepersonne-{self.__id}"
@@ -84,7 +84,7 @@ class Person:
         self.set_directed_films()
         self.set_played_films()
 
-    def get_id(self):
+    def get_id(self) -> int:
         """
         Get the person's identifier on Allocine.
 
@@ -95,7 +95,7 @@ class Person:
         """
         return self.__id
 
-    def get_html(self):
+    def get_html(self) -> str:
         """
         Get HTML code of the person's page.
 
@@ -106,7 +106,7 @@ class Person:
         """
         return self.__html
 
-    def set_name(self):
+    def set_name(self) -> None:
         """
         Set the full name of the person.
 
@@ -118,7 +118,7 @@ class Person:
         pattern_name = r"<title>(.*?)(?: : Filmographie)* - AlloCiné</title>"
         self.__name = re.findall(pattern_name, self.__html)[0]
 
-    def get_name(self):
+    def get_name(self) -> str:
         """
         Get the full name of the person.
 
@@ -130,7 +130,7 @@ class Person:
         """
         return self.__name
 
-    def set_image(self):
+    def set_image(self) -> None:
         """
         Set the link to an image of the person.
 
@@ -142,7 +142,7 @@ class Person:
         pattern_image = r"<meta content=\"https://(.*?)\""
         self.__image = "https://" + re.findall(pattern_image, self.__html)[0]
 
-    def get_image(self):
+    def get_image(self) -> str:
         """
         Get the link to an image of the person.
 
@@ -154,7 +154,7 @@ class Person:
         """
         return self.__image
 
-    def find_films(self, role):
+    def find_films(self, role: str) -> list[int]:
         """
         Find films where the person have the indicate role.
 
@@ -185,7 +185,7 @@ class Person:
         # We search film titles, because ID are not necessarly in this section
         pattern_title = r'title="(.*?)">'
         titles = re.findall(pattern_title, html[0])
-        films = []
+        films: list[int] = []
         for title in titles:
             # Change regex caracters
             title = re.escape(title)
@@ -198,7 +198,7 @@ class Person:
                 films.append(int(result[0]))
         return films
 
-    def set_directed_films(self):
+    def set_directed_films(self) -> None:
         """
         Set list of films directed by the person.
 
@@ -209,7 +209,7 @@ class Person:
         """
         self.__directed_films = self.find_films("(?:Réalisateur|Réalisatrice)")
 
-    def get_directed_films(self):
+    def get_directed_films(self) -> list[int]:
         """
         Get list of films directed by the person.
 
@@ -221,7 +221,7 @@ class Person:
         """
         return self.__directed_films
 
-    def set_played_films(self):
+    def set_played_films(self) -> None:
         """
         Set list of films with the person as actor.
 
@@ -232,7 +232,7 @@ class Person:
         """
         self.__played_films = self.find_films("(?:Acteur|Actrice)")
 
-    def get_played_films(self):
+    def get_played_films(self) -> list[int]:
         """
         Get list of films with the person as actor.
 

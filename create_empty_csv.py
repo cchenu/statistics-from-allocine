@@ -10,7 +10,7 @@ from deep_translator import GoogleTranslator
 from tqdm import tqdm
 
 
-def get_name(type_, id_):
+def get_name(type_: str, id_: int) -> str | None:
     """
     Get the country or the genre with its Allocine's id.
 
@@ -39,7 +39,7 @@ def get_name(type_, id_):
     return results[0]
 
 
-def get_country(id_country):
+def get_country(id_country: int) -> str | None:
     """
     Get the country with its Allocine's ID.
 
@@ -59,7 +59,7 @@ def get_country(id_country):
     return country
 
 
-def get_genre(id_genre):
+def get_genre(id_genre: int) -> str | None:
     """
     Get the genre with its Allocine's ID.
 
@@ -79,7 +79,7 @@ def get_genre(id_genre):
     return genre
 
 
-def run():
+def run() -> None:
     """
     Generate CSV files for countries and genres available on Allocine.
 

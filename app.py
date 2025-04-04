@@ -8,9 +8,14 @@ from create_csv import create_csv
 from person import Person
 
 
-def create_hist_numbers(df_films, value, mean=False, hist_title=None):
+def create_hist_numbers(
+    df_films: pd.DataFrame,
+    value: str,
+    mean: bool = False,
+    hist_title: str | None = None,
+) -> None:
     """
-    Create an histogramm with numerical values in x axis.
+    Create a histogram with numerical values in x-axis.
 
     Parameters
     ----------
@@ -23,8 +28,13 @@ def create_hist_numbers(df_films, value, mean=False, hist_title=None):
     mean : bool, optional
         True to add a line for the mean value of x axis. The default is False.
     hist_title : str, optional
-        Title of the histogramm.
-        The default is None, title will be creatre with value.
+        Title of the histogram.
+        The default is None, title will be created with value.
+
+    Returns
+    -------
+    None.
+
     """
     # Count films by year
     df_count = df_films.groupby(value).size().reset_index(name="number")
@@ -64,9 +74,14 @@ def create_hist_numbers(df_films, value, mean=False, hist_title=None):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def create_hist_categories(df_categories, categories, df_films, id_):
+def create_hist_categories(
+    df_categories: pd.DataFrame,
+    categories: str,
+    df_films: pd.DataFrame,
+    id_: str,
+) -> None:
     """
-    Create an histogramm with literal values in x axis.
+    Create a histogram with literal values in x-axis.
 
     Parameters
     ----------
@@ -77,21 +92,26 @@ def create_hist_categories(df_categories, categories, df_films, id_):
         Type of data to plot, in singular. For example, country or genre.
     df_films : pd.DataFrame
         DataFrame with watched movies data.
-        Required columns: plurial of categories, title.
+        Required columns: plural of categories, title.
     id_ : str
         Column of df_categories which is used in df_films to save data.
         For example, in df_films, genres are save with their ID but
         countries are saved with their french name.
+
+    Returns
+    -------
+    None.
+
     """
-    # Plurial of the word categories
-    plurial = (
+    # Plural of the word categories
+    plural = (
         categories + "s" if categories[-1] != "y" else categories[:-1] + "ies"
     )
     df_categories["hover_text"] = df_categories.apply(
         lambda row: f"{categories.title()}: {row[categories]}"
         f"<br>Films: {row['number']}<br>"
         + "<br>".join(
-            df_films[df_films[plurial].str.contains(str(row[id_]))][
+            df_films[df_films[plural].str.contains(str(row[id_]))][
                 "title"
             ].head(5)
         ),
@@ -117,7 +137,7 @@ def create_hist_categories(df_categories, categories, df_films, id_):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def create_map(df_countries):
+def create_map(df_countries: pd.DataFrame) -> None:
     """
     Create a map with movies watched by country.
 
@@ -126,6 +146,11 @@ def create_map(df_countries):
     df_countries : pd.DataFrame
         DataFrame with number of films watched by country.
         Required columns: country_en and number.
+
+    Returns
+    -------
+    None.
+
     """
     fig = px.choropleth(
         df_countries,
@@ -165,9 +190,9 @@ def create_map(df_countries):
     )
 
 
-def create_progression(award, title, df_films):
+def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
     """
-    Create a pie chart with the ratio of watched movies of one a award.
+    Create a pie chart showing ratio of watched movies for a specific award.
 
     Parameters
     ----------
@@ -178,6 +203,11 @@ def create_progression(award, title, df_films):
     df_films : pd.DataFrame
         DataFrame with watched movies data.
         Required columns: id, title.
+
+    Returns
+    -------
+    None.
+
     """
     df_award = pd.read_csv(f"csv/{award.lower().replace("é", "e")}.csv")
 
@@ -220,7 +250,9 @@ def create_progression(award, title, df_films):
     st.plotly_chart(fig, use_container_width=False)
 
 
-def create_progression_countries(df_countries, countries_not_watched):
+def create_progression_countries(
+    df_countries: pd.DataFrame, countries_not_watched: list[str]
+) -> None:
     """
     Create a pie chart with the ratio of countries with one watched movie.
 
@@ -231,6 +263,11 @@ def create_progression_countries(df_countries, countries_not_watched):
         Required columns: country.
     countries_not_watched : list[str]
         List of french country names without any watched movie.
+
+    Returns
+    -------
+    None.
+
     """
     watched = df_countries["country"].tolist()
     not_watched = countries_not_watched
@@ -269,15 +306,20 @@ def create_progression_countries(df_countries, countries_not_watched):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def create_scatter_ratings(df_films):
+def create_scatter_ratings(df_films: pd.DataFrame) -> None:
     """
-    Create a scatter of audiance rating by press rating.
+    Create a scatter of audience rating by press rating.
 
     Parameters
     ----------
     df_films : pd.DataFrame
         DataFrame with watched movies data.
         Required columns: press rating, spectator rating.
+
+    Returns
+    -------
+    None.
+
     """
     df_count = (
         df_films.groupby(["press rating", "spectator rating"])
@@ -317,15 +359,20 @@ def create_scatter_ratings(df_films):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def create_persons(df_persons):
+def create_persons(df_persons: pd.DataFrame) -> None:
     """
-    Create a section with the nine persons the most watched for one role.
+    Create a section with the nine most-watched persons for a specific role.
 
     Parameters
     ----------
     df_persons : pd.DataFrame
         DataFrame with persons of one role, for example actors or directors.
         Required columns: id, number.
+
+    Returns
+    -------
+    None.
+
     """
     cols_per_row = 3
     num_people = 3 * cols_per_row
@@ -363,9 +410,14 @@ def create_persons(df_persons):
                     )
 
 
-def create_site():
+def create_site() -> None:
     """
     Create the whole streamlit site.
+
+    Returns
+    -------
+    None.
+
     """
     create_csv()
     df_films = pd.read_csv("csv/films.csv")
