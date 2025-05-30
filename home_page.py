@@ -395,9 +395,12 @@ def create_persons(df_persons: pd.DataFrame) -> None:
                     )
 
                     st.markdown(
-                        "<div style='text-align: center;'><img src='"
-                        + person.get_image()
-                        + "' width='150'></div>"
+                        (
+                            "<div style='text-align: center;'><img src='"
+                            + person.get_image()
+                            + "' width='150'></div>"
+                        ),
+                        unsafe_allow_html=True,
                     )
 
                     st.markdown(
@@ -408,6 +411,10 @@ def create_persons(df_persons: pd.DataFrame) -> None:
                         ),
                         unsafe_allow_html=True,
                     )
+
+
+def person_clicked(person_id: int):
+    pass
 
 
 def create_home() -> None:
