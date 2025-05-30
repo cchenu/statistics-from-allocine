@@ -20,11 +20,11 @@ def create_site() -> None:
         st.session_state["person"] = Person(5119)
 
     home_page = st.Page("home_page.py", title="Films stats")
-    create_page = st.Page(
+    actor_page = st.Page(
         "actor_page.py", title="Actor stats", url_path="actor"
     )
 
-    pg = st.navigation([home_page, create_page])
+    pg = st.navigation([home_page, actor_page], position="hidden")
     pg.run()
 
 

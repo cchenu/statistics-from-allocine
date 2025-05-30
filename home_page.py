@@ -3,7 +3,6 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-from st_click_detector import click_detector
 
 from create_csv import create_csv
 from person import Person
@@ -384,15 +383,13 @@ def create_persons(df_persons: pd.DataFrame) -> None:
             if i + j < len(people):
                 person = Person(people.iloc[i + j]["id"])
                 with cols[j]:
-                    st.markdown(
-                        (
-                            "<p style='text-align: center; "
-                            "margin-bottom: 3px;'>"
-                            + person.get_name()
-                            + "</p>"
-                        ),
-                        unsafe_allow_html=True,
-                    )
+                    _col1, col2, _col3 = st.columns([0.05, 0.9, 0.05])
+                    with col2:
+                        button = st.button(
+                            person.get_name(),
+                            type="secondary",
+                            use_container_width=True,
+                        )
 
                     st.markdown(
                         (
@@ -412,9 +409,9 @@ def create_persons(df_persons: pd.DataFrame) -> None:
                         unsafe_allow_html=True,
                     )
 
-
-def person_clicked(person_id: int):
-    pass
+                    if button:
+                        st.session_state["person"] = person
+                        st.switch_page("actor_page.py")
 
 
 def create_home() -> None:
