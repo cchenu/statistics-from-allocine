@@ -378,7 +378,6 @@ def create_persons(df_persons: pd.DataFrame) -> None:
     cols_per_row = 3
     num_people = 3 * cols_per_row
     people = df_persons.iloc[:num_people]
-    images: dict[int, None] = {}
     for i in range(0, len(people), cols_per_row):
         cols = st.columns(cols_per_row)
         for j in range(cols_per_row):
@@ -395,7 +394,7 @@ def create_persons(df_persons: pd.DataFrame) -> None:
                         unsafe_allow_html=True,
                     )
 
-                    images[person.get_id()] = click_detector(
+                    st.markdown(
                         "<div style='text-align: center;'><img src='"
                         + person.get_image()
                         + "' width='150'></div>"
@@ -420,9 +419,11 @@ def create_home() -> None:
     None.
 
     """
-    create_csv()
-    df_films = pd.read_csv("csv/films.csv")
-    st.session_state["df_films"] = df_films
+    if "df_films" not in st.session_state:
+        create_csv()
+        df_films = pd.read_csv("csv/films.csv")
+        st.session_state["df_films"] = df_films
+    df_films = st.session_state["df_films"]
     df_countries = pd.read_csv("csv/countries.csv").sort_values(
         "number", ascending=False
     )
