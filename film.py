@@ -44,6 +44,8 @@ class Film:
         List of actor IDs of the film.
     __directors : list[int]
         List of directors' id of the film.
+    __poster : str
+        Link to the Allocine's poster of the film.
 
     Public methods
     -------
@@ -87,6 +89,10 @@ class Film:
         Set the film's directors id.
     get_directors() -> list[int]
         Get the film's directors id.
+    set_poster()
+        Set the film's poster.
+    get_poster() -> str
+        Get the film's poster.
     """
 
     # pylint: disable=R0902
@@ -100,6 +106,7 @@ class Film:
             Identifier of the film on Allocine.
         """
         self.__id = film_id
+        self.__html: str
         self.__title: str
         self.__duration: int
         self.__genres: list[int]
@@ -109,6 +116,7 @@ class Film:
         self.__spectator_rating: float
         self.__actors: list[int]
         self.__directors: list[int]
+        self.__poster: str
 
         url = f"https://www.allocine.fr/film/fichefilm-{self.__id}/casting/"
         response = requests.get(url, timeout=30)
@@ -122,6 +130,7 @@ class Film:
         self.set_spectator_rating()
         self.set_actors()
         self.set_directors()
+        self.set_poster()
 
     def get_id(self) -> int:
         """
@@ -435,6 +444,37 @@ class Film:
             Directors' id of the film.
         """
         return self.__directors
+
+    def set_poster(self):
+        """
+        Set the film's poster.
+
+        Returns
+        -------
+        None.
+        """
+        pattern_poster = (
+            r'"image": {\s*"@type": "ImageObject",\s*"url": "(.*?)"'
+        )
+        poster = re.findall(pattern_poster, self.__html)
+        if poster:
+            self.__poster = poster[0]
+        else:
+            self.__poster = (
+                "https://fr.web.img6.acsta.net/c_310_420/commons/v9/common"
+                "/empty/empty_portrait.png"
+            )
+
+    def get_poster(self) -> str:
+        """
+        Get the film's poster.
+
+        Returns
+        -------
+        str
+            Link to the Allocine's poster of the film.
+        """
+        return self.__poster
 
 
 if __name__ == "__main__":
