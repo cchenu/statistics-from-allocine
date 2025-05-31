@@ -90,19 +90,18 @@ def create_csv(
             pool.imap(Film, df_films["id"]), total=len(df_films)
         )
 
-    df_films["title"] = df_films["Film"].apply(lambda f: f.get_title())
-    df_films["duration"] = df_films["Film"].apply(lambda f: f.get_duration())
-    df_films["genres"] = df_films["Film"].apply(lambda f: f.get_genres())
-    df_films["year"] = df_films["Film"].apply(lambda f: f.get_year())
-    df_films["countries"] = df_films["Film"].apply(lambda f: f.get_countries())
-    df_films["press rating"] = df_films["Film"].apply(
-        lambda f: f.get_press_rating()
-    )
+    df_films["title"] = df_films["Film"].apply(Film.get_title)
+    df_films["duration"] = df_films["Film"].apply(Film.get_duration)
+    df_films["genres"] = df_films["Film"].apply(Film.get_genres)
+    df_films["year"] = df_films["Film"].apply(Film.get_year)
+    df_films["countries"] = df_films["Film"].apply(Film.get_countries)
+    df_films["press rating"] = df_films["Film"].apply(Film.get_press_rating)
     df_films["spectator rating"] = df_films["Film"].apply(
-        lambda f: f.get_spectator_rating()
+        Film.get_spectator_rating
     )
-    df_films["actors"] = df_films["Film"].apply(lambda f: f.get_actors())
-    df_films["directors"] = df_films["Film"].apply(lambda f: f.get_directors())
+    df_films["actors"] = df_films["Film"].apply(Film.get_actors)
+    df_films["directors"] = df_films["Film"].apply(Film.get_directors)
+    df_films["poster"] = df_films["Film"].apply(Film.get_poster)
 
     df_films = df_films.drop(["Film"], axis=1)  # Remove Film column
     if csv_exist:
