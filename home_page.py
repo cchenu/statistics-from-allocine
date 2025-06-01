@@ -380,7 +380,11 @@ def create_persons(df_persons: pd.DataFrame) -> None:
         cols = st.columns(cols_per_row)
         for j in range(cols_per_row):
             if i + j < len(people):
-                person = Person(people.iloc[i + j]["id"])
+                key = f"person_{people.iloc[i + j]['id']}"
+                if not key in st.session_state:
+                    person = Person(people.iloc[i + j]["id"])
+                    st.session_state[key] = person
+                person = st.session_state[key]
                 with cols[j]:
                     _col1, col2, _col3 = st.columns([0.05, 0.9, 0.05])
                     with col2:
