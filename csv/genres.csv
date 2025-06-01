@@ -1,34 +1,34 @@
 id,genre,number
-13001,Aventure,0
-13002,Comédie dramatique,0
-13005,Comédie,0
+13001,Aventure,120
+13002,Comédie dramatique,26
+13005,Comédie,296
 13006,Dessin Animé,0
-13008,Drame,0
-13009,Epouvante-horreur,0
-13010,Erotique,0
-13012,Fantastique,0
-13013,Comédie musicale,0
-13014,Guerre,0
-13015,Historique,0
-13016,Arts Martiaux,0
-13017,Divers,0
-13018,Policier,0
-13019,Western,0
-13021,Science Fiction,0
-13022,Espionnage,0
-13023,Thriller,0
-13024,Romance,0
-13025,Action,0
-13026,Animation,0
-13027,Biopic,0
-13028,Péplum,0
+13008,Drame,170
+13009,Epouvante-horreur,4
+13010,Erotique,5
+13012,Fantastique,57
+13013,Comédie musicale,12
+13014,Guerre,11
+13015,Historique,18
+13016,Arts Martiaux,13
+13017,Divers,1
+13018,Policier,69
+13019,Western,12
+13021,Science Fiction,62
+13022,Espionnage,18
+13023,Thriller,84
+13024,Romance,40
+13025,Action,150
+13026,Animation,62
+13027,Biopic,24
+13028,Péplum,1
 13030,Médical,0
-13031,Judiciaire,0
+13031,Judiciaire,10
 13032,Feuilleton,0
 13033,Expérimental,0
-13036,Famille,0
+13036,Famille,38
 13040,Classique,0
-13043,Musical,0
+13043,Musical,4
 13045,Web Séries,0
 13047,Bollywood,0
 13048,Opéra,0

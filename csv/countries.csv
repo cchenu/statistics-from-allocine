@@ -1,47 +1,47 @@
 id,country,country_en,number
-5001,France,France,0
-5002,U.S.A.,USA.,0
+5001,France,France,324
+5002,U.S.A.,USA.,306
 5003,Allemagne de l'Est,Eastern Germany,0
-5004,Grande-Bretagne,Great Britain,0
+5004,Grande-Bretagne,Great Britain,45
 5005,Nouvelle-Zélande,New Zealand,0
 5006,Papouasie-Nouvelle Guinée,Papua New Guinea,0
-5007,Afrique du Sud,South Africa,0
+5007,Afrique du Sud,South Africa,1
 5008,Corée du Sud,South Korea,0
 5009,Corée du Nord,North Korea,0
-5010,Suisse,Swiss,0
+5010,Suisse,Swiss,2
 5012,Niger,Niger,0
 5013,Algérie,Algeria,0
-5014,Belgique,Belgium,0
+5014,Belgique,Belgium,27
 5015,Somalie,Somalia,0
 5016,Arménie,Armenia,0
-5017,Espagne,Spain,0
-5018,Canada,Canada,0
+5017,Espagne,Spain,7
+5018,Canada,Canada,9
 5019,Grèce,Greece,0
-5020,Italie,Italy,0
-5021,Japon,Japan,0
+5020,Italie,Italy,30
+5021,Japon,Japan,12
 5022,Jamaïque,Jamaica,0
-5023,Pologne,Poland,0
-5024,Portugal,Portugal,0
-5025,Argentine,Argentina,0
+5023,Pologne,Poland,1
+5024,Portugal,Portugal,4
+5025,Argentine,Argentina,1
 5026,Turquie,Türkiye,0
-5027,Chine,China,0
+5027,Chine,China,6
 5028,Brésil,Brazil,0
-5029,Australie,Australia,0
+5029,Australie,Australia,6
 5030,Irlande,Ireland,0
-5031,Mexique,Mexico,0
+5031,Mexique,Mexico,2
 5032,Autriche,Austria,0
 5033,Maroc,Morocco,0
 5034,Nigéria,Nigeria,0
 5036,Zimbabwé,Zimbabwe,0
 5037,Israël,Israel,0
 5038,Mali,Mali,0
-5039,Russie,Russia,0
+5039,Russie,Russia,2
 5040,Taïwan,Taiwan,0
 5041,Tchécoslovaquie,Czechoslovakia,0
 5042,Inde,India,0
 5043,Palestine,Palestine,0
 5044,Angola,Angola,0
-5045,Luxembourg,Luxembourg,0
+5045,Luxembourg,Luxembourg,1
 5047,Cameroun,Cameroon,0
 5048,Congo (Brazzaville),Congo (Brazzaville),0
 5049,Liban,Lebanon,0
@@ -53,31 +53,31 @@ id,country,country_en,number
 5056,Biélorussie,Belarus,0
 5057,Corée,Korea,0
 5058,Birmanie,Burma,0
-5059,Chili,Chile,0
+5059,Chili,Chile,1
 5060,Cuba,Cuba,0
-5061,Danemark,Denmark,0
+5061,Danemark,Denmark,1
 5062,Norvège,Norway,0
 5063,Egypte,Egypt,0
 5064,Bulgarie,Bulgaria,0
 5065,Colombie,Colombia,0
 5066,Yougoslavie,Yugoslavia,0
 5067,Suède,Sweden,0
-5068,Hongrie,Hungary,0
-5069,Finlande,Finland,0
+5068,Hongrie,Hungary,1
+5069,Finlande,Finland,1
 5070,Indonésie,Indonesia,0
 5072,Bengladesh,Bengladesh,0
 5073,Bosnie-Herzégovine,Bosnia and Herzegovina,0
 5074,Botswana,Botswana,0
 5076,Serbie,Serbia,0
 5077,Croatie,Croatia,0
-5079,Emirats Arabes Unis,United Arab Emirates,0
+5079,Emirats Arabes Unis,United Arab Emirates,1
 5080,Estonie,Estonia,0
 5081,Chypre,Cyprus,0
 5082,Vénézuela,Venezuela,0
 5083,Haïti,Haiti,0
 5084,Cambodge,Cambodia,0
 5085,Bhoutan,Bhoutan,0
-5086,Iran,Iran,0
+5086,Iran,Iran,2
 5087,Lituanie,Lithuania,0
 5088,Roumanie,Romania,0
 5089,Sénégal,Senegal,0
@@ -92,7 +92,7 @@ id,country,country_en,number
 5098,Sri Lanka,Sri Lanka,0
 5099,Népal,Nepal,0
 5100,Slovaquie,Slovakia,0
-5101,Lettonie,Latvia,0
+5101,Lettonie,Latvia,1
 5102,Azerbaïdjan,Azerbaijan,0
 5103,Mauritanie,Mauritania,0
 5104,Mongolie,Mongolia,0
@@ -119,8 +119,8 @@ id,country,country_en,number
 5126,Ghana,Ghana,0
 5127,Thaïlande,Thailand,0
 5128,Albanie,Albania,0
-5129,Allemagne,Germany,0
-5130,Allemagne de l'Ouest,Western Germany,0
+5129,Allemagne,Germany,27
+5130,Allemagne de l'Ouest,Western Germany,2
 5131,Burundi,Burundi,0
 5132,Congo (Kinshasa),Congo (Kinshasa),0
 5133,République dominicaine,Dominican Republic,0
@@ -130,7 +130,7 @@ id,country,country_en,number
 5138,Guinée-Bissau,Guinea-Bissau,0
 5139,Guinée équatoriale,Equatorial Guinea,0
 5141,Honduras,Honduras,0
-5142,Hong-Kong,Hong Kong,0
+5142,Hong-Kong,Hong Kong,5
 5143,Jordanie,Jordan,0
 5144,Laos,Laos,0
 5145,Lésotho,Lesotho,0
@@ -147,7 +147,7 @@ id,country,country_en,number
 5157,Qatar,Qatar,0
 5158,Rwanda,Rwanda,0
 5159,Salvador,Salvador,0
-5161,URSS,USSR,0
+5161,URSS,USSR,1
 5163,Swaziland,Swaziland,0
 5164,Tanzanie,Tanzania,0
 5165,République tchèque,Czech Republic,0
@@ -175,6 +175,6 @@ id,country,country_en,number
 7259,Malawi,Malawi,0
 7264,Trinité-et-Tobago,Trinity and Tobago,0
 7267,Vanuatu,Vanuatu,0
-7268,Samoa,Samoa,0
+7268,Samoa,Samoa,1
 7270,Costa Rica,Costa Rica,0
 7289,Kosovo,Kosovo,0
