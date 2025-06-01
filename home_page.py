@@ -4,7 +4,6 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from create_csv import create_csv
 from person import Person
 
 
@@ -423,10 +422,6 @@ def create_home() -> None:
     None.
 
     """
-    if "df_films" not in st.session_state:
-        create_csv()
-        df_films = pd.read_csv("csv/films.csv")
-        st.session_state["df_films"] = df_films
     df_films = st.session_state["df_films"]
     df_countries = pd.read_csv("csv/countries.csv").sort_values(
         "number", ascending=False

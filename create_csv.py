@@ -141,4 +141,5 @@ def create_csv(
 
 
 if __name__ == "__main__":
+    update_awards()
     create_csv()

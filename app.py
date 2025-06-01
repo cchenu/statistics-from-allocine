@@ -1,9 +1,9 @@
 """Create a web site with streamlit."""
 
 import pandas as pd
-import plotly.express as px
 import streamlit as st
 
+from create_csv import create_csv
 from person import Person
 
 
@@ -16,6 +16,11 @@ def create_site() -> None:
     None.
 
     """
+    if "df_films" not in st.session_state:
+        create_csv()
+        df_films = pd.read_csv("csv/films.csv")
+        st.session_state["df_films"] = df_films
+
     if "person" not in st.session_state:
         st.session_state["person"] = Person(5119)
 
