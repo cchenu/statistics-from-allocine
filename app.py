@@ -18,7 +18,7 @@ def create_site() -> None:
 
     """
     if "df_films" not in st.session_state:
-        create_csv()
+        # create_csv()
         df_films = pd.read_csv("csv/films.csv")
         st.session_state["df_films"] = df_films
 
