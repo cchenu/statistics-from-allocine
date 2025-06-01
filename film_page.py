@@ -153,5 +153,5 @@ def create_film_page() -> None:
         list_persons(actors, "actors")
 
 
-if __name__ == "__page__":
+if __name__ == "__main__":
     create_film_page()

@@ -182,5 +182,5 @@ def create_person_page() -> None:
             list_films(played_not_watched, "actor")
 
 
-if __name__ == "__page__":
+if __name__ == "__main__":
     create_person_page()
