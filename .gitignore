@@ -161,9 +161,3 @@ cython_debug/
 
 requirements.in
 .vscode
-
-csv/films.csv
-csv/actors.csv
-csv/directors.csv
-csv/countries.csv
-csv/genres.csv
