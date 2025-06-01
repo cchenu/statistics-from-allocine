@@ -13,14 +13,18 @@ from person import Person
 
 def list_films(
     films: list[int] | pd.DataFrame,
+    role: str,
 ) -> None:
     """
     List the films with their Allocine's id, title and poster.
 
     Parameters
     ----------
-    ids : list[int] | pd.DataFrame
+    films : list[int] | pd.DataFrame
         List of Allocine's id of the films or a DataFrame with the films.
+        Required columns: id, title, press rating, spectator rating, poster.
+    role : str
+        Role of the persons in the film, for example actor or director.
 
     Returns
     -------
@@ -28,21 +32,27 @@ def list_films(
 
     """
     if isinstance(films, list):
-        df_films = pd.DataFrame(films, columns=["id"])
-        with multiprocessing.Pool() as pool:
-            df_films["Film"] = pool.map(Film, df_films["id"])
+        key = f"actor_{role}_{st.session_state["person"].get_id()}"
+        if not key in st.session_state:
+            df_films = pd.DataFrame(films, columns=["id"])
+            with multiprocessing.Pool() as pool:
+                df_films["Film"] = pool.map(Film, df_films["id"])
 
-        df_films["title"] = df_films["Film"].apply(Film.get_title)
-        df_films["press rating"] = df_films["Film"].apply(
-            Film.get_press_rating
-        )
-        df_films["spectator rating"] = df_films["Film"].apply(
-            Film.get_spectator_rating
-        )
-        df_films["poster"] = df_films["Film"].apply(Film.get_poster)
-        df_films = df_films.sort_values(
-            by=["spectator rating", "press rating"], ascending=[False, False]
-        )
+            df_films["title"] = df_films["Film"].apply(Film.get_title)
+            df_films["press rating"] = df_films["Film"].apply(
+                Film.get_press_rating
+            )
+            df_films["spectator rating"] = df_films["Film"].apply(
+                Film.get_spectator_rating
+            )
+            df_films["poster"] = df_films["Film"].apply(Film.get_poster)
+            df_films = df_films.sort_values(
+                by=["spectator rating", "press rating"],
+                ascending=[False, False],
+            )
+            st.session_state[key] = df_films
+        else:
+            df_films = st.session_state[key]
     else:
         df_films = films
 
@@ -58,11 +68,9 @@ def list_films(
                             df_films["title"].iloc[i + j],
                             type="secondary",
                             use_container_width=True,
-                            key="".join(
-                                random.choices(
-                                    string.ascii_letters + string.digits,
-                                    k=20,
-                                )
+                            key=(
+                                f"{role}_{st.session_state["person"].get_id()}"
+                                f"_{df_films['id'].iloc[i + j]}"
                             ),
                         )
                     st.markdown(
@@ -75,7 +83,10 @@ def list_films(
                     )
 
                     if button:
-                        pass
+                        st.session_state["film"] = Film(
+                            df_films["id"].iloc[i + j]
+                        )
+                        st.switch_page("film_page.py")
 
 
 def create_person_page() -> None:
@@ -144,7 +155,7 @@ def create_person_page() -> None:
             st.header("Directed film")
         if len(directed_watched) > 0:
             st.subheader("Watched")
-            list_films(directed_watched)
+            list_films(directed_watched, "director")
         if len(directed_watched) != len(directed_films):
             directed_not_watched = [
                 film
@@ -152,7 +163,7 @@ def create_person_page() -> None:
                 if film not in directed_watched["id"].astype(int).tolist()
             ]
             st.subheader("Not Watched")
-            list_films(directed_not_watched)
+            list_films(directed_not_watched, "director")
 
     st.markdown("<br>", unsafe_allow_html=True)
     if played_films:
@@ -162,7 +173,7 @@ def create_person_page() -> None:
             st.header("Acted-in film")
         if len(played_watched) > 0:
             st.subheader("Watched")
-            list_films(played_watched)
+            list_films(played_watched, "actor")
         if len(played_watched) != len(played_films):
             played_not_watched = [
                 film
@@ -170,7 +181,7 @@ def create_person_page() -> None:
                 if film not in played_watched["id"].astype(int).tolist()
             ]
             st.subheader("Not Watched")
-            list_films(played_not_watched)
+            list_films(played_not_watched, "actor")
 
 
 if __name__ == "__main__":
