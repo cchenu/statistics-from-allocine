@@ -195,7 +195,9 @@ class Person:
             )
             result = re.findall(pattern_film, self.__html)
             if result:
-                films.append(int(result[0]))
+                films.extend(
+                    [int(film) for film in result if int(film) not in films]
+                )
         return films
 
     def set_directed_films(self) -> None:
