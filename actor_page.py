@@ -1,8 +1,6 @@
 """Create a page of the app with statistic on an actor or a director."""
 
 import multiprocessing
-import random
-import string
 
 import pandas as pd
 import streamlit as st
