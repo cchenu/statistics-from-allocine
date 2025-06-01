@@ -24,7 +24,7 @@ A **Streamlit** web app is also available to visualize the data.
 ## Features
 ### CSV File Generation
 - Extract data from an Allocine collection and save it as CSV files.
-  - `films.csv`: Contains information about each film, including its Allocine ID, title, duration, genres, release year, countries, press rating, spectator rating, actors, and directors.
+  - `films.csv`: Contains information about each film, including its Allocine ID, title, duration, genres, release year, countries, press rating, spectator rating, actors, directors and posters.
   - `cesars.csv`, `palmes.csv`, and `oscars.csv`: Similar to `films.csv` but only include award-winning films from existing Allocine collections.
   - `countries.csv`: Lists the number of films per country.
   - `genres.csv`: Lists the number of films per genre.
@@ -32,27 +32,11 @@ A **Streamlit** web app is also available to visualize the data.
   - `directors.csv`: Lists the number of films per director IDs.
 
 ### Streamlit Web App
-- Create a Streamlit web app.
-  - Provide general statistics on the number of watched films, total watch time, countries with at least one watched film, most-watched actors, and most-watched directors.
-  - Create a histogram of films by year.
-  - Create a histogram of films by genre.
-  - Create a histogram of films by country.
-  - Create a map of films by country.
-  - Create a histogram of films by duration.
-  - Create a doughnut chart with watched César-winning films.
-  - Create a doughnut chart with watched Oscar-winning films.
-  - Create a doughnut chart with watched Palmes d'Or-winning films.
-  - Create a doughnut chart with countries with at least one watched film.
-  - Create a histogram of films by spectator rating.
-  - Create a histogram of films by press rating.
-  - Create a histogram of films without press rating by spectator rating.
-  - Create a scatter plot of spectator rating as a function of press rating.
-  - Show the nine most-watched directors, including their names, photos, and number of watched films.
-  - Show the nine most-watched actors, including their names, photos, and number of watched films.
+- Create a Streamlit web app: you can see an example of the application with fixed data at https://statistics-from-allocine-example.streamlit.app/.
+
+This is a preview of the application:
 
 ![First part of the streamlit app](https://zupimages.net/up/25/13/0ryo.png)
-![Second part of the streamlit app](https://zupimages.net/up/25/13/x06n.png)
-![Third part of the streamlit app](https://zupimages.net/up/25/13/lw17.png)
 
 ## Usage
 ### Setup
@@ -91,7 +75,7 @@ If you only need the CSV files, you can find them in the `csv/` folder.
 
 
 ## Project Status
-Project is: _complete_ - version 3.0.0.
+Project is: _complete_ - version 3.1.0.
 
 
 ## Contact
