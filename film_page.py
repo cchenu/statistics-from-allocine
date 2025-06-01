@@ -124,7 +124,7 @@ def create_film_page() -> None:
         st.markdown(
             f"""
             Release year: {film.get_year()}<br>
-            Duration: {film.get_duration()}<br>
+            Duration: {film.get_duration()} min<br>
             {countries_label}: {", ".join(film.get_countries())}<br>
             Press rating: <span style='color:#FFD700;'>
             {print_stars(film.get_press_rating())}</span><br>
