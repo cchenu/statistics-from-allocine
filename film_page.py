@@ -59,7 +59,7 @@ def list_persons(
                         (
                             "<p style='text-align: center;'><img src='"
                             + df_persons["image"].iloc[i + j]
-                            + "' width='150'></p>"
+                            + "' height='200'></p>"
                         ),
                         unsafe_allow_html=True,
                     )
@@ -110,7 +110,7 @@ def create_film_page() -> None:
             (
                 "<div style='text-align: left;'><img src='"
                 + film.get_poster()
-                + "' width='150'></div>"
+                + "' height='200'></div>"
             ),
             unsafe_allow_html=True,
         )

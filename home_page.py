@@ -399,7 +399,7 @@ def create_persons(df_persons: pd.DataFrame) -> None:
                         (
                             "<div style='text-align: center;'><img src='"
                             + person.get_image()
-                            + "' width='150'></div>"
+                            + "' height='200'></div>"
                         ),
                         unsafe_allow_html=True,
                     )
@@ -452,7 +452,7 @@ def create_films(
                         (
                             "<p style='text-align: center;'><img src='"
                             + df_films["poster"].iloc[i + j]
-                            + "' width='150'></p>"
+                            + "' height='225'></p>"
                         ),
                         unsafe_allow_html=True,
                     )
