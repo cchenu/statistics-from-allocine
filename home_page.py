@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+from film import Film
 from person import Person
 
 
@@ -417,6 +418,52 @@ def create_persons(df_persons: pd.DataFrame) -> None:
                         st.switch_page("actor_page.py")
 
 
+def create_films(
+    df_films: pd.DataFrame,
+) -> None:
+    """
+    List the films with their Allocine's id, title and poster.
+
+    Parameters
+    ----------
+    films : list[int] | pd.DataFrame
+        List of Allocine's id of the films or a DataFrame with the films.
+        Required columns: id, title, press rating, spectator rating, poster.
+
+    Returns
+    -------
+    None.
+
+    """
+    cols_per_row = 3
+    for i in range(0, len(df_films), cols_per_row):
+        cols = st.columns(cols_per_row)
+        for j in range(cols_per_row):
+            if i + j < len(df_films):
+                with cols[j]:
+                    _col1, col2, _col3 = st.columns([0.05, 0.9, 0.05])
+                    with col2:
+                        button = st.button(
+                            df_films["title"].iloc[i + j],
+                            type="secondary",
+                            use_container_width=True,
+                        )
+                    st.markdown(
+                        (
+                            "<p style='text-align: center;'><img src='"
+                            + df_films["poster"].iloc[i + j]
+                            + "' width='150'></p>"
+                        ),
+                        unsafe_allow_html=True,
+                    )
+
+                    if button:
+                        st.session_state["film"] = Film(
+                            df_films["id"].iloc[i + j]
+                        )
+                        st.switch_page("film_page.py")
+
+
 def create_home() -> None:
     """
     Create the streamlit home page.
@@ -514,6 +561,9 @@ def create_home() -> None:
 
     st.subheader("Most watched actors")
     create_persons(df_actors)
+
+    st.subheader("Last watched films")
+    create_films(df_films.head(3))
 
 
 if __name__ == "__main__":
