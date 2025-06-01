@@ -271,7 +271,10 @@ class Film:
         None.
         """
         pattern_countries = r'"localizedName":"(.*?)"'
-        self.__countries = re.findall(pattern_countries, self.__html)
+        self.__countries = [
+            c.encode().decode("unicode_escape")
+            for c in re.findall(pattern_countries, self.__html)
+        ]
 
     def get_countries(self) -> list[str]:
         """
