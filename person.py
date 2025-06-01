@@ -47,7 +47,7 @@ class Person:
     get_image() -> str
         Get the link to an image of the person.
     find_films(role: str) -> list[int]
-        Find films where the person have the indicate role.
+        Find films where the person have the indicated role.
     set_directed_films()
         Set list of films directed by the person.
     get_directed_films() -> list[int]
@@ -156,7 +156,7 @@ class Person:
 
     def find_films(self, role: str) -> list[int]:
         """
-        Find films where the person have the indicate role.
+        Find films where the person have the indicated role.
 
         Parameters
         ----------
@@ -167,7 +167,7 @@ class Person:
         Returns
         -------
         list[int]
-            List of films where the person have the indicate role.
+            List of films where the person have the indicated role.
 
         """
         # Pattern to keep only films with the selected role
