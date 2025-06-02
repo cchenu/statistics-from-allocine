@@ -1,5 +1,6 @@
 """Create a page of the app with statistic on an actor or a director."""
 
+import math
 import multiprocessing
 
 import pandas as pd
@@ -84,6 +85,8 @@ def print_stars(rating: float) -> str:
     stars : str
         String with corresponding stars.
     """
+    if math.isnan(rating):
+        return ""
     round_rating = round(rating * 2) / 2
     stars = "★" * int(round_rating)
     if not round_rating.is_integer():
@@ -121,10 +124,16 @@ def create_film_page() -> None:
         else:
             countries_label = "Countries"
 
+        duration = film.get_duration()
+        if duration >= 60:
+            duration_str = f"{duration // 60} h {duration % 60} min"
+        else:
+            duration_str = f"{duration} min"
+
         st.markdown(
             f"""
             Release year: {film.get_year()}<br>
-            Duration: {film.get_duration()} min<br>
+            Duration: {duration_str}<br>
             {countries_label}: {", ".join(film.get_countries())}<br>
             Press rating: <span style='color:#FFD700;'>
             {print_stars(film.get_press_rating())}</span><br>
