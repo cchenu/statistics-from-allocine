@@ -1,75 +1,12 @@
 """Create a page of the app with statistic on an actor or a director."""
 
 import math
-import multiprocessing
 
 import pandas as pd
 import streamlit as st
 
 from film import Film
-from person import Person
-
-
-def list_persons(
-    persons: list[int],
-    role: str,
-) -> None:
-    """
-    List the actors or directors of a film.
-
-    Parameters
-    ----------
-    persons : list[int]
-        List of Allocine's id of the films or a DataFrame with the films.
-    role : str
-        Role of the persons, for example actors or directors.
-
-    Returns
-    -------
-    None.
-
-    """
-    key = f"film_{role}_{st.session_state["film"].get_id()}"
-    if not key in st.session_state:
-        df_persons = pd.DataFrame(persons, columns=["id"])
-        with multiprocessing.Pool() as pool:
-            df_persons["Person"] = pool.map(Person, df_persons["id"])
-
-        df_persons["name"] = df_persons["Person"].apply(Person.get_name)
-        df_persons["image"] = df_persons["Person"].apply(Person.get_image)
-        st.session_state[key] = df_persons
-    df_persons = st.session_state[key]
-    cols_per_row = 3
-    for i in range(0, len(persons), cols_per_row):
-        cols = st.columns(cols_per_row)
-        for j in range(cols_per_row):
-            if i + j < len(persons):
-                with cols[j]:
-                    _col1, col2, _col3 = st.columns([0.05, 0.9, 0.05])
-                    with col2:
-                        button = st.button(
-                            df_persons["name"].iloc[i + j],
-                            type="secondary",
-                            use_container_width=True,
-                            key=(
-                                f"{role}_{st.session_state["film"].get_id()}"
-                                f"_{df_persons['id'].iloc[i + j]}"
-                            ),
-                        )
-                    st.markdown(
-                        (
-                            "<p style='text-align: center;'><img src='"
-                            + df_persons["image"].iloc[i + j]
-                            + "' height='200'></p>"
-                        ),
-                        unsafe_allow_html=True,
-                    )
-
-                    if button:
-                        st.session_state["person"] = Person(
-                            df_persons["id"].iloc[i + j]
-                        )
-                        st.switch_page("actor_page.py")
+from utils import list_persons
 
 
 def print_stars(rating: float) -> str:
@@ -151,7 +88,7 @@ def create_film_page() -> None:
             st.header("Directors")
         else:
             st.header("Director")
-        list_persons(directors, "directors")
+        list_persons(directors, f"directors_{film.get_id()}")
 
     st.markdown("<br>", unsafe_allow_html=True)
     if actors:
@@ -159,7 +96,7 @@ def create_film_page() -> None:
             st.header("Actors")
         else:
             st.header("Actor")
-        list_persons(actors, "actors")
+        list_persons(actors, f"actors_{film.get_id()}")
 
 
 if __name__ == "__main__":

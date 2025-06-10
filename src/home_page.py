@@ -4,8 +4,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from film import Film
 from person import Person
+from utils import list_films, list_persons
 
 
 def create_hist_numbers(
@@ -131,7 +131,7 @@ def create_hist_categories(
     fig.update_layout(
         xaxis_title=categories.title(),
         yaxis_title="Number of films",
-        xaxis=dict(tickangle=315),  # Orientation
+        xaxis={"tickangle": 315},  # Orientation
     )
     # Add graph in streamlit
     st.plotly_chart(fig, use_container_width=True)
@@ -349,119 +349,14 @@ def create_scatter_ratings(df_films: pd.DataFrame) -> None:
 
     # Improve layout
     fig.update_layout(
-        xaxis=dict(range=[0, 5]),
-        yaxis=dict(range=[0, 5]),
+        xaxis={"range": [0, 5]},
+        yaxis={"range": [0, 5]},
         xaxis_title="Press Rating",
         yaxis_title="Spectator Rating",
     )
 
     # Show the chart in Streamlit
     st.plotly_chart(fig, use_container_width=True)
-
-
-def create_persons(df_persons: pd.DataFrame) -> None:
-    """
-    Create a section with the nine most-watched persons for a specific role.
-
-    Parameters
-    ----------
-    df_persons : pd.DataFrame
-        DataFrame with persons of one role, for example actors or directors.
-        Required columns: id, number.
-
-    Returns
-    -------
-    None.
-
-    """
-    cols_per_row = 3
-    num_people = 3 * cols_per_row
-    people = df_persons.iloc[:num_people]
-    for i in range(0, len(people), cols_per_row):
-        cols = st.columns(cols_per_row)
-        for j in range(cols_per_row):
-            if i + j < len(people):
-                key = f"person_{people.iloc[i + j]['id']}"
-                if not key in st.session_state:
-                    person = Person(people.iloc[i + j]["id"])
-                    st.session_state[key] = person
-                person = st.session_state[key]
-                with cols[j]:
-                    _col1, col2, _col3 = st.columns([0.05, 0.9, 0.05])
-                    with col2:
-                        button = st.button(
-                            person.get_name(),
-                            type="secondary",
-                            use_container_width=True,
-                        )
-
-                    st.markdown(
-                        (
-                            "<div style='text-align: center;'><img src='"
-                            + person.get_image()
-                            + "' height='200'></div>"
-                        ),
-                        unsafe_allow_html=True,
-                    )
-
-                    st.markdown(
-                        (
-                            "<p style='text-align: center;'>"
-                            + str(people.iloc[i + j]["number"])
-                            + " films</p>"
-                        ),
-                        unsafe_allow_html=True,
-                    )
-
-                    if button:
-                        st.session_state["person"] = person
-                        st.switch_page("actor_page.py")
-
-
-def create_films(
-    df_films: pd.DataFrame,
-) -> None:
-    """
-    List the films with their Allocine's id, title and poster.
-
-    Parameters
-    ----------
-    films : list[int] | pd.DataFrame
-        List of Allocine's id of the films or a DataFrame with the films.
-        Required columns: id, title, press rating, spectator rating, poster.
-
-    Returns
-    -------
-    None.
-
-    """
-    cols_per_row = 3
-    for i in range(0, len(df_films), cols_per_row):
-        cols = st.columns(cols_per_row)
-        for j in range(cols_per_row):
-            if i + j < len(df_films):
-                with cols[j]:
-                    _col1, col2, _col3 = st.columns([0.05, 0.9, 0.05])
-                    with col2:
-                        button = st.button(
-                            df_films["title"].iloc[i + j],
-                            type="secondary",
-                            use_container_width=True,
-                        )
-                    st.markdown(
-                        (
-                            "<p style='text-align: center;'><img src='"
-                            + df_films["poster"].iloc[i + j]
-                            + "' height='225'></p>"
-                        ),
-                        unsafe_allow_html=True,
-                    )
-
-                    if button:
-                        st.session_state["film"] = Film(
-                            df_films["id"].iloc[i + j]
-                        )
-                        st.switch_page("film_page.py")
 
 
 def create_home() -> None:
@@ -557,13 +452,13 @@ def create_home() -> None:
         create_scatter_ratings(df_films)
 
     st.subheader("Most watched directors")
-    create_persons(df_directors)
+    list_persons(df_directors.head(9), "home_directors")
 
     st.subheader("Most watched actors")
-    create_persons(df_actors)
+    list_persons(df_actors.head(9), "home_actors")
 
     st.subheader("Last watched films")
-    create_films(df_films.head(3))
+    list_films(df_films.head(3), "home_films")
 
 
 if __name__ == "__main__":

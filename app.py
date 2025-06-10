@@ -1,7 +1,12 @@
 """Create a web site with streamlit."""
 
+import sys
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
+
+sys.path.append(str(Path(__file__).parent / "src"))
 
 from create_csv import create_csv
 from film import Film
@@ -28,11 +33,11 @@ def create_site() -> None:
     if "film" not in st.session_state:
         st.session_state["film"] = Film(9684)
 
-    home_page = st.Page("home_page.py", title="Films stats")
+    home_page = st.Page("src/home_page.py", title="Films stats")
     actor_page = st.Page(
-        "actor_page.py", title="Actor stats", url_path="actor"
+        "src/actor_page.py", title="Actor stats", url_path="actor"
     )
-    film_page = st.Page("film_page.py", title="Film page", url_path="film")
+    film_page = st.Page("src/film_page.py", title="Film page", url_path="film")
 
     pg = st.navigation([home_page, actor_page, film_page], position="hidden")
     pg.run()
