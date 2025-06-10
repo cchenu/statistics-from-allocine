@@ -38,8 +38,13 @@ def create_site() -> None:
         "src/actor_page.py", title="Actor stats", url_path="actor"
     )
     film_page = st.Page("src/film_page.py", title="Film page", url_path="film")
+    details_page = st.Page(
+        "src/details_page.py", title="Details", url_path="details"
+    )
 
-    pg = st.navigation([home_page, actor_page, film_page], position="hidden")
+    pg = st.navigation(
+        [home_page, actor_page, film_page, details_page], position="hidden"
+    )
     pg.run()
 
 

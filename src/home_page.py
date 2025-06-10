@@ -4,7 +4,6 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from person import Person
 from utils import list_films, list_persons
 
 
@@ -44,11 +43,14 @@ def create_hist_numbers(
         f"{df_count[df_count[value] == val]['number'].values[0]}<br>"
         + "<br>".join(df_films[df_films[value] == val]["title"].head(5))
     )
+
+    hist_title = hist_title or f"Films by {value}"
+
     fig = px.bar(
         df_count,
         x=value,
         y="number",
-        title=hist_title or f"Films by {value}",
+        title=hist_title,
         height=500 if "rating" not in value else 400,
         hover_name="hover_text",
         hover_data={value: False, "number": False, "hover_text": False},
@@ -57,6 +59,7 @@ def create_hist_numbers(
     fig.update_layout(
         xaxis_title=value.title(),
         yaxis_title="Number of films",
+        dragmode="zoom",
     )
     if mean:  # If we add the mean
         mean_value = df_films[value].mean()
@@ -68,10 +71,19 @@ def create_hist_numbers(
             annotation_position="top",
         )
     if "rating" in value:  # If it is a rating chart, values are from 0 to 5
-        fig.update_xaxes(range=[0, 5])
+        fig.update_xaxes(range=[0, 5.05])
 
     # Add graph in streamlit
-    st.plotly_chart(fig, use_container_width=True)
+    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+
+    if chart["selection"]["points"]:
+        bar = chart["selection"]["points"][0]["x"]
+        if value == "duration":
+            st.session_state["details_title"] = f"{bar} min"
+        else:
+            st.session_state["details_title"] = bar
+        st.session_state["details_films"] = df_films[df_films[value] == bar]
+        st.switch_page("src/details_page.py")
 
 
 def create_hist_categories(
@@ -132,12 +144,27 @@ def create_hist_categories(
         xaxis_title=categories.title(),
         yaxis_title="Number of films",
         xaxis={"tickangle": 315},  # Orientation
+        dragmode="zoom",
     )
     # Add graph in streamlit
-    st.plotly_chart(fig, use_container_width=True)
+    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+
+    if chart["selection"]["points"]:
+        bar = chart["selection"]["points"][0]["x"]
+        st.session_state["details_title"] = bar
+        st.session_state["details_films"] = df_films[
+            df_films[plural].str.contains(
+                str(
+                    df_categories[df_categories[categories] == bar][id_].iloc[
+                        0
+                    ]
+                )
+            )
+        ]
+        st.switch_page("src/details_page.py")
 
 
-def create_map(df_countries: pd.DataFrame) -> None:
+def create_map(df_countries: pd.DataFrame, df_films: pd.DataFrame) -> None:
     """
     Create a map with movies watched by country.
 
@@ -146,6 +173,9 @@ def create_map(df_countries: pd.DataFrame) -> None:
     df_countries : pd.DataFrame
         DataFrame with number of films watched by country.
         Required columns: country_en and number.
+    df_films : pd.DataFrame
+        DataFrame with watched movies data.
+        Required columns: plural of categories, title.
 
     Returns
     -------
@@ -185,9 +215,24 @@ def create_map(df_countries: pd.DataFrame) -> None:
         margin={"t": 40},
     )
 
-    st.plotly_chart(
-        fig, use_container_width=True, config={"scrollZoom": False}
+    chart = st.plotly_chart(
+        fig,
+        use_container_width=True,
+        config={"scrollZoom": False},
+        on_select="rerun",
     )
+
+    if chart["selection"]["points"]:
+        country = (
+            chart["selection"]["points"][0]["hovertext"]
+            .split("<br>")[0]
+            .replace("Country: ", "")
+        )
+        st.session_state["details_title"] = country
+        st.session_state["details_films"] = df_films[
+            df_films["countries"].str.contains(country)
+        ]
+        st.switch_page("src/details_page.py")
 
 
 def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
@@ -247,7 +292,19 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
         hover_data={"category": False, "number": False, "hover_text": False},
     )
 
-    st.plotly_chart(fig, use_container_width=False)
+    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+
+    if chart["selection"]["points"]:
+        country = (
+            chart["selection"]["points"][0]["hovertext"]
+            .split("<br>")[0]
+            .replace("Country: ", "")
+        )
+        st.session_state["details_title"] = country
+        st.session_state["details_films"] = df_films[
+            df_films["countries"].str.contains(country)
+        ]
+        st.switch_page("src/details_page.py")
 
 
 def create_progression_countries(
@@ -349,14 +406,27 @@ def create_scatter_ratings(df_films: pd.DataFrame) -> None:
 
     # Improve layout
     fig.update_layout(
-        xaxis={"range": [0, 5]},
-        yaxis={"range": [0, 5]},
+        xaxis={"range": [0, 5.05]},
+        yaxis={"range": [0, 5.05]},
         xaxis_title="Press Rating",
         yaxis_title="Spectator Rating",
+        dragmode="zoom",
     )
 
     # Show the chart in Streamlit
-    st.plotly_chart(fig, use_container_width=True)
+    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+
+    if chart["selection"]["points"]:
+        press = chart["selection"]["points"][0]["x"]
+        spectator = chart["selection"]["points"][0]["y"]
+        st.session_state["details_title"] = (
+            f"Press: {press:.3g} - Spectator: {spectator:.3g}"
+        )
+        st.session_state["details_films"] = df_films[
+            (df_films["press rating"] == press)
+            & (df_films["spectator rating"] == spectator)
+        ]
+        st.switch_page("src/details_page.py")
 
 
 def create_home() -> None:
@@ -412,7 +482,7 @@ def create_home() -> None:
     create_hist_categories(df_countries, "country", df_films, "country")
 
     # Map films by country
-    create_map(df_countries)
+    create_map(df_countries, df_films)
 
     # Film by duration
     create_hist_numbers(df_films, "duration", True)
