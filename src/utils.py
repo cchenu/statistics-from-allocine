@@ -103,18 +103,39 @@ def list_persons(
     None.
 
     """
-    if source not in st.session_state:
+    if "home" in source or source not in st.session_state:
         if isinstance(persons, list):
             df_persons = pd.DataFrame(persons, columns=["id"])
         else:
             df_persons = persons.copy()
-        with multiprocessing.Pool() as pool:
-            df_persons["Person"] = pool.map(Person, df_persons["id"])
+            if source in st.session_state:
+                df_persons = df_persons.merge(
+                    st.session_state[source][["id", "Person"]],
+                    on="id",
+                    how="left",
+                )
+        if "Person" not in df_persons:
+            with multiprocessing.Pool() as pool:
+                df_persons["Person"] = pool.map(Person, df_persons["id"])
+        elif len(df_persons[df_persons["Person"].isna()]) > 0:
+            with multiprocessing.Pool() as pool:
+                df_persons.loc[df_persons["Person"].isna(), "Person"] = (
+                    pool.map(
+                        Person,
+                        df_persons.loc[df_persons["Person"].isna(), "id"],
+                    )
+                )
 
         df_persons["name"] = df_persons["Person"].apply(Person.get_name)
         df_persons["image"] = df_persons["Person"].apply(Person.get_image)
-        st.session_state[source] = df_persons
-    df_persons: pd.DataFrame = st.session_state[source]
+        if (
+            source in st.session_state
+            and len(df_persons) > len(st.session_state[source])
+            or source not in st.session_state
+        ):
+            st.session_state[source] = df_persons
+    else:
+        df_persons: pd.DataFrame = st.session_state[source]
     cols_per_row = 3
     for i in range(0, len(df_persons), cols_per_row):
         cols = st.columns(cols_per_row)

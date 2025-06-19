@@ -429,6 +429,61 @@ def create_scatter_ratings(df_films: pd.DataFrame) -> None:
         st.switch_page("src/details_page.py")
 
 
+def buttons_see_more(source: str) -> None:
+    """
+    Create buttons to see more or less films or persons.
+
+    Parameters
+    ----------
+    source : str
+        Source of the call.
+
+    Returns
+    -------
+    None.
+
+    """
+    key = f"number_{source}"
+    _, col2, _ = st.columns([0.1, 0.8, 0.1])
+    with col2:
+        if st.session_state[key] <= 9:
+            _, col2_2, _ = st.columns([0.35, 0.3, 0.35])
+            with col2_2:
+                st.button(
+                    "Show more",
+                    type="secondary",
+                    use_container_width=True,
+                    key=f"more_{source}",
+                    on_click=lambda: st.session_state.update(
+                        {key: st.session_state[key] + 9}
+                    ),
+                )
+
+        else:
+            _, col2_2, col2_3, _ = st.columns([0.2, 0.3, 0.3, 0.2])
+            with col2_2:
+                st.button(
+                    "Show less",
+                    type="secondary",
+                    use_container_width=True,
+                    key=f"less_{source}",
+                    on_click=lambda: st.session_state.update(
+                        {key: st.session_state[key] - 9}
+                    ),
+                )
+
+            with col2_3:
+                st.button(
+                    "Show more",
+                    type="secondary",
+                    use_container_width=True,
+                    key=f"more_{source}",
+                    on_click=lambda: st.session_state.update(
+                        {key: st.session_state[key] + 9}
+                    ),
+                )
+
+
 def create_home() -> None:
     """
     Create the streamlit home page.
@@ -438,7 +493,7 @@ def create_home() -> None:
     None.
 
     """
-    df_films = st.session_state["df_films"]
+    df_films: pd.DataFrame = st.session_state["df_films"]
     df_countries = pd.read_csv("csv/countries.csv").sort_values(
         "number", ascending=False
     )
@@ -522,13 +577,28 @@ def create_home() -> None:
         create_scatter_ratings(df_films)
 
     st.subheader("Most watched directors")
-    list_persons(df_directors.head(9), "home_directors")
+    list_persons(
+        df_directors.head(st.session_state["number_directors"]),
+        f"home_directors",
+    )
+
+    buttons_see_more("directors")
 
     st.subheader("Most watched actors")
-    list_persons(df_actors.head(9), "home_actors")
+    list_persons(
+        df_actors.head(st.session_state["number_actors"]),
+        f"home_actors",
+    )
+
+    buttons_see_more("actors")
 
     st.subheader("Last watched films")
-    list_films(df_films.head(3), "home_films")
+    list_films(
+        df_films.head(st.session_state["number_films"]),
+        f"home_films",
+    )
+
+    buttons_see_more("films")
 
 
 if __name__ == "__main__":

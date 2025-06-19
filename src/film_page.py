@@ -2,7 +2,6 @@
 
 import math
 
-import pandas as pd
 import streamlit as st
 
 from film import Film
@@ -62,14 +61,16 @@ def create_film_page() -> None:
             countries_label = "Countries"
 
         duration = film.get_duration()
-        if duration >= 60:
+        if duration is None:
+            duration_str = ""
+        elif duration >= 60:
             duration_str = f"{duration // 60} h {duration % 60} min"
         else:
             duration_str = f"{duration} min"
 
         st.markdown(
             f"""
-            Release year: {film.get_year()}<br>
+            Release year: {film.get_year() or ""}<br>
             Duration: {duration_str}<br>
             {countries_label}: {", ".join(film.get_countries())}<br>
             Press rating: <span style='color:#FFD700;'>

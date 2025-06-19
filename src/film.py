@@ -1,12 +1,15 @@
 """Module containing the Film class."""
 
 import base64
+import logging
 import re
 
 import requests
 from bs4 import BeautifulSoup
 
 from corrections import corrections
+
+logging.basicConfig(level=logging.INFO)
 
 
 class Film:
@@ -28,11 +31,11 @@ class Film:
         HTML code of the film's page.
     __title : str
         Title of the film.
-    __duration : int
+    __duration : int | None
         Duration of the film in minutes.
     __genres : list[int]
         genre IDs of the film.
-    __year : int
+    __year : int | None
         Release year of the film.
     __countries : list[str]
         List of countries of the film.
@@ -59,7 +62,7 @@ class Film:
         Get the film's title.
     set_duration()
         Set the film's duration.
-    get_duration() -> int
+    get_duration() -> int | None
         Get the film's duration.
     set_genres()
         Set the film's genres id.
@@ -67,7 +70,7 @@ class Film:
         Get the film's genres id.
     set_year()
         Set the film's release year.
-    get_year() -> int
+    get_year() -> int | None
         Get the film's release year.
     set_countries()
         Set the list of countries of the film.
@@ -108,9 +111,9 @@ class Film:
         self.__id = film_id
         self.__html: str
         self.__title: str
-        self.__duration: int
+        self.__duration: int | None
         self.__genres: list[int]
-        self.__year: int
+        self.__year: int | None
         self.__countries: list[str]
         self.__press_rating: float
         self.__spectator_rating: float
@@ -192,22 +195,28 @@ class Film:
         # Search hours and minutes
         pattern_duration = r'"duration": "PT(.*?)H(.*?)M00S"'
         duration = re.findall(pattern_duration, self.__html)
-        if duration:
-            duration = duration[0]
-            self.__duration = int(duration[0]) * 60 + int(duration[1])
 
         # If data in Allocine is empty or false
         if self.__id in corrections["duration"]:
             self.__duration = corrections["duration"][self.__id]
+        elif duration:
+            duration = duration[0]
+            self.__duration = int(duration[0]) * 60 + int(duration[1])
+        else:
+            self.__duration = None
+            logging.info(
+                f"Duration not found for film {self.__title} (ID: "
+                f"{self.__id}). You can set it manually in corrections.py."
+            )
 
-    def get_duration(self) -> int:
+    def get_duration(self) -> int | None:
         """
         Get the film's duration.
 
         Returns
         -------
-        int
-            Duration of the film.
+        int | None
+            Duration of the film. None if the duration is not on Allocine.
         """
         return self.__duration
 
@@ -244,21 +253,27 @@ class Film:
         """
         pattern_year = r'"releasedate":"(.*?)-'
         year = re.findall(pattern_year, self.__html)
-        if year:
-            self.__year = int(year[0])
 
         # If data in Allocine is empty or false
         if self.__id in corrections["year"]:
             self.__year = corrections["year"][self.__id]
+        elif year:
+            self.__year = int(year[0])
+        else:
+            self.__year = None
+            logging.info(
+                f"Year not found for film {self.__title} (ID: "
+                f"{self.__id}). You can set it manually in corrections.py."
+            )
 
-    def get_year(self) -> int:
+    def get_year(self) -> int | None:
         """
         Get the film's release year.
 
         Returns
         -------
-        int
-            Release year of the film.
+        int | None
+            Release year of the film. None if the year is not on Allocine.
         """
         return self.__year
 
