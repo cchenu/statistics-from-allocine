@@ -579,7 +579,7 @@ def create_home() -> None:
     st.subheader("Most watched directors")
     list_persons(
         df_directors.head(st.session_state["number_directors"]),
-        f"home_directors",
+        "home_directors",
     )
 
     buttons_see_more("directors")
@@ -587,7 +587,7 @@ def create_home() -> None:
     st.subheader("Most watched actors")
     list_persons(
         df_actors.head(st.session_state["number_actors"]),
-        f"home_actors",
+        "home_actors",
     )
 
     buttons_see_more("actors")
@@ -595,7 +595,7 @@ def create_home() -> None:
     st.subheader("Last watched films")
     list_films(
         df_films.head(st.session_state["number_films"]),
-        f"home_films",
+        "home_films",
     )
 
     buttons_see_more("films")

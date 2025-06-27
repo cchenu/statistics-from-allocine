@@ -47,7 +47,7 @@ def create_person_page() -> None:
                 progression,
                 text=(
                     f"{len(directed_watched)} out of {len(directed_films)} "
-                    f"directed films watched ({progression*100:2.1f}%)"
+                    f"directed films watched ({progression * 100:2.1f}%)"
                 ),
             )
 
@@ -59,7 +59,7 @@ def create_person_page() -> None:
                 progression,
                 text=(
                     f"{len(played_watched)} out of {len(played_films)} "
-                    f"acted-in films watched ({progression*100:2.1f}%)"
+                    f"acted-in films watched ({progression * 100:2.1f}%)"
                 ),
             )
 

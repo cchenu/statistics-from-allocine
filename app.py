@@ -37,13 +37,17 @@ def create_site() -> None:
         if f"number_{role}" not in st.session_state:
             st.session_state[f"number_{role}"] = 9
 
-    if f"number_films" not in st.session_state:
+    if "number_films" not in st.session_state:
         st.session_state["number_films"] = 3
 
     home_page = st.Page("src/home_page.py", title="Films stats")
-    actor_page = st.Page("src/actor_page.py", title="Actor stats", url_path="actor")
+    actor_page = st.Page(
+        "src/actor_page.py", title="Actor stats", url_path="actor"
+    )
     film_page = st.Page("src/film_page.py", title="Film page", url_path="film")
-    details_page = st.Page("src/details_page.py", title="Details", url_path="details")
+    details_page = st.Page(
+        "src/details_page.py", title="Details", url_path="details"
+    )
 
     pg = st.navigation(
         [home_page, actor_page, film_page, details_page], position="hidden"

@@ -28,7 +28,7 @@ def list_films(
 
     """
     if isinstance(films, list):
-        if not source in st.session_state:
+        if source not in st.session_state:
             df_films = pd.DataFrame(films, columns=["id"])
             with multiprocessing.Pool() as pool:
                 df_films["Film"] = pool.map(Film, df_films["id"])
