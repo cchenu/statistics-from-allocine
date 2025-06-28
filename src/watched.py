@@ -183,8 +183,11 @@ def watched_list(collection_id: str, token: str) -> list[int]:
     list_id: list[int] = []
     # Each request retrieves up to 120 films; check if additional pages exist.
     while len(list_id) != number_films:
-        for film in entities["edges"]:  # Find the films id on this page
-            list_id.append(film["node"]["entity"]["internalId"])
+        # Find the films id on this page
+        list_id.extend(
+            film["node"]["entity"]["internalId"] for film in entities["edges"]
+        )
+
         after = entities["pageInfo"]["endCursor"]  # Find the end of this page
         params["variables"]["after"] = after  # Set the beginning of next page
         response = requests.post(url, headers=headers, json=params, timeout=10)

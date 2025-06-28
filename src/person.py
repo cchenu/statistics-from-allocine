@@ -56,15 +56,18 @@ class Person:
         Set list of films with the person as actor.
     get_played_films() -> list[int]
         Get list of films with the person as actor.
+
     """
 
-    def __init__(self, person_id: int):
-        """Construct an object of the Person class.
+    def __init__(self, person_id: int) -> None:
+        """
+        Construct an object of the Person class.
 
         Parameters
         ----------
         person_id : int
             Identifier of the person on Allocine.
+
         """
         self.__id = person_id
         self.__name: str
@@ -92,6 +95,7 @@ class Person:
         -------
         int
             Value of the person's identifier on Allocine.
+
         """
         return self.__id
 
@@ -103,6 +107,7 @@ class Person:
         -------
         str
             HTML code of the person's page.
+
         """
         return self.__html
 
@@ -188,15 +193,15 @@ class Person:
         films: list[int] = []
         for title in titles:
             # Change regex caracters
-            title = re.escape(title)
+            title_pat = re.escape(title)
             # We search the id of the film
             pattern_film = (
-                rf'/film/fichefilm_gen_cfilm=(.*?).html" title="{title}">'
+                rf'/film/fichefilm_gen_cfilm=(.*?).html" title="{title_pat}">'
             )
             result = re.findall(pattern_film, self.__html)
             if result:
                 films.extend(
-                    [int(film) for film in result if int(film) not in films]
+                    [int(film) for film in result if int(film) not in films],
                 )
         return films
 

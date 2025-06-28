@@ -1,3 +1,5 @@
+"""Utility functions to display films and persons in Streamlit."""
+
 import multiprocessing
 
 import pandas as pd
@@ -35,10 +37,10 @@ def list_films(
 
             df_films["title"] = df_films["Film"].apply(Film.get_title)
             df_films["press rating"] = df_films["Film"].apply(
-                Film.get_press_rating
+                Film.get_press_rating,
             )
             df_films["spectator rating"] = df_films["Film"].apply(
-                Film.get_spectator_rating
+                Film.get_spectator_rating,
             )
             df_films["poster"] = df_films["Film"].apply(Film.get_poster)
             df_films = df_films.sort_values(
@@ -77,7 +79,7 @@ def list_films(
 
                     if button:
                         st.session_state["film"] = Film(
-                            df_films["id"].iloc[i + j]
+                            df_films["id"].iloc[i + j],
                         )
                         st.switch_page("src/film_page.py")
 
@@ -103,6 +105,7 @@ def list_persons(
     None.
 
     """
+    df_persons: pd.DataFrame
     if "home" in source or source not in st.session_state:
         if isinstance(persons, list):
             df_persons = pd.DataFrame(persons, columns=["id"])
@@ -128,14 +131,13 @@ def list_persons(
 
         df_persons["name"] = df_persons["Person"].apply(Person.get_name)
         df_persons["image"] = df_persons["Person"].apply(Person.get_image)
-        if (
-            source in st.session_state
-            and len(df_persons) > len(st.session_state[source])
+        if source in st.session_state and (
+            len(df_persons) > len(st.session_state[source])
             or source not in st.session_state
         ):
             st.session_state[source] = df_persons
     else:
-        df_persons: pd.DataFrame = st.session_state[source]
+        df_persons = st.session_state[source]
     cols_per_row = 3
     for i in range(0, len(df_persons), cols_per_row):
         cols = st.columns(cols_per_row)
@@ -172,6 +174,6 @@ def list_persons(
 
                     if button:
                         st.session_state["person"] = Person(
-                            df_persons["id"].iloc[i + j]
+                            df_persons["id"].iloc[i + j],
                         )
                         st.switch_page("src/actor_page.py")

@@ -1,15 +1,19 @@
 """Create a page of the app with statistic on an actor or a director."""
 
 import math
+from typing import TYPE_CHECKING
 
 import streamlit as st
 
-from film import Film
 from utils import list_persons
+
+if TYPE_CHECKING:
+    from film import Film
 
 
 def print_stars(rating: float) -> str:
-    """Create a string with stars corresponding to a rating.
+    """
+    Create a string with stars corresponding to a rating.
 
     Parameters
     ----------
@@ -20,6 +24,7 @@ def print_stars(rating: float) -> str:
     -------
     stars : str
         String with corresponding stars.
+
     """
     if math.isnan(rating):
         return ""
@@ -61,9 +66,10 @@ def create_film_page() -> None:
             countries_label = "Countries"
 
         duration = film.get_duration()
+        hour = 60
         if duration is None:
             duration_str = ""
-        elif duration >= 60:
+        elif duration >= hour:
             duration_str = f"{duration // 60} h {duration % 60} min"
         else:
             duration_str = f"{duration} min"

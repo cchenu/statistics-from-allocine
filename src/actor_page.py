@@ -1,10 +1,15 @@
 """Create a page of the app with statistic on an actor or a director."""
 
-import pandas as pd
+from typing import TYPE_CHECKING
+
 import streamlit as st
 
-from person import Person
 from utils import list_films
+
+if TYPE_CHECKING:
+    import pandas as pd
+
+    from person import Person
 
 
 def create_person_page() -> None:

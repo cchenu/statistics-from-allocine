@@ -167,3 +167,5 @@ csv/actors.csv
 csv/directors.csv
 csv/countries.csv
 csv/genres.csv
+
+*.ruff_cache

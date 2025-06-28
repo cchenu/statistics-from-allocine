@@ -96,17 +96,20 @@ class Film:
         Set the film's poster.
     get_poster() -> str
         Get the film's poster.
+
     """
 
-    # pylint: disable=R0902
+    logger = logging.getLogger(__name__)
 
-    def __init__(self, film_id: int):
-        """Construct an object of the Film class.
+    def __init__(self, film_id: int) -> None:
+        """
+        Construct an object of the Film class.
 
         Parameters
         ----------
         film_id : int
             Identifier of the film on Allocine.
+
         """
         self.__id = film_id
         self.__html: str
@@ -143,6 +146,7 @@ class Film:
         -------
         int
             Value of the film's identifier on Allocine.
+
         """
         return self.__id
 
@@ -154,6 +158,7 @@ class Film:
         -------
         str
             HTML code of the film's page.
+
         """
         return self.__html
 
@@ -164,6 +169,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         pattern_title = (
             r'<meta content="'
@@ -181,6 +187,7 @@ class Film:
         -------
         str
             Title of the film.
+
         """
         return self.__title
 
@@ -191,6 +198,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         # Search hours and minutes
         pattern_duration = r'"duration": "PT(.*?)H(.*?)M00S"'
@@ -204,10 +212,12 @@ class Film:
             self.__duration = int(duration[0]) * 60 + int(duration[1])
         else:
             self.__duration = None
-            logging.info(
-                f"Duration not found for film {self.__title} (ID: "
-                f"{self.__id}). You can set it manually in corrections.py."
-            )
+        self.logger.info(
+            "Duration not found for film %s (ID: %d). You can set it manually "
+            "in corrections.py.",
+            self.__title,
+            self.__id,
+        )
 
     def get_duration(self) -> int | None:
         """
@@ -217,6 +227,7 @@ class Film:
         -------
         int | None
             Duration of the film. None if the duration is not on Allocine.
+
         """
         return self.__duration
 
@@ -227,6 +238,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         pattern_genres = r'"genre":\["(.*?)"\]'
         genres = re.findall(pattern_genres, self.__html)[0].split('","')
@@ -240,6 +252,7 @@ class Film:
         -------
         list[int]
             List of genre IDs of the film.
+
         """
         return self.__genres
 
@@ -250,6 +263,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         pattern_year = r'"releasedate":"(.*?)-'
         year = re.findall(pattern_year, self.__html)
@@ -261,9 +275,11 @@ class Film:
             self.__year = int(year[0])
         else:
             self.__year = None
-            logging.info(
-                f"Year not found for film {self.__title} (ID: "
-                f"{self.__id}). You can set it manually in corrections.py."
+            self.logger.info(
+                "Year not found for film %s (ID: %d). You can set it manually "
+                "in corrections.py.",
+                self.__title,
+                self.__id,
             )
 
     def get_year(self) -> int | None:
@@ -274,6 +290,7 @@ class Film:
         -------
         int | None
             Release year of the film. None if the year is not on Allocine.
+
         """
         return self.__year
 
@@ -284,6 +301,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         pattern_countries = r'"localizedName":"(.*?)"'
         self.__countries = [
@@ -299,6 +317,7 @@ class Film:
         -------
         list[str]
             List of countries of the film.
+
         """
         return self.__countries
 
@@ -309,6 +328,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         pattern_press_rating = r'"press_rating":"(\d+\.*\d*)"'
         rating = re.findall(pattern_press_rating, self.__html)
@@ -325,6 +345,7 @@ class Film:
         -------
         float
             Press rating of the film.
+
         """
         return self.__press_rating
 
@@ -335,6 +356,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         pattern_spectator_rating = r'"user_rating":"(\d+\.*\d*)"'
         rating = re.findall(pattern_spectator_rating, self.__html)
@@ -351,6 +373,7 @@ class Film:
         -------
         float
             Spectator rating of the film.
+
         """
         return self.__spectator_rating
 
@@ -361,6 +384,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         # Search page section with Actors
         pattern_actors = (
@@ -368,8 +392,8 @@ class Film:
             r"(.*?)"
             r'<h2 class="titlebar-title titlebar-title-md">'
         )
-        text_actors = re.findall(pattern_actors, self.__html, re.DOTALL)
-        text_actors = text_actors[0] if text_actors else ""
+        find_actors = re.findall(pattern_actors, self.__html, re.DOTALL)
+        text_actors: str = find_actors[0] if find_actors else ""
 
         # Search id of actors
         pattern_id_actor = r"/personne/fichepersonne_gen_cpersonne=(.*?).html"
@@ -382,7 +406,8 @@ class Film:
         for code in actors_encoded:
             # We decode the page
             decoded_str = base64.b64decode(code).decode(
-                "utf-8", errors="ignore"
+                "utf-8",
+                errors="ignore",
             )
             # We find the id in the decoded string
             actor_id = re.findall(r"(\d+)", decoded_str)[0]
@@ -392,7 +417,8 @@ class Film:
 
         self.__actors = [int(actor) for actor in actors if actor != ""]
 
-        if len(actors) >= 40:  # If we have several actors pages
+        actors_by_page = 40
+        if len(actors) >= actors_by_page:  # If we have several actors pages
             # We start from nothing with new requests with json result
             page = 1
             self.__actors = []
@@ -418,6 +444,7 @@ class Film:
         -------
         list[int]
             List of actor IDs of the film.
+
         """
         return self.__actors
 
@@ -428,6 +455,7 @@ class Film:
         Returns
         -------
         None.
+
         """
         # Search the page section with Directors
         pattern_directors = (
@@ -435,8 +463,8 @@ class Film:
             r"(.*?)"
             r'<h2 class="titlebar-title titlebar-title-md">'
         )
-        text_directors = re.findall(pattern_directors, self.__html, re.DOTALL)
-        text_directors = text_directors[0] if text_directors else ""
+        find_directors = re.findall(pattern_directors, self.__html, re.DOTALL)
+        text_directors = find_directors[0] if find_directors else ""
 
         # Search id of directors
         pattern_id_director = (
@@ -460,16 +488,18 @@ class Film:
         -------
         list[int]
             Directors' id of the film.
+
         """
         return self.__directors
 
-    def set_poster(self):
+    def set_poster(self) -> None:
         """
         Set the film's poster.
 
         Returns
         -------
         None.
+
         """
         pattern_poster = (
             r'"image": {\s*"@type": "ImageObject",\s*"url": "(.*?)"'
@@ -491,6 +521,7 @@ class Film:
         -------
         str
             Link to the Allocine's poster of the film.
+
         """
         return self.__poster
 

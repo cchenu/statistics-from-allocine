@@ -12,6 +12,7 @@ def create_details_page() -> None:
     Returns
     -------
     None.
+
     """
     if "details_title" in st.session_state:
         title: str = st.session_state["details_title"]
