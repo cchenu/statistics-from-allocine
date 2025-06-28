@@ -107,6 +107,10 @@ ignore = [
   "D203",
   # multi-line-summary-first-line
   "D212",
+  # missing-trailing-comma
+  "COM812",
+  # module-import-not-at-top-of-file
+  "E402",
 ]
 
 [tool.ruff.format]

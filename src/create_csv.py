@@ -94,8 +94,7 @@ def create_csv(
 
     with multiprocessing.Pool() as pool:
         df_films["Film"] = tqdm(
-            pool.imap(Film, df_films["id"]),
-            total=len(df_films),
+            pool.imap(Film, df_films["id"]), total=len(df_films)
         )
 
     df_films["title"] = df_films["Film"].apply(Film.get_title)
@@ -105,7 +104,7 @@ def create_csv(
     df_films["countries"] = df_films["Film"].apply(Film.get_countries)
     df_films["press rating"] = df_films["Film"].apply(Film.get_press_rating)
     df_films["spectator rating"] = df_films["Film"].apply(
-        Film.get_spectator_rating,
+        Film.get_spectator_rating
     )
     df_films["actors"] = df_films["Film"].apply(Film.get_actors)
     df_films["directors"] = df_films["Film"].apply(Film.get_directors)
@@ -122,7 +121,7 @@ def create_csv(
         df_genres["number"] = df_genres["id"].apply(
             lambda genre: df_films[
                 df_films["genres"].apply(lambda genres: genre in genres)
-            ].shape[0],
+            ].shape[0]
         )
         df_genres.to_csv("csv/genres.csv", index=False)
 
@@ -133,7 +132,7 @@ def create_csv(
                 df_films["countries"].apply(
                     lambda countries: country in countries,
                 )
-            ].shape[0],
+            ].shape[0]
         )
         df_countries.to_csv("csv/countries.csv", index=False)
 
@@ -141,8 +140,7 @@ def create_csv(
         for persons in ("actors", "directors"):
             all_persons = df_films[persons].sum()
             df_persons = pd.DataFrame(
-                list(Counter(all_persons).items()),
-                columns=["id", "number"],
+                list(Counter(all_persons).items()), columns=["id", "number"]
             )
             df_persons.to_csv(f"csv/{persons}.csv", index=False)
 

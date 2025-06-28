@@ -41,7 +41,7 @@ def create_hist_numbers(
     df_count["hover_text"] = df_count[value].apply(
         lambda val: f"{value.title()}: {val}<br>Films: "
         f"{df_count[df_count[value] == val]['number'].iloc[0]}<br>"
-        + "<br>".join(df_films[df_films[value] == val]["title"].head(5)),
+        + "<br>".join(df_films[df_films[value] == val]["title"].head(5))
     )
 
     hist_title = hist_title or f"Films by {value}"
@@ -125,7 +125,7 @@ def create_hist_categories(
         + "<br>".join(
             df_films[df_films[plural].str.contains(str(row[id_]))][
                 "title"
-            ].head(5),
+            ].head(5)
         ),
         axis="columns",
     )
@@ -157,8 +157,8 @@ def create_hist_categories(
                 str(
                     df_categories[df_categories[categories] == bar][id_].iloc[
                         0
-                    ],
-                ),
+                    ]
+                )
             )
         ]
         st.switch_page("src/details_page.py")
@@ -278,7 +278,7 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
             "category": ["Watched", "Not watched"],
             "number": [len(watched), len(not_watched)],
             "hover_text": [watched_str, not_watched_str],
-        },
+        }
     )
 
     # Create the donut chart
@@ -308,8 +308,7 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
 
 
 def create_progression_countries(
-    df_countries: pd.DataFrame,
-    countries_not_watched: list[str],
+    df_countries: pd.DataFrame, countries_not_watched: list[str]
 ) -> None:
     """
     Create a pie chart with the ratio of countries with one watched movie.
@@ -347,7 +346,7 @@ def create_progression_countries(
             "category": ["Watched", "Not watched"],
             "number": [len(watched), len(not_watched)],
             "hover_text": [watched_str, not_watched_str],
-        },
+        }
     )
 
     # Create the donut chart
@@ -457,7 +456,7 @@ def buttons_see_more(source: str) -> None:
                     use_container_width=True,
                     key=f"more_{source}",
                     on_click=lambda: st.session_state.update(
-                        {key: st.session_state[key] + 9},
+                        {key: st.session_state[key] + 9}
                     ),
                 )
 
@@ -470,7 +469,7 @@ def buttons_see_more(source: str) -> None:
                     use_container_width=True,
                     key=f"less_{source}",
                     on_click=lambda: st.session_state.update(
-                        {key: st.session_state[key] - 9},
+                        {key: st.session_state[key] - 9}
                     ),
                 )
 
@@ -481,7 +480,7 @@ def buttons_see_more(source: str) -> None:
                     use_container_width=True,
                     key=f"more_{source}",
                     on_click=lambda: st.session_state.update(
-                        {key: st.session_state[key] + 9},
+                        {key: st.session_state[key] + 9}
                     ),
                 )
 
@@ -497,25 +496,21 @@ def create_home() -> None:
     """
     df_films: pd.DataFrame = st.session_state["df_films"]
     df_countries = pd.read_csv("csv/countries.csv").sort_values(
-        "number",
-        ascending=False,
+        "number", ascending=False
     )
     countries_not_watched = df_countries[df_countries["number"] == 0][
         "country"
     ].tolist()
     df_countries = df_countries[df_countries["number"] != 0]
     df_genres = pd.read_csv("csv/genres.csv").sort_values(
-        "number",
-        ascending=False,
+        "number", ascending=False
     )
     df_genres = df_genres[df_genres["number"] != 0]
     df_actors = pd.read_csv("csv/actors.csv").sort_values(
-        "number",
-        ascending=False,
+        "number", ascending=False
     )
     df_directors = pd.read_csv("csv/directors.csv").sort_values(
-        "number",
-        ascending=False,
+        "number", ascending=False
     )
 
     st.title("Film Statistics")
@@ -552,15 +547,11 @@ def create_home() -> None:
     col1, col2 = st.columns(2, gap="small")
     with col1:
         create_progression(
-            "Césars",
-            "Watched César Awards for Best Film",
-            df_films,
+            "Césars", "Watched César Awards for Best Film", df_films
         )
     with col2:
         create_progression(
-            "Oscars",
-            "Watched Oscar Awards for Best Film",
-            df_films,
+            "Oscars", "Watched Oscar Awards for Best Film", df_films
         )
 
     col1, col2 = st.columns(2, gap="small")

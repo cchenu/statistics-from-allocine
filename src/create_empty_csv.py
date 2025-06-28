@@ -29,8 +29,7 @@ def get_name(type_: str, id_: int) -> str | None:
 
     """
     response = requests.get(
-        f"https://www.allocine.fr/films/{type_}-{id_}",
-        timeout=10,
+        f"https://www.allocine.fr/films/{type_}-{id_}", timeout=10
     )
     html_page = str(BeautifulSoup(response.content, "html.parser"))
     pattern = r'class="filter-entity-on-txt" data-name="(.*?)">'
@@ -98,12 +97,10 @@ def run() -> None:
     df_genres["id"] = range(13000, 14000)
     with multiprocessing.Pool() as pool:
         df_countries["country"] = tqdm(
-            pool.imap(get_country, df_countries["id"]),
-            total=len(df_countries),
+            pool.imap(get_country, df_countries["id"]), total=len(df_countries)
         )
         df_genres["genre"] = tqdm(
-            pool.imap(get_genre, df_genres["id"]),
-            total=len(df_genres),
+            pool.imap(get_genre, df_genres["id"]), total=len(df_genres)
         )
     df_countries = df_countries.dropna()
     # Add english names
@@ -111,7 +108,7 @@ def run() -> None:
     df_countries["country_en"] = df_countries["country"].apply(
         lambda country: (
             translator.translate(country) if country != "Suède" else "Sweden"
-        ),
+        )
     )
     df_countries.to_csv("csv/countries.csv", index=False)
     df_genres = df_genres.dropna()

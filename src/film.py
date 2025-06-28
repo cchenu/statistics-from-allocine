@@ -406,8 +406,7 @@ class Film:
         for code in actors_encoded:
             # We decode the page
             decoded_str = base64.b64decode(code).decode(
-                "utf-8",
-                errors="ignore",
+                "utf-8", errors="ignore"
             )
             # We find the id in the decoded string
             actor_id = re.findall(r"(\d+)", decoded_str)[0]
