@@ -109,8 +109,6 @@ ignore = [
   "D212",
   # missing-trailing-comma
   "COM812",
-  # module-import-not-at-top-of-file
-  "E402",
 ]
 
 [tool.ruff.format]

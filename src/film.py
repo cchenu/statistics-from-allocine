@@ -212,12 +212,12 @@ class Film:
             self.__duration = int(duration[0]) * 60 + int(duration[1])
         else:
             self.__duration = None
-        self.logger.info(
-            "Duration not found for film %s (ID: %d). You can set it manually "
-            "in corrections.py.",
-            self.__title,
-            self.__id,
-        )
+            self.logger.info(
+                "Duration not found for film %s (ID: %d). You can set it "
+                "manually in corrections.py.",
+                self.__title,
+                self.__id,
+            )
 
     def get_duration(self) -> int | None:
         """
