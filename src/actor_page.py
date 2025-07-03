@@ -13,14 +13,7 @@ if TYPE_CHECKING:
 
 
 def create_person_page() -> None:
-    """
-    Create the page with statistics on an actor or a director.
-
-    Returns
-    -------
-    None.
-
-    """
+    """Create the page with statistics on an actor or a director."""
     person: Person = st.session_state["person"]
     df_films: pd.DataFrame = st.session_state["df_films"]
 

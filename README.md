@@ -1,4 +1,4 @@
-# Statistics-from-allocine
+# statistics-from-allocine
 > Python program to generate statistics from an Allocine film collection.
 
 ## Table of Contents

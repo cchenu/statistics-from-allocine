@@ -169,3 +169,5 @@ csv/countries.csv
 csv/genres.csv
 
 *.ruff_cache
+
+check.bat

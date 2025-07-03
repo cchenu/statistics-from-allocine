@@ -23,11 +23,6 @@ def list_films(
         Required columns: id, title, press rating, spectator rating, poster.
     source : str
         Source of the call, used as key in session state and in button.
-
-    Returns
-    -------
-    None.
-
     """
     if isinstance(films, list):
         if source not in st.session_state:
@@ -99,11 +94,6 @@ def list_persons(
         in source.
     source : str
         Source of the call, used as key in session state and in button.
-
-    Returns
-    -------
-    None.
-
     """
     df_persons: pd.DataFrame
     if "home" in source or source not in st.session_state:

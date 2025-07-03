@@ -19,14 +19,7 @@ if TYPE_CHECKING:
 
 
 def update_awards() -> None:
-    """
-    Update csv about Cesars, Oscars and Palmes d'Or films.
-
-    Returns
-    -------
-    None.
-
-    """
+    """Update csv about Cesars, Oscars and Palmes d'Or films."""
     oscars_id = "VXNlckNvbGxlY3Rpb246NDQ5NzM="
     cesars_id = "VXNlckNvbGxlY3Rpb246NDQ5NzQ="
     palmes_id = "VXNlckNvbGxlY3Rpb246NDQ5NzY="
@@ -57,7 +50,6 @@ def create_csv(
     -------
     str
         String which says if some updates had been done or not.
-
     """
     load_dotenv(override=True)
     collection_id = collection_id or os.getenv("ID")

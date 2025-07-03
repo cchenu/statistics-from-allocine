@@ -24,7 +24,6 @@ def print_stars(rating: float) -> str:
     -------
     stars : str
         String with corresponding stars.
-
     """
     if math.isnan(rating):
         return ""
@@ -37,14 +36,7 @@ def print_stars(rating: float) -> str:
 
 
 def create_film_page() -> None:
-    """
-    Create the page with information about a film.
-
-    Returns
-    -------
-    None.
-
-    """
+    """Create the page with information about a film."""
     film: Film = st.session_state["film"]
 
     st.title(film.get_title())
@@ -66,11 +58,14 @@ def create_film_page() -> None:
             countries_label = "Countries"
 
         duration = film.get_duration()
-        hour = 60
+        minutes_in_hour = 60
         if duration is None:
             duration_str = ""
-        elif duration >= hour:
-            duration_str = f"{duration // 60} h {duration % 60} min"
+        elif duration >= minutes_in_hour:
+            duration_str = (
+                f"{duration // minutes_in_hour} h "
+                f"{duration % minutes_in_hour} min"
+            )
         else:
             duration_str = f"{duration} min"
 

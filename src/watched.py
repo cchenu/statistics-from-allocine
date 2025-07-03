@@ -20,7 +20,6 @@ def watched_list(collection_id: str, token: str) -> list[int]:
     -------
     list_id : list[int]
         List of movie IDs from the specified Allocine collection.
-
     """
     # URL of Allocine's API
     url = "https://graph.allocine.fr/v1/public"

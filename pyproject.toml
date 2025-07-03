@@ -3,28 +3,28 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Statistics-from-allocine"
+name = "statistics-from-allocine"
 version = "3.3.0"
 description = "App to have statistics about a films list from Allocine."
-authors = [{ name = "cchenu" }]
+authors = [{name = "cchenu"}]
 license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "streamlit>=1.30",
-    "pandas>=1.5",
-    "plotly>=5.0",
-    "requests>=2.28",
-    "tqdm>=4.64",
-    "beautifulsoup4>=4.11",
-    "python-dotenv>=1.0",
-    "deep-translator>=1.11"
+  "streamlit>=1.30",
+  "pandas>=1.5",
+  "plotly>=5.0",
+  "requests>=2.28",
+  "tqdm>=4.64",
+  "beautifulsoup4>=4.11",
+  "python-dotenv>=1.0",
+  "deep-translator>=1.11",
 ]
 
 [project.urls]
-homepage = "https://github.com/cchenu/Statistics-from-allocine"
-documentation = "https://github.com/cchenu/Statistics-from-allocine"
-repository = "https://github.com/cchenu/Statistics-from-allocine"
+homepage = "https://github.com/cchenu/statistics-from-allocine"
+documentation = "https://github.com/cchenu/statistics-from-allocine"
+repository = "https://github.com/cchenu/statistics-from-allocine"
 
 [tool.ruff]
 line-length = 79
@@ -35,81 +35,82 @@ extend-exclude = ["venv"]
 [tool.ruff.lint]
 unfixable = []
 select = [
-    "AIR",  # Airflow
-    "ERA",  # eradicate
-    "FAST", # FastAPI
-    "YTT",  # flake8-2020
-    "ANN",  # flake8-annotations
-    "ASYNC",# flake8-async
-    "S",    # flake8-bandit
-    "B",    # flake8-bugbear
-    "BLE",  # flake8-blind-except
-    "A",    # flake8-builtins
-    "COM",  # flake8-commas
-    "C4",   # flake8-comprehensions
-    "DTZ",  # flake8-datetimez
-    "T10",  # flake8-debugger
-    "DJ",   # flake8-django
-    "EM",   # flake8-errmsg
-    "EXE",  # flake8-executable
-    "FIX",  # flake8-fixme
-    "INT",  # flake8-gettext
-    "ISC",  # flake8-implicit-str-concat
-    "ICN",  # flake8-import-conventions
-    "LOG",  # flake8-logging
-    "G",    # flake8-logging-format
-    "INP",  # flake8-no-pep420
-    "PIE",  # flake8-pie
-    "T20",  # flake8-print
-    "PYI",  # flake8-pyi
-    "PT",   # flake8-pytest-style
-    "Q",    # flake8-quotes
-    "RSE",  # flake8-raise
-    "RET",  # flake8-return
-    "SLF",  # flake8-self
-    "SIM",  # flake8-simplify
-    "SLOT", # flake8-slots
-    "TID",  # flake8-tidy-imports
-    "TD",   # flake8-todos
-    "TC",   # flake8-type-checking
-    "ARG",  # flake8-unused-arguments
-    "PTH",  # flake8-use-pathlib
-    "FLY",  # flynt
-    "I",    # isort
-    "NPY",  # NumPy-specific rules
-    "PD",   # pandas-vet
-    "N",    # pep8-naming
-    "PERF", # Perflint
-    "E",    # pycodestyle (errors)
-    "W",    # pycodestyle (warnings)
-    "D",    # pydocstyle
-    "F",    # Pyflakes
-    "PGH",  # pygrep-hooks
-    "PL",   # Pylint
-    "UP",   # pyupgrade
-    "FURB", # refurb
-    "RUF",  # Ruff-specific rules
-    "TRY"   # tryceratops
+  "AIR", # Airflow
+  "ERA", # eradicate
+  "FAST", # FastAPI
+  "YTT", # flake8-2020
+  "ANN", # flake8-annotations
+  "ASYNC", # flake8-async
+  "S", # flake8-bandit
+  "B", # flake8-bugbear
+  "BLE", # flake8-blind-except
+  "A", # flake8-builtins
+  "COM", # flake8-commas
+  "C4", # flake8-comprehensions
+  "DTZ", # flake8-datetimez
+  "T10", # flake8-debugger
+  "DJ", # flake8-django
+  "EM", # flake8-errmsg
+  "EXE", # flake8-executable
+  "FIX", # flake8-fixme
+  "INT", # flake8-gettext
+  "ISC", # flake8-implicit-str-concat
+  "ICN", # flake8-import-conventions
+  "LOG", # flake8-logging
+  "G", # flake8-logging-format
+  "INP", # flake8-no-pep420
+  "PIE", # flake8-pie
+  "T20", # flake8-print
+  "PYI", # flake8-pyi
+  "PT", # flake8-pytest-style
+  "Q", # flake8-quotes
+  "RSE", # flake8-raise
+  "RET", # flake8-return
+  "SLF", # flake8-self
+  "SIM", # flake8-simplify
+  "SLOT", # flake8-slots
+  "TID", # flake8-tidy-imports
+  "TD", # flake8-todos
+  "TC", # flake8-type-checking
+  "ARG", # flake8-unused-arguments
+  "PTH", # flake8-use-pathlib
+  "FLY", # flynt
+  "I", # isort
+  "NPY", # NumPy-specific rules
+  "PD", # pandas-vet
+  "N", # pep8-naming
+  "PERF", # Perflint
+  "E", # pycodestyle (errors)
+  "W", # pycodestyle (warnings)
+  "D", # pydocstyle
+  "F", # Pyflakes
+  "PGH", # pygrep-hooks
+  "PL", # Pylint
+  "UP", # pyupgrade
+  "FURB", # refurb
+  "RUF", # Ruff-specific rules
+  "TRY", # tryceratops
 ]
 
 ignore = [
-  # Too many arguments to function call
-  "PLR0913",
-  # Too many returns
-  "PLR0911",
-  # Too many branches
-  "PLR0912",
-  # Too many locals
-  "PLR0914",
-  # Too many statements
-  "PLR0915",
-  # incorrect-blank-line-before-class
-  "D203",
-  # multi-line-summary-first-line
-  "D212",
-  # missing-trailing-comma
-  "COM812",
+  "PLR0913", # Too many arguments to function call
+  "PLR0911", # Too many returns
+  "PLR0912", # Too many branches
+  "PLR0914", # Too many locals
+  "PLR0915", # Too many statements
+  "D203", # incorrect-blank-line-before-class
+  "D212", # multi-line-summary-first-line 
+  "COM812", # missing-trailing-coma 
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+  "S101", # assert##
+  "PLR2004", # magic-value-comparison
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
 
 [tool.ruff.format]
 docstring-code-format = true

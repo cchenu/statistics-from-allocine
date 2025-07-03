@@ -33,7 +33,7 @@ class Person:
         List of Allocine's id of films with the person as actor.
 
     Public methods
-    -------
+    --------------
     get_id() -> int
         Get the person's identifier on Allocine.
     get_html() -> str
@@ -56,7 +56,6 @@ class Person:
         Set list of films with the person as actor.
     get_played_films() -> list[int]
         Get list of films with the person as actor.
-
     """
 
     def __init__(self, person_id: int) -> None:
@@ -67,7 +66,6 @@ class Person:
         ----------
         person_id : int
             Identifier of the person on Allocine.
-
         """
         self.__id = person_id
         self.__name: str
@@ -95,7 +93,6 @@ class Person:
         -------
         int
             Value of the person's identifier on Allocine.
-
         """
         return self.__id
 
@@ -107,19 +104,11 @@ class Person:
         -------
         str
             HTML code of the person's page.
-
         """
         return self.__html
 
     def set_name(self) -> None:
-        """
-        Set the full name of the person.
-
-        Returns
-        -------
-        None.
-
-        """
+        """Set the full name of the person."""
         pattern_name = r"<title>(.*?)(?: : Filmographie)* - AlloCiné</title>"
         self.__name = re.findall(pattern_name, self.__html)[0]
 
@@ -131,19 +120,11 @@ class Person:
         -------
         str
             Full name of the person.
-
         """
         return self.__name
 
     def set_image(self) -> None:
-        """
-        Set the link to an image of the person.
-
-        Returns
-        -------
-        None.
-
-        """
+        """Set the link to an image of the person."""
         pattern_image = r"<meta content=\"https://(.*?)\""
         self.__image = "https://" + re.findall(pattern_image, self.__html)[0]
 
@@ -155,7 +136,6 @@ class Person:
         -------
         str
             Link to an image of the person.
-
         """
         return self.__image
 
@@ -173,7 +153,6 @@ class Person:
         -------
         list[int]
             List of films where the person have the indicated role.
-
         """
         # Pattern to keep only films with the selected role
         pattern_role = (
@@ -206,14 +185,7 @@ class Person:
         return films
 
     def set_directed_films(self) -> None:
-        """
-        Set list of films directed by the person.
-
-        Returns
-        -------
-        None.
-
-        """
+        """Set list of films directed by the person."""
         self.__directed_films = self.find_films("(?:Réalisateur|Réalisatrice)")
 
     def get_directed_films(self) -> list[int]:
@@ -224,19 +196,11 @@ class Person:
         -------
         list[int]
             List of Allocine's id of films directed by the person.
-
         """
         return self.__directed_films
 
     def set_played_films(self) -> None:
-        """
-        Set list of films with the person as actor.
-
-        Returns
-        -------
-        None.
-
-        """
+        """Set list of films with the person as actor."""
         self.__played_films = self.find_films("(?:Acteur|Actrice)")
 
     def get_played_films(self) -> list[int]:
@@ -247,7 +211,6 @@ class Person:
         -------
         list[int]
             List of Allocine's id of films with the person as actor.
-
         """
         return self.__played_films
 

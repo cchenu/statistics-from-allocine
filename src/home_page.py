@@ -29,11 +29,6 @@ def create_hist_numbers(
     hist_title : str, optional
         Title of the histogram.
         The default is None, title will be created with value.
-
-    Returns
-    -------
-    None.
-
     """
     # Count films by year
     df_count = df_films.groupby(value).size().reset_index(name="number")
@@ -109,11 +104,6 @@ def create_hist_categories(
         Column of df_categories which is used in df_films to save data.
         For example, in df_films, genres are save with their ID but
         countries are saved with their french name.
-
-    Returns
-    -------
-    None.
-
     """
     # Plural of the word categories
     plural = (
@@ -176,11 +166,6 @@ def create_map(df_countries: pd.DataFrame, df_films: pd.DataFrame) -> None:
     df_films : pd.DataFrame
         DataFrame with watched movies data.
         Required columns: plural of categories, title.
-
-    Returns
-    -------
-    None.
-
     """
     fig = px.choropleth(
         df_countries,
@@ -248,11 +233,6 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
     df_films : pd.DataFrame
         DataFrame with watched movies data.
         Required columns: id, title.
-
-    Returns
-    -------
-    None.
-
     """
     df_award = pd.read_csv(f"csv/{award.lower().replace("é", "e")}.csv")
 
@@ -320,11 +300,6 @@ def create_progression_countries(
         Required columns: country.
     countries_not_watched : list[str]
         List of french country names without any watched movie.
-
-    Returns
-    -------
-    None.
-
     """
     watched = df_countries["country"].tolist()
     not_watched = countries_not_watched
@@ -372,11 +347,6 @@ def create_scatter_ratings(df_films: pd.DataFrame) -> None:
     df_films : pd.DataFrame
         DataFrame with watched movies data.
         Required columns: press rating, spectator rating.
-
-    Returns
-    -------
-    None.
-
     """
     df_count = (
         df_films.groupby(["press rating", "spectator rating"])
@@ -437,11 +407,6 @@ def buttons_see_more(source: str) -> None:
     ----------
     source : str
         Source of the call.
-
-    Returns
-    -------
-    None.
-
     """
     key = f"number_{source}"
     _, col2, _ = st.columns([0.1, 0.8, 0.1])
@@ -486,14 +451,7 @@ def buttons_see_more(source: str) -> None:
 
 
 def create_home() -> None:
-    """
-    Create the streamlit home page.
-
-    Returns
-    -------
-    None.
-
-    """
+    """Create the streamlit home page."""
     df_films: pd.DataFrame = st.session_state["df_films"]
     df_countries = pd.read_csv("csv/countries.csv").sort_values(
         "number", ascending=False

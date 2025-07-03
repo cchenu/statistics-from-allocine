@@ -26,7 +26,6 @@ def get_name(type_: str, id_: int) -> str | None:
     str
         Name of the country or the genre with the given ID.
         None if no result is found.
-
     """
     response = requests.get(
         f"https://www.allocine.fr/films/{type_}-{id_}", timeout=10
@@ -53,7 +52,6 @@ def get_country(id_country: int) -> str | None:
     country : str
         Name of the country corresponding to the given ID.
         None if no result is found.
-
     """
     return get_name("pays", id_country)
 
@@ -72,7 +70,6 @@ def get_genre(id_genre: int) -> str | None:
     genre : str
         Name of the genre corresponding to the given ID.
         None if no result is found.
-
     """
     return get_name("genre", id_genre)
 
@@ -85,11 +82,6 @@ def run() -> None:
     - countries.csv with country names in french and english and their
     respective IDs.
     - genres.csv with french genre names and their respective IDs.
-
-    Returns
-    -------
-    None.
-
     """
     df_countries = pd.DataFrame()
     df_countries["id"] = range(5000, 8000)

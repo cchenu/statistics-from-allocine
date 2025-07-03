@@ -14,14 +14,7 @@ from person import Person
 
 
 def create_site() -> None:
-    """
-    Create the whole streamlit site.
-
-    Returns
-    -------
-    None.
-
-    """
+    """Create the whole streamlit site."""
     if "df_films" not in st.session_state:
         create_csv()
         df_films = pd.read_csv("csv/films.csv")
