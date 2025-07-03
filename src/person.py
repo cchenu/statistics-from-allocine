@@ -52,7 +52,7 @@ class Person:
         Set list of films directed by the person.
     get_directed_films() -> list[int]
         Get list of films directed by the person.
-    set_played_films()
+    set_played_films(is_filmography: bool)
         Set list of films with the person as actor.
     get_played_films() -> list[int]
         Get list of films with the person as actor.
@@ -83,7 +83,7 @@ class Person:
         self.set_name()
         self.set_image()
         self.set_directed_films()
-        self.set_played_films()
+        self.set_played_films(not bool(response.history))
 
     def get_id(self) -> int:
         """
@@ -199,9 +199,22 @@ class Person:
         """
         return self.__directed_films
 
-    def set_played_films(self) -> None:
-        """Set list of films with the person as actor."""
-        self.__played_films = self.find_films("(?:Acteur|Actrice)")
+    def set_played_films(self, is_filmography: bool) -> None:
+        """
+        Set list of films with the person as actor.
+
+        Parameters
+        ----------
+        is_filmography: bool
+            True if the html page is the filmography page, False if a
+            redirection happened.
+        """
+        if is_filmography:
+            self.__played_films = self.find_films("(?:Acteur|Actrice)")
+        else:
+            pattern_film = r"/film/fichefilm_gen_cfilm=(\d*).html"
+            films = re.findall(pattern_film, self.__html)
+            self.__played_films = [int(film) for film in films]
 
     def get_played_films(self) -> list[int]:
         """
