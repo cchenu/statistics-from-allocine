@@ -4,7 +4,6 @@ import ast
 import multiprocessing
 import os
 from collections import Counter
-from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
 import pandas as pd
@@ -12,6 +11,7 @@ from dotenv import load_dotenv
 from tqdm import tqdm
 
 from film import Film
+from utils import CSV_DIR
 from watched import watched_list
 
 if TYPE_CHECKING:
@@ -67,7 +67,7 @@ def create_csv(
         raise ValueError(msg) from exc
     df_films = pd.DataFrame(list_id, columns=["id"])
 
-    csv_exist = Path(f"csv/{name_file}.csv").exists()
+    csv_exist = (CSV_DIR / f"{name_file}.csv").exists()
     if csv_exist:
         converters: Mapping[str, Callable[[str], Any]] = {
             "genres": ast.literal_eval,
@@ -78,7 +78,9 @@ def create_csv(
             "year": int,
         }
 
-        df_file = pd.read_csv(f"csv/{name_file}.csv", converters=converters)
+        df_file = pd.read_csv(
+            CSV_DIR / f"{name_file}.csv", converters=converters
+        )
         df_films = df_films[~df_films["id"].isin(df_file["id"])]
 
     if len(df_films) == 0:
@@ -105,20 +107,20 @@ def create_csv(
     df_films = df_films.drop(["Film"], axis=1)  # Remove Film column
     if csv_exist:
         df_films = pd.concat([df_films, df_file], ignore_index=True)
-    df_films.to_csv(f"csv/{name_file}.csv", index=False)
+    df_films.to_csv(CSV_DIR / f"{name_file}.csv", index=False)
 
     if other_csv:
         # Count the number of films for each genre
-        df_genres = pd.read_csv("csv/genres.csv")
+        df_genres = pd.read_csv(CSV_DIR / "genres.csv")
         df_genres["number"] = df_genres["id"].apply(
             lambda genre: df_films[
                 df_films["genres"].apply(lambda genres: genre in genres)
             ].shape[0]
         )
-        df_genres.to_csv("csv/genres.csv", index=False)
+        df_genres.to_csv(CSV_DIR / "genres.csv", index=False)
 
         # Count the number of films for each country
-        df_countries = pd.read_csv("csv/countries.csv")
+        df_countries = pd.read_csv(CSV_DIR / "countries.csv")
         df_countries["number"] = df_countries["country"].apply(
             lambda country: df_films[
                 df_films["countries"].apply(
@@ -126,7 +128,7 @@ def create_csv(
                 )
             ].shape[0]
         )
-        df_countries.to_csv("csv/countries.csv", index=False)
+        df_countries.to_csv(CSV_DIR / "countries.csv", index=False)
 
         # CSV actors and directors
         for persons in ("actors", "directors"):
@@ -134,7 +136,7 @@ def create_csv(
             df_persons = pd.DataFrame(
                 list(Counter(all_persons).items()), columns=["id", "number"]
             )
-            df_persons.to_csv(f"csv/{persons}.csv", index=False)
+            df_persons.to_csv(CSV_DIR / f"{persons}.csv", index=False)
 
     return f"The file {name_file} has been updated!"
 

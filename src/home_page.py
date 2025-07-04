@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from utils import list_films, list_persons
+from utils import CSV_DIR, SRC_DIR, list_films, list_persons
 
 
 def create_hist_numbers(
@@ -78,7 +78,7 @@ def create_hist_numbers(
         else:
             st.session_state["details_title"] = bar
         st.session_state["details_films"] = df_films[df_films[value] == bar]
-        st.switch_page("src/details_page.py")
+        st.switch_page(SRC_DIR / "details_page.py")
 
 
 def create_hist_categories(
@@ -151,7 +151,7 @@ def create_hist_categories(
                 )
             )
         ]
-        st.switch_page("src/details_page.py")
+        st.switch_page(SRC_DIR / "details_page.py")
 
 
 def create_map(df_countries: pd.DataFrame, df_films: pd.DataFrame) -> None:
@@ -217,7 +217,7 @@ def create_map(df_countries: pd.DataFrame, df_films: pd.DataFrame) -> None:
         st.session_state["details_films"] = df_films[
             df_films["countries"].str.contains(country)
         ]
-        st.switch_page("src/details_page.py")
+        st.switch_page(SRC_DIR / "details_page.py")
 
 
 def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
@@ -234,7 +234,7 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
         DataFrame with watched movies data.
         Required columns: id, title.
     """
-    df_award = pd.read_csv(f"csv/{award.lower().replace("é", "e")}.csv")
+    df_award = pd.read_csv(CSV_DIR / f"{award.lower().replace("é", "e")}.csv")
 
     watched = df_award[df_award["id"].isin(df_films["id"])]["title"].tolist()
     not_watched = df_award[~df_award["id"].isin(df_films["id"])][
@@ -284,7 +284,7 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
         st.session_state["details_films"] = df_films[
             df_films["countries"].str.contains(country)
         ]
-        st.switch_page("src/details_page.py")
+        st.switch_page(SRC_DIR / "details_page.py")
 
 
 def create_progression_countries(
@@ -396,7 +396,7 @@ def create_scatter_ratings(df_films: pd.DataFrame) -> None:
             (df_films["press rating"] == press)
             & (df_films["spectator rating"] == spectator)
         ]
-        st.switch_page("src/details_page.py")
+        st.switch_page(SRC_DIR / "details_page.py")
 
 
 def buttons_see_more(source: str) -> None:
@@ -453,21 +453,21 @@ def buttons_see_more(source: str) -> None:
 def create_home() -> None:
     """Create the streamlit home page."""
     df_films: pd.DataFrame = st.session_state["df_films"]
-    df_countries = pd.read_csv("csv/countries.csv").sort_values(
+    df_countries = pd.read_csv(CSV_DIR / "countries.csv").sort_values(
         "number", ascending=False
     )
     countries_not_watched = df_countries[df_countries["number"] == 0][
         "country"
     ].tolist()
     df_countries = df_countries[df_countries["number"] != 0]
-    df_genres = pd.read_csv("csv/genres.csv").sort_values(
+    df_genres = pd.read_csv(CSV_DIR / "genres.csv").sort_values(
         "number", ascending=False
     )
     df_genres = df_genres[df_genres["number"] != 0]
-    df_actors = pd.read_csv("csv/actors.csv").sort_values(
+    df_actors = pd.read_csv(CSV_DIR / "actors.csv").sort_values(
         "number", ascending=False
     )
-    df_directors = pd.read_csv("csv/directors.csv").sort_values(
+    df_directors = pd.read_csv(CSV_DIR / "directors.csv").sort_values(
         "number", ascending=False
     )
 

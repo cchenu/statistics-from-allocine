@@ -11,13 +11,14 @@ sys.path.append(str(Path(__file__).parent / "src"))
 from create_csv import create_csv
 from film import Film
 from person import Person
+from utils import CSV_DIR, SRC_DIR
 
 
 def create_site() -> None:
     """Create the whole streamlit site."""
     if "df_films" not in st.session_state:
         create_csv()
-        df_films = pd.read_csv("csv/films.csv")
+        df_films = pd.read_csv(CSV_DIR / "films.csv")
         st.session_state["df_films"] = df_films
 
     if "person" not in st.session_state:
@@ -33,13 +34,15 @@ def create_site() -> None:
     if "number_films" not in st.session_state:
         st.session_state["number_films"] = 3
 
-    home_page = st.Page("src/home_page.py", title="Films stats")
+    home_page = st.Page(SRC_DIR / "home_page.py", title="Films stats")
     actor_page = st.Page(
-        "src/actor_page.py", title="Actor stats", url_path="actor"
+        SRC_DIR / "actor_page.py", title="Actor stats", url_path="actor"
     )
-    film_page = st.Page("src/film_page.py", title="Film page", url_path="film")
+    film_page = st.Page(
+        SRC_DIR / "film_page.py", title="Film page", url_path="film"
+    )
     details_page = st.Page(
-        "src/details_page.py", title="Details", url_path="details"
+        SRC_DIR / "details_page.py", title="Details", url_path="details"
     )
 
     pg = st.navigation(

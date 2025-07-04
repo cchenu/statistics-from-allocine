@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 from deep_translator import GoogleTranslator
 from tqdm import tqdm
 
+from utils import CSV_DIR
+
 
 def get_name(type_: str, id_: int) -> str | None:
     """
@@ -102,9 +104,9 @@ def run() -> None:
             translator.translate(country) if country != "Suède" else "Sweden"
         )
     )
-    df_countries.to_csv("csv/countries.csv", index=False)
+    df_countries.to_csv(CSV_DIR / "countries.csv", index=False)
     df_genres = df_genres.dropna()
-    df_genres.to_csv("csv/genres.csv", index=False)
+    df_genres.to_csv(CSV_DIR / "genres.csv", index=False)
 
 
 if __name__ == "__main__":

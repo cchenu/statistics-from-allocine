@@ -1,12 +1,19 @@
 """Utility functions to display films and persons in Streamlit."""
 
 import multiprocessing
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
 from film import Film
 from person import Person
+
+CSV_DIR = Path(__file__).parent.parent / "csv"
+"""Path: Absolute path to the csv directory."""
+
+SRC_DIR = Path(__file__).parent
+"""Path: Absolute path to the src directory."""
 
 
 def list_films(
@@ -76,7 +83,7 @@ def list_films(
                         st.session_state["film"] = Film(
                             df_films["id"].iloc[i + j],
                         )
-                        st.switch_page("src/film_page.py")
+                        st.switch_page(SRC_DIR / "film_page.py")
 
 
 def list_persons(
@@ -166,4 +173,4 @@ def list_persons(
                         st.session_state["person"] = Person(
                             df_persons["id"].iloc[i + j],
                         )
-                        st.switch_page("src/actor_page.py")
+                        st.switch_page(SRC_DIR / "actor_page.py")
