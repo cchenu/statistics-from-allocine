@@ -52,9 +52,10 @@ This is a preview of the application:
    - Under the **Payload** tab, find `collectionId`:  
      - This is your collection ID.
 
-**Create your `.env` file in your command prompt:**  
+**Create and update your `.env` file in your command prompt:**  
    ```bash
    cp .env.example .env
+   vim .env
    ```
 
 **Install dependencies:**
