@@ -1,17 +1,12 @@
 """Create a web site with streamlit."""
 
-import sys
-from pathlib import Path
-
 import pandas as pd
 import streamlit as st
 
-sys.path.append(str(Path(__file__).parent / "src"))
-
-from create_csv import create_csv
-from film import Film
-from person import Person
-from utils import CSV_DIR, SRC_DIR
+from src.create_csv import create_csv
+from src.film import Film
+from src.person import Person
+from src.utils import CSV_DIR, SRC_DIR
 
 
 def create_site() -> None:

@@ -4,7 +4,7 @@ from typing import TYPE_CHECKING
 
 import streamlit as st
 
-from utils import list_films
+from src.utils import list_films
 
 if TYPE_CHECKING:
     import pandas as pd

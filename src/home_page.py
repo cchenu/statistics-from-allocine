@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from utils import CSV_DIR, SRC_DIR, list_films, list_persons
+from src.utils import CSV_DIR, SRC_DIR, list_films, list_persons
 
 
 def create_hist_numbers(

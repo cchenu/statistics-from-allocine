@@ -6,8 +6,8 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from film import Film
-from person import Person
+from src.film import Film
+from src.person import Person
 
 CSV_DIR = Path(__file__).parent.parent / "csv"
 """Path: Absolute path to the csv directory."""

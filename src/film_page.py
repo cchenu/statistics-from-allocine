@@ -5,10 +5,10 @@ from typing import TYPE_CHECKING
 
 import streamlit as st
 
-from utils import list_persons
+from src.utils import list_persons
 
 if TYPE_CHECKING:
-    from film import Film
+    from src.film import Film
 
 
 def print_stars(rating: float) -> str:

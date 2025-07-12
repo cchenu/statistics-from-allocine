@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from deep_translator import GoogleTranslator
 from tqdm import tqdm
 
-from utils import CSV_DIR
+from src.utils import CSV_DIR
 
 
 def get_name(type_: str, id_: int) -> str | None:

@@ -10,9 +10,9 @@ import pandas as pd
 from dotenv import load_dotenv
 from tqdm import tqdm
 
-from film import Film
-from utils import CSV_DIR
-from watched import watched_list
+from src.film import Film
+from src.utils import CSV_DIR
+from src.watched import watched_list
 
 if TYPE_CHECKING:
     from collections.abc import Callable, Mapping
@@ -50,6 +50,15 @@ def create_csv(
     -------
     str
         String which says if some updates had been done or not.
+
+    Raises
+    ------
+    ValueError
+        If `ID` or `TOKEN` is not found in the `.env` file.
+    ValueError
+        If the provided `ID` is invalid and must be updated.
+    ValueError
+        If the provided `TOKEN` is invalid and must be updated.
     """
     load_dotenv(override=True)
     collection_id = collection_id or os.getenv("ID")

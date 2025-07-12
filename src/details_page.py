@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from utils import list_films
+from src.utils import list_films
 
 
 def create_details_page() -> None:

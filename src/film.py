@@ -7,7 +7,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from corrections import corrections
+from src.corrections import corrections
 
 logging.basicConfig(level=logging.INFO)
 
@@ -347,7 +347,7 @@ class Film:
             if actor_id not in actors:
                 actors.append(actor_id)
 
-        self.__actors = [int(actor) for actor in actors if actor != ""]
+        self.__actors = [int(actor) for actor in actors if actor]
 
         actors_by_page = 40
         if len(actors) >= actors_by_page:  # If we have several actors pages
@@ -397,7 +397,7 @@ class Film:
         directors = re.findall(pattern_id_director, text_directors)
 
         self.__directors = [
-            int(director) for director in directors if director != ""
+            int(director) for director in directors if director
         ]
 
         # If data in Allocine is empty or false
