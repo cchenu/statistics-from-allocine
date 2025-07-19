@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "statistics-from-allocine"
-version = "3.3.0"
+version = "3.3.1"
 description = "App to have statistics about a films list from Allocine."
 authors = [{name = "cchenu"}]
 license = { file = "LICENSE" }

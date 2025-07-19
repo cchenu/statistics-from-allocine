@@ -128,10 +128,10 @@ def list_persons(
 
         df_persons["name"] = df_persons["Person"].apply(Person.get_name)
         df_persons["image"] = df_persons["Person"].apply(Person.get_image)
-        if source in st.session_state and (
-            len(df_persons) > len(st.session_state[source])
-            or source not in st.session_state
-        ):
+        if (
+            source in st.session_state
+            and len(df_persons) > len(st.session_state[source])
+        ) or source not in st.session_state:
             st.session_state[source] = df_persons
     else:
         df_persons = st.session_state[source]
