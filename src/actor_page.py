@@ -9,7 +9,7 @@ from src.utils import list_films
 if TYPE_CHECKING:
     import pandas as pd
 
-    from person import Person
+    from src.person import Person
 
 
 def create_person_page() -> None:
