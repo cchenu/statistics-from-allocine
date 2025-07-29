@@ -62,6 +62,15 @@ def list_films(
         for j in range(cols_per_row):
             if i + j < len(df_films):
                 with cols[j]:
+                    st.markdown(
+                        (
+                            "<p style='text-align: center; "
+                            "margin-bottom: 5px;'><img src='"
+                            + df_films["poster"].iloc[i + j]
+                            + "' height='200'></p>"
+                        ),
+                        unsafe_allow_html=True,
+                    )
                     _, col2, _ = st.columns([0.05, 0.9, 0.05])
                     with col2:
                         button = st.button(
@@ -70,14 +79,8 @@ def list_films(
                             use_container_width=True,
                             key=(f"{source}_{df_films['id'].iloc[i + j]}"),
                         )
-                    st.markdown(
-                        (
-                            "<p style='text-align: center;'><img src='"
-                            + df_films["poster"].iloc[i + j]
-                            + "' height='200'></p>"
-                        ),
-                        unsafe_allow_html=True,
-                    )
+
+                    st.text(" ")
 
                     if button:
                         st.session_state["film"] = Film(
@@ -141,6 +144,17 @@ def list_persons(
         for j in range(cols_per_row):
             if i + j < len(df_persons):
                 with cols[j]:
+                    tag = "div" if "home" in source else "p"
+                    st.markdown(
+                        (
+                            f"<{tag} style='text-align: center; "
+                            "margin-bottom: 5px;'><img src='"
+                            + df_persons["image"].iloc[i + j]
+                            + f"' height='200'></{tag}>"
+                        ),
+                        unsafe_allow_html=True,
+                    )
+
                     _, col2, _ = st.columns([0.05, 0.9, 0.05])
                     with col2:
                         button = st.button(
@@ -150,24 +164,18 @@ def list_persons(
                             key=(f"{source}_{df_persons['id'].iloc[i + j]}"),
                         )
 
-                    tag = "div" if "home" in source else "p"
-                    st.markdown(
-                        (
-                            f"<{tag} style='text-align: center;'><img src='"
-                            + df_persons["image"].iloc[i + j]
-                            + f"' height='200'></{tag}>"
-                        ),
-                        unsafe_allow_html=True,
-                    )
                     if "home" in source:
                         st.markdown(
                             (
-                                "<p style='text-align: center;'>"
+                                "<p style='text-align: center; margin-top: "
+                                "-15px;'>"
                                 + str(df_persons["number"].iloc[i + j])
                                 + " films</p>"
                             ),
                             unsafe_allow_html=True,
                         )
+
+                    st.text(" ")
 
                     if button:
                         st.session_state["person"] = Person(
