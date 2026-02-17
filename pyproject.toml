@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "statistics-from-allocine"
-version = "3.4.0"
+version = "3.4.1"
 description = "App to have statistics about a films list from Allocine."
 authors = [{name = "cchenu"}]
 license = { file = "LICENSE" }
@@ -74,13 +74,12 @@ target-version = ["py312"]
 [tool.mypy]
 python_version = "3.12"
 strict = true
-ignore_missing_imports = true
-warn_unused_configs = true
-warn_unused_ignores = true
-warn_return_any = true
-show_error_codes = true
 pretty = true
-exclude = "^venv/"
+disallow_any_unimported = true
+# disallow_any_expr = true
+disallow_any_decorated = true
+disallow_any_explicit = true
+
 
 [tool.isort]
 profile = "black"

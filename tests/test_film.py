@@ -3,7 +3,6 @@
 import ast
 import math
 from collections.abc import Callable, Mapping
-from typing import Any
 
 import pandas as pd
 import pytest
@@ -13,13 +12,19 @@ from src.corrections import corrections
 from src.film import Film
 from src.utils import CSV_DIR
 
-CORRECTIONS_LIST = [
-    (param, id_, value)
-    for param, param_dict in corrections.items()
-    for id_, value in param_dict.items()
-]
+CORRECTIONS_LIST = (
+    [("year", id_, value) for id_, value in corrections["year"].items()]
+    + [
+        ("duration", id_, value)
+        for id_, value in corrections["duration"].items()
+    ]
+    + [
+        ("directors", id_, value)
+        for id_, value in corrections["directors"].items()
+    ]
+)
 
-CONVERTERS: Mapping[str, Callable[[str], Any]] = {
+CONVERTERS: Mapping[str, Callable[[str], list[str] | list[int] | int]] = {
     "genres": ast.literal_eval,
     "countries": ast.literal_eval,
     "actors": ast.literal_eval,

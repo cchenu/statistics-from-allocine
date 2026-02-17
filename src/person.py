@@ -110,7 +110,8 @@ class Person:
     def set_name(self) -> None:
         """Set the full name of the person."""
         pattern_name = r"<title>(.*?)(?: : Filmographie)* - AlloCiné</title>"
-        self.__name = re.findall(pattern_name, self.__html)[0]
+        result: list[str] = re.findall(pattern_name, self.__html)
+        self.__name = result[0]
 
     def get_name(self) -> str:
         """
@@ -126,7 +127,8 @@ class Person:
     def set_image(self) -> None:
         """Set the link to an image of the person."""
         pattern_image = r"<meta content=\"https://(.*?)\""
-        self.__image = "https://" + re.findall(pattern_image, self.__html)[0]
+        result: list[str] = re.findall(pattern_image, self.__html)
+        self.__image = "https://" + result[0]
 
     def get_image(self) -> str:
         """
@@ -161,14 +163,14 @@ class Person:
             r'(?:<h2 class="titlebar-title titlebar-title-md">|$)'
         )
         # re.DOTALL allow a result on several lines
-        html = re.findall(pattern_role, self.__html, re.DOTALL)
+        html: list[str] = re.findall(pattern_role, self.__html, re.DOTALL)
 
         if not html:  # If we have not a section with this role
             return []
 
         # We search film titles, because ID are not necessarly in this section
         pattern_title = r'title="(.*?)">'
-        titles = re.findall(pattern_title, html[0])
+        titles: list[str] = re.findall(pattern_title, html[0])
         films: list[int] = []
         for title in titles:
             # Change regex caracters
@@ -177,7 +179,7 @@ class Person:
             pattern_film = (
                 rf'/film/fichefilm_gen_cfilm=(.*?).html" title="{title_pat}">'
             )
-            result = re.findall(pattern_film, self.__html)
+            result: list[str] = re.findall(pattern_film, self.__html)
             if result:
                 films.extend(
                     [int(film) for film in result if int(film) not in films],
@@ -213,7 +215,7 @@ class Person:
             self.__played_films = self.find_films("(?:Acteur|Actrice)")
         else:
             pattern_film = r"/film/fichefilm_gen_cfilm=(\d*).html"
-            films = re.findall(pattern_film, self.__html)
+            films: list[str] = re.findall(pattern_film, self.__html)
             self.__played_films = [int(film) for film in films]
 
     def get_played_films(self) -> list[int]:

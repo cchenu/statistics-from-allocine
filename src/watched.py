@@ -1,8 +1,11 @@
 """Module which gives the list of films' IDs."""
 
-from typing import Any
+from typing import TYPE_CHECKING
 
 import requests
+
+if TYPE_CHECKING:
+    from src.type_defs import JsonCollectionDict, ParamsDict
 
 
 def watched_list(collection_id: str, token: str) -> list[int]:
@@ -28,7 +31,7 @@ def watched_list(collection_id: str, token: str) -> list[int]:
     headers = {"Authorization": "Bearer " + token}
 
     # Parameters of the post requests
-    params: dict[Any, Any] = {
+    params: ParamsDict = {
         "operationName": "GetCollectionEntities",
         "query": """
         fragment MovieFragment on Movie {
@@ -175,7 +178,8 @@ def watched_list(collection_id: str, token: str) -> list[int]:
 
     response = requests.post(url, headers=headers, json=params, timeout=10)
     # Information are in entities
-    entities = response.json()["data"]["me"]["user"]["social"]["collections"][
+    json_response: JsonCollectionDict = response.json()
+    entities = json_response["data"]["me"]["user"]["social"]["collections"][
         "edges"
     ][0]["node"]["entities"]
     number_films = entities["totalCount"]

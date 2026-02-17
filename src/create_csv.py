@@ -4,7 +4,7 @@ import ast
 import multiprocessing
 import os
 from collections import Counter
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -74,11 +74,14 @@ def create_csv(
     except KeyError as exc:
         msg = "Verify your TOKEN in your .env file!"
         raise ValueError(msg) from exc
-    df_films = pd.DataFrame(list_id, columns=["id"])
+    columns = ["id"]
+    df_films = pd.DataFrame(list_id, columns=columns)
 
     csv_exist = (CSV_DIR / f"{name_file}.csv").exists()
     if csv_exist:
-        converters: Mapping[str, Callable[[str], Any]] = {
+        converters: Mapping[
+            str, Callable[[str], list[str] | list[int] | int]
+        ] = {
             "genres": ast.literal_eval,
             "countries": ast.literal_eval,
             "actors": ast.literal_eval,
@@ -142,8 +145,9 @@ def create_csv(
         # CSV actors and directors
         for persons in ("actors", "directors"):
             all_persons = df_films[persons].sum()
+            columns = ["id", "number"]
             df_persons = pd.DataFrame(
-                list(Counter(all_persons).items()), columns=["id", "number"]
+                list(Counter(all_persons).items()), columns=columns
             )
             df_persons.to_csv(CSV_DIR / f"{persons}.csv", index=False)
 

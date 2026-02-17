@@ -1,9 +1,9 @@
 """Module containing corrections for films with an error on Allocine."""
 
-from typing import Any
+from src.type_defs import CorrectionsDict
 
 # Dictionary with all corrections
-corrections: dict[str, dict[int, Any]] = {
+corrections: CorrectionsDict = {
     "year": {
         621: 1945,
         2025: 1945,

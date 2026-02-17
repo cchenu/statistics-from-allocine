@@ -161,12 +161,13 @@ class Film:
     def set_title(self) -> None:
         """Set the film's title."""
         pattern_title = (
-            r'<meta content="'
+            r'<meta content=["\']'
             r"(?:Tout le casting du film )?"
             r"(?:Casting de )?(.*?)"
-            r'" property="og:title"/>'
+            r'["\'] property="og:title"/>'
         )
-        self.__title = re.findall(pattern_title, self.__html)[0]
+        result: list[str] = re.findall(pattern_title, self.__html)
+        self.__title = result[0]
 
     def get_title(self) -> str:
         """
@@ -183,13 +184,15 @@ class Film:
         """Set the film's duration."""
         # Search hours and minutes
         pattern_duration = r'"duration": "PT(.*?)H(.*?)M00S"'
-        duration = re.findall(pattern_duration, self.__html)
+        result_duration: list[tuple[str, str]] = re.findall(
+            pattern_duration, self.__html
+        )
 
         # If data in Allocine is empty or false
         if self.__id in corrections["duration"]:
             self.__duration = corrections["duration"][self.__id]
-        elif duration:
-            duration = duration[0]
+        elif result_duration:
+            duration = result_duration[0]
             self.__duration = int(duration[0]) * 60 + int(duration[1])
         else:
             self.__duration = None
@@ -214,7 +217,8 @@ class Film:
     def set_genres(self) -> None:
         """Set the film's genres id."""
         pattern_genres = r'"genre":\["(.*?)"\]'
-        genres = re.findall(pattern_genres, self.__html)[0].split('","')
+        result: list[str] = re.findall(pattern_genres, self.__html)
+        genres = result[0].split('","')
         self.__genres = [int(genre) for genre in genres]
 
     def get_genres(self) -> list[int]:
@@ -231,7 +235,7 @@ class Film:
     def set_year(self) -> None:
         """Set the film's release year."""
         pattern_year = r'"releasedate":"(.*?)-'
-        year = re.findall(pattern_year, self.__html)
+        year: list[str] = re.findall(pattern_year, self.__html)
 
         # If data in Allocine is empty or false
         if self.__id in corrections["year"]:
@@ -261,9 +265,9 @@ class Film:
     def set_countries(self) -> None:
         """Set the list of countries of the film."""
         pattern_countries = r'"localizedName":"(.*?)"'
+        result: list[str] = re.findall(pattern_countries, self.__html)
         self.__countries = [
-            c.encode().decode("unicode_escape")
-            for c in re.findall(pattern_countries, self.__html)
+            c.encode().decode("unicode_escape") for c in result
         ]
 
     def get_countries(self) -> list[str]:
@@ -280,7 +284,7 @@ class Film:
     def set_press_rating(self) -> None:
         """Set the press rating of the film."""
         pattern_press_rating = r'"press_rating":"(\d+\.*\d*)"'
-        rating = re.findall(pattern_press_rating, self.__html)
+        rating: list[str] = re.findall(pattern_press_rating, self.__html)
         if len(rating) == 1:  # If there is a rating
             self.__press_rating = float(rating[0].replace(",", "."))
         else:
@@ -300,7 +304,7 @@ class Film:
     def set_spectator_rating(self) -> None:
         """Set the spectator rating of the film."""
         pattern_spectator_rating = r'"user_rating":"(\d+\.*\d*)"'
-        rating = re.findall(pattern_spectator_rating, self.__html)
+        rating: list[str] = re.findall(pattern_spectator_rating, self.__html)
         if len(rating) == 1:  # If there is a rating
             self.__spectator_rating = float(rating[0].replace(",", "."))
         else:
@@ -325,16 +329,18 @@ class Film:
             r"(.*?)"
             r'<h2 class="titlebar-title titlebar-title-md">'
         )
-        find_actors = re.findall(pattern_actors, self.__html, re.DOTALL)
-        text_actors: str = find_actors[0] if find_actors else ""
+        find_actors: list[str] = re.findall(
+            pattern_actors, self.__html, re.DOTALL
+        )
+        text_actors = find_actors[0] if find_actors else ""
 
         # Search id of actors
         pattern_id_actor = r"/personne/fichepersonne_gen_cpersonne=(.*?).html"
-        actors = re.findall(pattern_id_actor, text_actors)
+        actors: list[str] = re.findall(pattern_id_actor, text_actors)
 
         # Some actors can have the id encoded in base64
         pattern_encoded = r"ACrL3BACrl(.*?)\s"
-        actors_encoded = re.findall(pattern_encoded, text_actors)
+        actors_encoded: list[str] = re.findall(pattern_encoded, text_actors)
 
         for code in actors_encoded:
             # We decode the page
@@ -342,7 +348,8 @@ class Film:
                 "utf-8", errors="ignore"
             )
             # We find the id in the decoded string
-            actor_id = re.findall(r"(\d+)", decoded_str)[0]
+            result: list[str] = re.findall(r"(\d+)", decoded_str)
+            actor_id = result[0]
 
             if actor_id not in actors:
                 actors.append(actor_id)
@@ -387,14 +394,16 @@ class Film:
             r"(.*?)"
             r'<h2 class="titlebar-title titlebar-title-md">'
         )
-        find_directors = re.findall(pattern_directors, self.__html, re.DOTALL)
+        find_directors: list[str] = re.findall(
+            pattern_directors, self.__html, re.DOTALL
+        )
         text_directors = find_directors[0] if find_directors else ""
 
         # Search id of directors
         pattern_id_director = (
             r"/personne/fichepersonne_gen_cpersonne=(.*?).html"
         )
-        directors = re.findall(pattern_id_director, text_directors)
+        directors: list[str] = re.findall(pattern_id_director, text_directors)
 
         self.__directors = [
             int(director) for director in directors if director
@@ -420,7 +429,7 @@ class Film:
         pattern_poster = (
             r'"image": {\s*"@type": "ImageObject",\s*"url": "(.*?)"'
         )
-        poster = re.findall(pattern_poster, self.__html)
+        poster: list[str] = re.findall(pattern_poster, self.__html)
         if poster:
             self.__poster = poster[0]
         else:
