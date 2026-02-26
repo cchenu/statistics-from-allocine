@@ -35,7 +35,7 @@ def list_films(
         if source not in st.session_state:
             df_films = pd.DataFrame(films, columns=["id"])
             with multiprocessing.Pool() as pool:
-                df_films["Film"] = pool.map(Film, df_films["id"])
+                df_films["Film"] = pd.Series(pool.map(Film, df_films["id"]))
 
             df_films["title"] = df_films["Film"].apply(Film.get_title)
             df_films["press rating"] = df_films["Film"].apply(
@@ -62,21 +62,18 @@ def list_films(
         for j in range(cols_per_row):
             if i + j < len(df_films):
                 with cols[j]:
-                    st.markdown(
-                        (
-                            "<p style='text-align: center; "
-                            "margin-bottom: 5px;'><img src='"
-                            + df_films["poster"].iloc[i + j]
-                            + "' height='200'></p>"
-                        ),
-                        unsafe_allow_html=True,
+                    st.html(
+                        "<p style='text-align: center; "
+                        "margin-bottom: -10px;'><img src='"
+                        + df_films["poster"].iloc[i + j]
+                        + "' height='200'></p>"
                     )
                     _, col2, _ = st.columns([0.05, 0.9, 0.05])
                     with col2:
                         button = st.button(
                             df_films["title"].iloc[i + j],
                             type="secondary",
-                            use_container_width=True,
+                            width="stretch",
                             key=(f"{source}_{df_films['id'].iloc[i + j]}"),
                         )
 
@@ -119,14 +116,17 @@ def list_persons(
                 )
         if "Person" not in df_persons:
             with multiprocessing.Pool() as pool:
-                df_persons["Person"] = pool.map(Person, df_persons["id"])
+                df_persons["Person"] = pd.Series(
+                    pool.map(Person, df_persons["id"]), index=df_persons.index
+                )
         elif len(df_persons[df_persons["Person"].isna()]) > 0:
             with multiprocessing.Pool() as pool:
-                df_persons.loc[df_persons["Person"].isna(), "Person"] = (
-                    pool.map(
-                        Person,
-                        df_persons.loc[df_persons["Person"].isna(), "id"],
-                    )
+                mask = df_persons["Person"].isna()
+                ids = df_persons.loc[mask, "id"]
+
+                df_persons.loc[mask, "Person"] = pd.Series(
+                    pool.map(Person, ids),
+                    index=ids.index,
                 )
 
         df_persons["name"] = df_persons["Person"].apply(Person.get_name)
@@ -145,14 +145,13 @@ def list_persons(
             if i + j < len(df_persons):
                 with cols[j]:
                     tag = "div" if "home" in source else "p"
-                    st.markdown(
+                    st.html(
                         (
                             f"<{tag} style='text-align: center; "
-                            "margin-bottom: 5px;'><img src='"
+                            "margin-bottom: -10px;'><img src='"
                             + df_persons["image"].iloc[i + j]
                             + f"' height='200'></{tag}>"
                         ),
-                        unsafe_allow_html=True,
                     )
 
                     _, col2, _ = st.columns([0.05, 0.9, 0.05])
@@ -160,19 +159,16 @@ def list_persons(
                         button = st.button(
                             df_persons["name"].iloc[i + j],
                             type="secondary",
-                            use_container_width=True,
+                            width="stretch",
                             key=(f"{source}_{df_persons['id'].iloc[i + j]}"),
                         )
 
                     if "home" in source:
-                        st.markdown(
-                            (
-                                "<p style='text-align: center; margin-top: "
-                                "-15px;'>"
-                                + str(df_persons["number"].iloc[i + j])
-                                + " films</p>"
-                            ),
-                            unsafe_allow_html=True,
+                        st.html(
+                            "<p style='text-align: center; margin-top: "
+                            "-15px; margin-bottom: -10px'>"
+                            + str(df_persons["number"].iloc[i + j])
+                            + " films</p>"
                         )
 
                     st.text(" ")

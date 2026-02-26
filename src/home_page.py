@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+from src.create_csv import create_csv
 from src.utils import CSV_DIR, SRC_DIR, list_films, list_persons
 
 
@@ -34,9 +35,11 @@ def create_hist_numbers(
     df_count = df_films.groupby(value).size().reset_index(name="number")
     # Add an infotip to the dataframe
     df_count["hover_text"] = df_count[value].apply(
-        lambda val: f"{value.title()}: {val}<br>Films: "
-        f"{df_count[df_count[value] == val]['number'].iloc[0]}<br>"
-        + "<br>".join(df_films[df_films[value] == val]["title"].head(5))
+        lambda val: (
+            f"{value.title()}: {val}<br>Films: "
+            f"{df_count[df_count[value] == val]['number'].iloc[0]}<br>"
+            + "<br>".join(df_films[df_films[value] == val]["title"].head(5))
+        )
     )
 
     hist_title = hist_title or f"Films by {value}"
@@ -69,7 +72,7 @@ def create_hist_numbers(
         fig.update_xaxes(range=[0, 5.05])
 
     # Add graph in streamlit
-    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+    chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
         bar = chart["selection"]["points"][0]["x"]
@@ -110,12 +113,14 @@ def create_hist_categories(
         categories + "s" if categories[-1] != "y" else categories[:-1] + "ies"
     )
     df_categories["hover_text"] = df_categories.apply(
-        lambda row: f"{categories.title()}: {row[categories]}"
-        f"<br>Films: {row['number']}<br>"
-        + "<br>".join(
-            df_films[df_films[plural].str.contains(str(row[id_]))][
-                "title"
-            ].head(5)
+        lambda row: (
+            f"{categories.title()}: {row[categories]}"
+            f"<br>Films: {row['number']}<br>"
+            + "<br>".join(
+                df_films[df_films[plural].str.contains(str(row[id_]))][
+                    "title"
+                ].head(5)
+            )
         ),
         axis="columns",
     )
@@ -137,7 +142,7 @@ def create_hist_categories(
         dragmode="zoom",
     )
     # Add graph in streamlit
-    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+    chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
         bar = chart["selection"]["points"][0]["x"]
@@ -201,10 +206,7 @@ def create_map(df_countries: pd.DataFrame, df_films: pd.DataFrame) -> None:
     )
 
     chart = st.plotly_chart(
-        fig,
-        use_container_width=True,
-        config={"scrollZoom": False},
-        on_select="rerun",
+        fig, config={"scrollZoom": False}, on_select="rerun"
     )
 
     if chart["selection"]["points"]:
@@ -272,7 +274,7 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
         hover_data={"category": False, "number": False, "hover_text": False},
     )
 
-    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+    chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
         country = (
@@ -335,7 +337,7 @@ def create_progression_countries(
         hover_data={"category": False, "number": False, "hover_text": False},
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
 
 def create_scatter_ratings(df_films: pd.DataFrame) -> None:
@@ -384,7 +386,7 @@ def create_scatter_ratings(df_films: pd.DataFrame) -> None:
     )
 
     # Show the chart in Streamlit
-    chart = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
+    chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
         press = chart["selection"]["points"][0]["x"]
@@ -418,7 +420,7 @@ def buttons_see_more(source: str) -> None:
                 st.button(
                     "Show more",
                     type="secondary",
-                    use_container_width=True,
+                    width="stretch",
                     key=f"more_{source}",
                     on_click=lambda: st.session_state.update(
                         {key: st.session_state[key] + 9}
@@ -431,7 +433,7 @@ def buttons_see_more(source: str) -> None:
                 st.button(
                     "Show less",
                     type="secondary",
-                    use_container_width=True,
+                    width="stretch",
                     key=f"less_{source}",
                     on_click=lambda: st.session_state.update(
                         {key: st.session_state[key] - 9}
@@ -442,7 +444,7 @@ def buttons_see_more(source: str) -> None:
                 st.button(
                     "Show more",
                     type="secondary",
-                    use_container_width=True,
+                    width="stretch",
                     key=f"more_{source}",
                     on_click=lambda: st.session_state.update(
                         {key: st.session_state[key] + 9}
@@ -452,7 +454,18 @@ def buttons_see_more(source: str) -> None:
 
 def create_home() -> None:
     """Create the streamlit home page."""
-    df_films: pd.DataFrame = st.session_state["df_films"]
+    if "df_films" not in st.session_state:
+        try:
+            create_csv()
+        except ValueError as exc:
+            st.session_state["token_error"] = exc.args[0]
+            st.switch_page(SRC_DIR / "token_page.py")
+
+        df_films = pd.read_csv(CSV_DIR / "films.csv")
+        st.session_state["df_films"] = df_films
+    else:
+        df_films = st.session_state["df_films"]
+
     df_countries = pd.read_csv(CSV_DIR / "countries.csv").sort_values(
         "number", ascending=False
     )

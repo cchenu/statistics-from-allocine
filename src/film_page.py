@@ -42,13 +42,10 @@ def create_film_page() -> None:
     st.title(film.get_title())
     col1, col2 = st.columns([0.3, 0.7])
     with col1:
-        st.markdown(
-            (
-                "<div style='text-align: left;'><img src='"
-                + film.get_poster()
-                + "' height='200'></div>"
-            ),
-            unsafe_allow_html=True,
+        st.html(
+            "<div style='text-align: left;'><img src='"
+            + film.get_poster()
+            + "' height='200'></div>"
         )
 
     with col2:
@@ -69,8 +66,7 @@ def create_film_page() -> None:
         else:
             duration_str = f"{duration} min"
 
-        st.markdown(
-            f"""
+        st.html(f"""
             Release year: {film.get_year() or ""}<br>
             Duration: {duration_str}<br>
             {countries_label}: {", ".join(film.get_countries())}<br>
@@ -78,11 +74,8 @@ def create_film_page() -> None:
             {print_stars(film.get_press_rating())}</span><br>
             Spectator rating: <span style='color:#FFD700;'>
             {print_stars(film.get_spectator_rating())}</span>
-            """,
-            unsafe_allow_html=True,
-        )
+            """)
 
-    st.markdown("<br>", unsafe_allow_html=True)
     directors = film.get_directors()
     actors = film.get_actors()
     if directors:
@@ -92,7 +85,6 @@ def create_film_page() -> None:
             st.header("Director")
         list_persons(directors, f"directors_{film.get_id()}")
 
-    st.markdown("<br>", unsafe_allow_html=True)
     if actors:
         if len(actors) > 1:
             st.header("Actors")

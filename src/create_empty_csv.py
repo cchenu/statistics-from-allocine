@@ -90,11 +90,14 @@ def run() -> None:
     df_genres = pd.DataFrame()
     df_genres["id"] = range(13000, 14000)
     with multiprocessing.Pool() as pool:
-        df_countries["country"] = tqdm(
-            pool.imap(get_country, df_countries["id"]), total=len(df_countries)
+        df_countries["country"] = pd.Series(
+            tqdm(
+                pool.imap(get_country, df_countries["id"]),
+                total=len(df_countries),
+            )
         )
-        df_genres["genre"] = tqdm(
-            pool.imap(get_genre, df_genres["id"]), total=len(df_genres)
+        df_genres["genre"] = pd.Series(
+            tqdm(pool.imap(get_genre, df_genres["id"]), total=len(df_genres))
         )
     df_countries = df_countries.dropna()
     # Add english names

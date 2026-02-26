@@ -12,7 +12,7 @@ STREAMLIT = streamlit
 
 install:
 	# pip 25.3 does not work with pip-compile
-	python.exe -m $(PIP) install pip==25.2
+	# python.exe -m $(PIP) install pip==25.2
 	$(PIP) install -r requirements.txt
 	$(PIP) install ruff black isort mypy pytest pip-tools ipykernel
 	$(MYPY) --install-types
@@ -66,7 +66,7 @@ requirements:
 	pip-compile --all-extras pyproject.toml
 
 run:
-	$(STREAMLIT) run streamlit_app.py
+	$(STREAMLIT) run
 
 help:
 	@echo "Usage: make <target>"

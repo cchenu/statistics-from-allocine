@@ -66,7 +66,7 @@ This is a preview of the application:
 ### Running the Application
 To launch the Streamlit app, navigate to your project folder in the command prompt (with `cd` command) and run:
    ```bash
-   streamlit run app.py
+   streamlit run
    ```
 
 ### Other
@@ -76,7 +76,7 @@ If you only need the CSV files, you can find them in the `csv/` folder.
 
 
 ## Project Status
-Project is: _complete_ - version 3.4.1.
+Project is: _complete_ - version 3.5.0.
 
 
 ## Contact

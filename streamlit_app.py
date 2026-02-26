@@ -1,21 +1,14 @@
 """Create a web site with streamlit."""
 
-import pandas as pd
 import streamlit as st
 
-from src.create_csv import create_csv
 from src.film import Film
 from src.person import Person
-from src.utils import CSV_DIR, SRC_DIR
+from src.utils import SRC_DIR
 
 
 def create_site() -> None:
     """Create the whole streamlit site."""
-    if "df_films" not in st.session_state:
-        create_csv()
-        df_films = pd.read_csv(CSV_DIR / "films.csv")
-        st.session_state["df_films"] = df_films
-
     if "person" not in st.session_state:
         st.session_state["person"] = Person(5119)
 
@@ -39,9 +32,13 @@ def create_site() -> None:
     details_page = st.Page(
         SRC_DIR / "details_page.py", title="Details", url_path="details"
     )
+    token_page = st.Page(
+        SRC_DIR / "token_page.py", title="Token", url_path="token"
+    )
 
     pg = st.navigation(
-        [home_page, actor_page, film_page, details_page], position="hidden"
+        [home_page, actor_page, film_page, details_page, token_page],
+        position="hidden",
     )
     pg.run()
 

@@ -20,22 +20,16 @@ def create_person_page() -> None:
     st.title(person.get_name())
     col1, col2 = st.columns([0.3, 0.7])
     with col1:
-        st.markdown(
-            (
-                "<div style='text-align: left;'><img src='"
-                + person.get_image()
-                + "' height='200'></div>"
-            ),
-            unsafe_allow_html=True,
+        st.html(
+            "<div style='text-align: left;'><img src='"
+            + person.get_image()
+            + "' height='200'></div>"
         )
 
     with col2:
-        st.markdown(
-            (
-                '<div style="display: flex; flex-direction: column; '
-                'justify-content: center; height: 50px;">'
-            ),
-            unsafe_allow_html=True,
+        st.html(
+            '<div style="display: flex; flex-direction: column; '
+            'justify-content: center; height: 40px;">'
         )
         directed_films = person.get_directed_films()
         if directed_films:
@@ -61,9 +55,8 @@ def create_person_page() -> None:
                 ),
             )
 
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.html("</div>")
 
-    st.markdown("<br>", unsafe_allow_html=True)
     if directed_films:
         if len(directed_films) > 1:
             st.header("Directed films")
@@ -81,7 +74,6 @@ def create_person_page() -> None:
             st.subheader("Not Watched")
             list_films(directed_not_watched, f"director_{person.get_id()}")
 
-    st.markdown("<br>", unsafe_allow_html=True)
     if played_films:
         if len(played_films) > 1:
             st.header("Acted-in films")

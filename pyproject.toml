@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "statistics-from-allocine"
-version = "3.4.1"
+version = "3.5.0"
 description = "App to have statistics about a films list from Allocine."
 authors = [{name = "cchenu"}]
 license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-  "streamlit>=1.30",
+  "streamlit>=1.54",
   "pandas>=1.5",
   "plotly>=5.0",
   "requests>=2.28",

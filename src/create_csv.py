@@ -72,7 +72,7 @@ def create_csv(
         msg = "Verify your ID in your .env file!"
         raise ValueError(msg) from exc
     except KeyError as exc:
-        msg = "Verify your TOKEN in your .env file!"
+        msg = "Verify your token in your .env file!"
         raise ValueError(msg) from exc
     columns = ["id"]
     df_films = pd.DataFrame(list_id, columns=columns)
@@ -99,8 +99,8 @@ def create_csv(
         return "No file updates."
 
     with multiprocessing.Pool() as pool:
-        df_films["Film"] = tqdm(
-            pool.imap(Film, df_films["id"]), total=len(df_films)
+        df_films["Film"] = pd.Series(
+            tqdm(pool.imap(Film, df_films["id"]), total=len(df_films))
         )
 
     df_films["title"] = df_films["Film"].apply(Film.get_title)
