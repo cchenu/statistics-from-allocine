@@ -6,10 +6,6 @@ import streamlit as st
 from src.utils import SRC_DIR
 
 
-def submit() -> None:
-    """Submit new tokens."""
-
-
 def create_token_page() -> None:
     """Create the page to update Allocine tokens."""
     st.title("Token update")

@@ -94,6 +94,7 @@ def create_csv(
             CSV_DIR / f"{name_file}.csv", converters=converters
         )
         df_films = df_films[~df_films["id"].isin(df_file["id"])]
+        df_films = df_films.reset_index(drop=True)
 
     if len(df_films) == 0:
         return "No file updates."
