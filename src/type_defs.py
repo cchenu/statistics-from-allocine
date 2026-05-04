@@ -109,3 +109,57 @@ class ParamsDict(TypedDict):
     operationName: Literal["GetCollectionEntities"]
     query: str
     variables: VariablesDict
+
+
+class PictureDict(TypedDict):
+    """Type for key `picture` in ActorDict."""
+
+    id: str
+    internalId: int
+    url: str
+    path: str
+    __typename: Literal["InternalImage"]
+
+
+class TagsDict(TypedDict):
+    """Type for key `tags` in ActorDict."""
+
+    list: list[Literal["Person.Gender.Male", "Person.Gender.Female"]]
+    __typename: Literal["TagCollection"]
+
+
+class SeoDict(TypedDict):
+    """Type for key `seo` in ActorDict."""
+
+    browsable: bool
+    __typename: Literal["Seo"]
+
+
+class AppearanceStatsDict(TypedDict):
+    """Type for key `appearanceStats` in ActorDict."""
+
+    totalMovies: int
+    totalSeries: int
+    __typename: Literal["PersonAppearanceStats"]
+
+
+class ActorDict(TypedDict):
+    """Type for key `actor` in ActorsDict."""
+
+    internalId: int
+    firstName: str
+    lastName: str
+    gender: Literal["MALE", "FEMALE"] | None
+    picture: PictureDict | None
+    tags: TagsDict
+    seo: SeoDict
+    appearanceStats: AppearanceStatsDict
+    __typename: Literal["Person"]
+
+
+class ActorsDict(TypedDict):
+    """Type for `response` variable in `set_actors` method of `Film` class."""
+
+    role: str | None
+    actor: ActorDict
+    __typename: Literal["CastMember"]

@@ -75,7 +75,7 @@ def create_hist_numbers(
     chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
-        bar = chart["selection"]["points"][0]["x"]
+        bar: float = chart["selection"]["points"][0]["x"]
         if value == "duration":
             st.session_state["details_title"] = f"{bar} min"
         else:
@@ -145,7 +145,7 @@ def create_hist_categories(
     chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
-        bar = chart["selection"]["points"][0]["x"]
+        bar: str = chart["selection"]["points"][0]["x"]
         st.session_state["details_title"] = bar
         st.session_state["details_films"] = df_films[
             df_films[plural].str.contains(
@@ -210,7 +210,7 @@ def create_map(df_countries: pd.DataFrame, df_films: pd.DataFrame) -> None:
     )
 
     if chart["selection"]["points"]:
-        country = (
+        country: str = (
             chart["selection"]["points"][0]["hovertext"]
             .split("<br>")[0]
             .replace("Country: ", "")
@@ -238,8 +238,10 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
     """
     df_award = pd.read_csv(CSV_DIR / f"{award.lower().replace("é", "e")}.csv")
 
-    watched = df_award[df_award["id"].isin(df_films["id"])]["title"].tolist()
-    not_watched = df_award[~df_award["id"].isin(df_films["id"])][
+    watched: list[str] = df_award[df_award["id"].isin(df_films["id"])][
+        "title"
+    ].tolist()
+    not_watched: list[str] = df_award[~df_award["id"].isin(df_films["id"])][
         "title"
     ].tolist()
 
@@ -277,7 +279,7 @@ def create_progression(award: str, title: str, df_films: pd.DataFrame) -> None:
     chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
-        country = (
+        country: str = (
             chart["selection"]["points"][0]["hovertext"]
             .split("<br>")[0]
             .replace("Country: ", "")
@@ -303,7 +305,7 @@ def create_progression_countries(
     countries_not_watched : list[str]
         List of french country names without any watched movie.
     """
-    watched = df_countries["country"].tolist()
+    watched: list[str] = df_countries["country"].tolist()
     not_watched = countries_not_watched
 
     # Text in tooltip
@@ -389,8 +391,8 @@ def create_scatter_ratings(df_films: pd.DataFrame) -> None:
     chart = st.plotly_chart(fig, on_select="rerun")
 
     if chart["selection"]["points"]:
-        press = chart["selection"]["points"][0]["x"]
-        spectator = chart["selection"]["points"][0]["y"]
+        press: float = chart["selection"]["points"][0]["x"]
+        spectator: float = chart["selection"]["points"][0]["y"]
         st.session_state["details_title"] = (
             f"Press: {press:.3g} - Spectator: {spectator:.3g}"
         )
@@ -469,9 +471,9 @@ def create_home() -> None:
     df_countries = pd.read_csv(CSV_DIR / "countries.csv").sort_values(
         "number", ascending=False
     )
-    countries_not_watched = df_countries[df_countries["number"] == 0][
-        "country"
-    ].tolist()
+    countries_not_watched: list[str] = df_countries[
+        df_countries["number"] == 0
+    ]["country"].tolist()
     df_countries = df_countries[df_countries["number"] != 0]
     df_genres = pd.read_csv(CSV_DIR / "genres.csv").sort_values(
         "number", ascending=False

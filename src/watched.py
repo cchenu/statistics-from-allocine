@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 import requests
 
 if TYPE_CHECKING:
-    from src.type_defs import JsonCollectionDict, ParamsDict
+    from src.type_defs import EntitiesDict, JsonCollectionDict, ParamsDict
 
 
 def watched_list(collection_id: str, token: str) -> list[int]:
@@ -179,9 +179,9 @@ def watched_list(collection_id: str, token: str) -> list[int]:
     response = requests.post(url, headers=headers, json=params, timeout=10)
     # Information are in entities
     json_response: JsonCollectionDict = response.json()
-    entities = json_response["data"]["me"]["user"]["social"]["collections"][
-        "edges"
-    ][0]["node"]["entities"]
+    entities: EntitiesDict = json_response["data"]["me"]["user"]["social"][
+        "collections"
+    ]["edges"][0]["node"]["entities"]
     number_films = entities["totalCount"]
     list_id: list[int] = []
     # Each request retrieves up to 120 films; check if additional pages exist.

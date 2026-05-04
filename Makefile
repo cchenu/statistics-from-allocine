@@ -11,10 +11,9 @@ MAKE = make
 STREAMLIT = streamlit
 
 install:
-	# pip 25.3 does not work with pip-compile
-	# python.exe -m $(PIP) install pip==25.2
+	python.exe -m $(PIP) install pip --upgrade
 	$(PIP) install -r requirements.txt
-	$(PIP) install ruff black isort mypy pytest pip-tools ipykernel
+	$(PIP) install -e .[dev]
 	$(MYPY) --install-types
 
 lint:

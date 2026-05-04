@@ -145,7 +145,7 @@ def create_csv(
 
         # CSV actors and directors
         for persons in ("actors", "directors"):
-            all_persons = df_films[persons].sum()
+            all_persons: list[int] = df_films[persons].sum()
             columns = ["id", "number"]
             df_persons = pd.DataFrame(
                 list(Counter(all_persons).items()), columns=columns

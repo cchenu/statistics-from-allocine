@@ -3,11 +3,15 @@
 import base64
 import logging
 import re
+from typing import TYPE_CHECKING
 
 import requests
 from bs4 import BeautifulSoup
 
 from src.corrections import corrections
+
+if TYPE_CHECKING:
+    from src.type_defs import ActorsDict
 
 logging.basicConfig(level=logging.INFO)
 
@@ -368,7 +372,9 @@ class Film:
                     f"https://www.allocine.fr/_/casting/movie-{self.__id}"
                     f"/type-CASTING/item-per-page-120/position-ACTOR/p-{page}/"
                 )
-                response = requests.get(url, timeout=30).json()["persons"]
+                response: list[ActorsDict] = requests.get(
+                    url, timeout=30
+                ).json()["persons"]
                 # Add ID of actors in this page
                 self.__actors += [
                     actor["actor"]["internalId"] for actor in response
