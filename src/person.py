@@ -79,10 +79,6 @@ class Person:
             f"https://www.allocine.fr/personne/fichepersonne-{self.__id}"
             "/filmographie/"
         )
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebK"
-            "it/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
-        }
         response = requests.get(url, headers=HEADERS, timeout=30)
         response.raise_for_status()
         self.__html = str(BeautifulSoup(response.content, "html.parser"))
