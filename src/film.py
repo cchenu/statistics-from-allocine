@@ -8,6 +8,7 @@ from typing import TYPE_CHECKING
 import requests
 from bs4 import BeautifulSoup
 
+from src.config import HEADERS
 from src.corrections import corrections
 
 if TYPE_CHECKING:
@@ -127,7 +128,8 @@ class Film:
         self.__poster: str
 
         url = f"https://www.allocine.fr/film/fichefilm-{self.__id}/casting/"
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, headers=HEADERS, timeout=30)
+        response.raise_for_status()
         self.__html = str(BeautifulSoup(response.content, "html.parser"))
         self.set_title()
         self.set_duration()
@@ -187,7 +189,7 @@ class Film:
     def set_duration(self) -> None:
         """Set the film's duration."""
         # Search hours and minutes
-        pattern_duration = r'"duration": "PT(.*?)H(.*?)M00S"'
+        pattern_duration = r'"duration":\s*"PT(.*?)H(.*?)M00S"'
         result_duration: list[tuple[str, str]] = re.findall(
             pattern_duration, self.__html
         )
@@ -222,8 +224,8 @@ class Film:
         """Set the film's genres id."""
         pattern_genres = r'"genre":\["(.*?)"\]'
         result: list[str] = re.findall(pattern_genres, self.__html)
-        genres = result[0].split('","')
-        self.__genres = [int(genre) for genre in genres]
+        genres = [genre for r in result for genre in r.split('","')]
+        self.__genres = [int(genre) for genre in genres if genre.isdecimal()]
 
     def get_genres(self) -> list[int]:
         """
@@ -373,7 +375,7 @@ class Film:
                     f"/type-CASTING/item-per-page-120/position-ACTOR/p-{page}/"
                 )
                 response: list[ActorsDict] = requests.get(
-                    url, timeout=30
+                    url, headers=HEADERS, timeout=30
                 ).json()["persons"]
                 # Add ID of actors in this page
                 self.__actors += [
@@ -433,7 +435,7 @@ class Film:
     def set_poster(self) -> None:
         """Set the film's poster."""
         pattern_poster = (
-            r'"image": {\s*"@type": "ImageObject",\s*"url": "(.*?)"'
+            r'"image":\s*{\s*"@type":\s*"ImageObject",\s*"url":\s*"(.*?)"'
         )
         poster: list[str] = re.findall(pattern_poster, self.__html)
         if poster:

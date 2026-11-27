@@ -5,6 +5,8 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
+from src.config import HEADERS
+
 
 class Person:
     """
@@ -77,7 +79,12 @@ class Person:
             f"https://www.allocine.fr/personne/fichepersonne-{self.__id}"
             "/filmographie/"
         )
-        response = requests.get(url, timeout=30)
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebK"
+            "it/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
+        }
+        response = requests.get(url, headers=HEADERS, timeout=30)
+        response.raise_for_status()
         self.__html = str(BeautifulSoup(response.content, "html.parser"))
 
         self.set_name()
@@ -180,10 +187,10 @@ class Person:
                 rf'/film/fichefilm_gen_cfilm=(.*?).html" title="{title_pat}">'
             )
             result: list[str] = re.findall(pattern_film, self.__html)
-            if result:
-                films.extend(
-                    [int(film) for film in result if int(film) not in films],
-                )
+            for film in result:
+                film_id = int(film)
+                if film_id not in films:
+                    films.append(film_id)
         return films
 
     def set_directed_films(self) -> None:
